@@ -1,0 +1,251 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>kartsideno</TITLE>
+<SCRIPT LANGUAGE = "JavaScript">
+   var whichImage = true;
+
+   function blend() 
+   {
+      if ( whichImage ) {
+         image1.filters( "blendTrans" ).apply();
+         image1.style.visibility = "hidden";
+         image1.filters( "blendTrans" ).play();
+      }
+      else {
+         image2.filters( "blendTrans" ).apply();
+         image2.style.visibility = "hidden";
+         image2.filters( "blendTrans" ).play();
+      } 
+   }
+
+   function reBlend ( fromImage ) 
+   {
+      if ( fromImage ) {
+         image1.style.zIndex -= 2;
+         image1.style.visibility = "visible";
+      }
+      else {
+         image1.style.zIndex += 2;
+         image2.style.visibility = "visible";
+      }
+   
+      whichImage = !whichImage;
+      blend();
+   }
+</SCRIPT>
+<style type="text/css">
+a {font-family: Arial; font-size: 11pt; font-weight: bold; color: #000066; text-decoration: none;}
+</style>
+</HEAD>
+
+<BODY ONLOAD = "blend()" bgcolor="#99ccff">
+<table bgcolor="#99ccff" align=center border=2 cellspacing=0 cellpadding=0 frame=above width=100%>
+<tr>
+<td width=100%>
+<table width=100% border=0 cellpadding=0 cellspacing=0>
+<tr>
+<td align=center>
+<table width=100% align=center cellspacing=0 cellpadding=1 height=21 style="border-top: none; border-right: solid; border-bottom: solid; border-left: solid; border-width: 1px; border-color: #666666">
+<tr>
+<td background="fylkesbg.jpg" align=center>
+<a href="tyskutv.html" target="innmat"><nobr><font color="#ffffff">Deutschland/BeNeLux</font>
+</a></td>
+</tr>
+</table>
+</td>
+<td width=2 border=0 cellspacing=0 cellpadding=0>
+</td>
+<td align=center>
+<table width=100% align=center cellspacing=0 cellpadding=1 height=21 style="border-top: none; border-right: solid; border-bottom: solid; border-left: solid; border-width: 1px; border-color: #666666">
+<tr>
+<td bgcolor="#ffffff" align=center>
+<a href="pasvalys.html" target="innmat"><nobr>Litauen
+</a></td>
+</tr>
+</table>
+</td>
+<td width=2 border=0 cellspacing=0 cellpadding=0>
+</td>
+<td align=center>
+<table width=100% align=center cellspacing=0 cellpadding=1 height=21 style="border-top: none; border-right: solid; border-bottom: solid; border-left: solid; border-width: 1px; border-color: #666666">
+<tr>
+<td bgcolor="#ffffff" align=center>
+<a href="polen.html" target="innmat"><nobr>Polen
+</a></td>
+</tr>
+</table>
+</td>
+<td width=2 border=0 cellspacing=0 cellpadding=0>
+</td>
+<td align=center>
+<table width=100% align=center cellspacing=0 cellpadding=1 height=21 style="border-top: none; border-right: solid; border-bottom: solid; border-left: solid; border-width: 1px; border-color: #666666">
+<tr>
+<td bgcolor="#ffffff" align=center>
+<a href="frankrike04.html" target="innmat"><nobr>Frankreich
+</a></td>
+</tr>
+</table>
+</td>
+<td width=2 border=0 cellspacing=0 cellpadding=0>
+</td>
+<td align=center>
+<table width=100% align=center cellspacing=0 cellpadding=1 height=21 style="border-top: none; border-right: solid; border-bottom: solid; border-left: solid; border-width: 1px; border-color: #666666">
+<tr>
+<td bgcolor="#ffffff" align=center>
+<a href="belgia04.html" target="innmat"><nobr>Belgien
+</a></td>
+</tr>
+</table>
+</td>
+<td width=2 border=0 cellspacing=0 cellpadding=0>
+</td>
+<td align=center>
+<table width=100% align=center cellspacing=0 cellpadding=1 height=21 style="border-top: none; border-right: solid; border-bottom: solid; border-left: solid; border-width: 1px; border-color: #666666">
+<tr>
+<td bgcolor="#ffffff" align=center>
+<a href="hellas.html" target="innmat"><nobr>Griechenland
+</a></td>
+</tr>
+</table>
+</td>
+<td width=2 border=0 cellspacing=0 cellpadding=0>
+</td>
+<td align=center>
+<table width=100% align=center cellspacing=0 cellpadding=1 height=21 style="border-top: none; border-right: solid; border-bottom: solid; border-left: solid; border-width: 1px; border-color: #666666">
+<tr>
+<td bgcolor="#ffffff" align=center>
+<a href="england.html" target="innmat"><nobr>London
+</a></td>
+</tr>
+</table>
+</td>
+<td width=2 border=0 cellspacing=0 cellpadding=0>
+</td>
+<td bgcolor="#ffffff" align=center>
+<table width=100% align=center cellspacing=0 cellpadding=1 height=21 style="border-top: none; border-right: solid; border-bottom: solid; border-left: solid; border-width: 1px; border-color: #666666">
+<tr>
+<td bgcolor="ffffff" align=center>
+<a href="skottland06b.html" target="innmat"><nobr>Schottland
+</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<p>
+<table border="0" cellspacing="0" cellpadding="0" width="600">
+<tr>
+<td>
+<img src="images\sch.gif" STYLE = "position: absolute; left: 50; top: 60;" width="200" height="50">
+</td>
+<td>
+<IMG ID = "image2" src= "images\Graphic2.gif"
+   ONFILTERCHANGE = "reBlend(false )" 
+   STYLE = "position: absolute; left: 350; top: 60;
+   filter: blendTrans( duration = 6 ); z-index: 1" width="200" height="50">
+
+<IMG ID = "image1" src= "images\Graphic3.gif"
+   ONFILTERCHANGE = "reBlend( true )" 
+   STYLE = "position: absolute; left: 350; top: 60;
+   filter: blendTrans( duration = 6 ); z-index: 2" width="200" height="50">
+</td>
+</tr>
+<tr STYLE = "position: absolute; top: 120;">
+<td>
+<table border="2" cellspacing="2" cellpadding="2" width="100%" bgcolor="#cc0000">
+<tr>
+<td width="404" align="center" bgcolor="#ffffff">
+<MAP NAME="dekart">
+<AREA HREF="dortmundt.html" SHAPE=RECT COORDS="343,3,395,30">
+<AREA HREF="gelsenkirchent.html" SHAPE=POLY COORDS="265,1,265,10,320,10,320,25,340,25,340,1">
+<AREA HREF="oberhausent.html" SHAPE=RECT COORDS="227,15,304,28">
+<AREA HREF="wuppertalt.html" SHAPE=RECT COORDS="300,49,355,70">
+<AREA HREF="dusselt.html" SHAPE=RECT COORDS="280,72,355,88">
+<AREA HREF="gladbacht.html" SHAPE=POLY COORDS="195,98,248,73,300,98">
+<AREA HREF="leverkusent.html" SHAPE=RECT COORDS="312,92,375,115">
+<AREA HREF="garzt.html" SHAPE=RECT COORDS="230,110,295,130">
+<AREA HREF="maastt.html" SHAPE=RECT COORDS="122,140,190,153">
+<AREA HREF="kolnt.html" SHAPE=RECT COORDS="311,127,350,141">
+<AREA HREF="brusselt.html" SHAPE COORDS="1,156,55,175">
+<AREA HREF="aachent.html" SHAPE=RECT COORDS="224,153,275,166">
+<AREA HREF="viergrenzenweg.html" SHAPE=RECT COORDS="157,130,223,171">
+<AREA HREF="eupent.html" SHAPE=RECT COORDS="171,173,218,186">
+<AREA HREF="lieget.html" SHAPE=RECT COORDS="162,192,189,217">
+<AREA HREF="monschat.html" SHAPE=RECT COORDS="231,181,296,196">
+<AREA HREF="bonnt.html" SHAPE=RECT COORDS="318,152,359,167">
+<AREA HREF="konigst.html" SHAPE=RECT COORDS="304,170,372,189">
+<AREA HREF="koblenzt.html" SHAPE=RECT COORDS="343,201,396,214">
+<AREA HREF="marksbt.html" SHAPE=RECT COORDS="340,223,394,246">
+<AREA HREF="stgoart.html" SHAPE=RECT COORDS="316,255,397,273">
+<AREA HREF="triert.html" SHAPE=RECT COORDS="262,314,300,327">
+<AREA HREF="luxt.html" SHAPE=RECT COORDS="152,340,231,352">
+</MAP>
+<IMG src="images\kt.gif" width="400" ALIGN="center" USEMAP="#dekart">
+</td>
+<td bgcolor="#ffff99" align="left" valign="top">
+<table border="0" width="100%" cellspacing="0" cellpadding="4" align="left" valign="top">
+<tr>
+<td bgcolor="#ffff99" align="left" valign="middle">
+<a href="tyskutv.html">
+<font face="Arial" size="2" color="#333333"><b><nobr>Skoleutveksling</b></font></a>
+<br><img src="images\norg.gif" border="0" width="40" height="20">
+</td>
+</tr>
+<tr>
+<td bgcolor="#ffff99" align="left" valign="middle">
+<a href="tyskutvt.html">
+<font face="Arial" size="2" color="#333333"><b><nobr>Sch&uuml;leraustausch</b></font></a>
+<br><img src="images\tysk.gif" border="0" width="40" height="20">
+</td>
+</tr>
+<tr>
+<td bgcolor="#ffff99" align="left" valign="middle">
+<a href="tyskland.html">
+<font face="Arial" size="2" color="#333333"><b><nobr>Bes&oslash;k i Tyskland</b></font></a>
+<br><img src="images\norg.gif" border="0" width="40" height="20">&nbsp;
+<a href="tyskland.html"><font face="Arial" size="2" color="#333333"><b><nobr>og BeNeLux</b></font></a>
+</td>
+</tr>
+<tr>
+<td bgcolor="#333333" align="left" valign="middle">
+<a href="tysklant.html">
+<font face="Arial" size="2" color="#ffff99"><b><nobr>Besuch in Deutschland</b></font></a>
+<br><img src="images\tysk.gif" border="0" width="40" height="20">&nbsp;
+<a href="tysklant.html"><font face="Arial" size="2" color="#ffff99"><b><nobr>und BeNeLux</b></font></a>
+</td>
+</tr>
+<tr>
+<td bgcolor="#ffff99" align="left" valign="middle">
+<a href="skolen.html">
+<font face="Arial" size="2" color="#333333"><b><nobr>Bes&oslash;k i Norge</b></font></a>
+<br><img src="images\norg.gif" border="0" width="40" height="20">
+</td>
+</tr>
+<tr>
+<td bgcolor="#ffff99" align="left" valign="middle">
+<a href="skolet.html">
+<font face="Arial" size="2" color="#333333"><b><nobr>Besuch in Norwegen</b></font></a>
+<br><img src="images\tysk.gif" border="0" width="40" height="20">
+</td>
+</tr>
+<tr>
+<td bgcolor="#ffff99" align="left" valign="middle">
+<a href="tysk\tysk.html">
+<font face="Arial" size="2" color="#333333"><b><nobr>&Uuml;bungen/Deutsch<b></b></b></font></a><b><b>
+<br><img src="images\norg.gif" border="0" width="40" height="20">
+&nbsp;<img src="images\tysk.gif" border="0" width="40" height="20">
+</b></b></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</BODY>
+</HTML>

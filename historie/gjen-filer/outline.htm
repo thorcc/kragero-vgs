@@ -1,0 +1,1112 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=PowerPoint.Slide>
+<meta name=Generator content="Microsoft PowerPoint 9">
+<link id=Main-File rel=Main-File href="..\gjen.html">
+<link rel=Preview href=preview.wmf>
+<meta name=Robots content=NoIndex>
+<script src=script.js></script><script><!--
+
+if( !(IsWin("PPTOtl")||IsWin("PPTNav")||IsWin("PPTOtlNav")) )
+{
+	obj = document.all.item("Main-File")
+	parent.location.href=obj.href
+}
+
+var gOtlHiliteClr="#FFFFFF",gOtlNormalClr="#000000",gOtlActiveClr="#FFFF00",gSelected="",gTxtState=false,gChildEntryTable=new Array()
+
+function Load()
+{
+	if( IsWin("PPTOtl" ) ){ LoadOtl(); parent.gOtlLoaded=true; return }
+	if( IsWin("PPTNav" ) ){ LoadNav("NavObj",UpdNav); parent.gNavLoaded=true; return }
+	if( IsWin("PPTOtlNav" ) ){ LoadNav("OtlNavObj",UpdOtlNav); parent.gOtlNavLoaded=true; return }
+}
+function Upd(){ if( IsWin("PPTNav") ) LoadNav("NavObj",UpdNav) }
+function LoadNav( oId,UpdFunc )
+{
+	document.ondragstart=CancelDrag
+	document.onselectstart=CancelDrag
+	document.body.style.margin=2
+	UpdFunc()
+	obj=document.all.item(oId)
+	obj.style.display="block"
+	obj.style.visibility="visible"
+	document.bgColor="threedface"
+}
+function LoadOtl()
+{
+	document.ondragstart=CancelDrag
+	document.onselectstart=CancelDrag
+	OtlObj.style.display="block"
+	OtlObj.style.visibility="visible"
+	if( gOtlActiveClr == "" ) gOtlActiveClr=document.linkColor
+	if( gOtlHiliteClr == "" ) gOtlHiliteClr=document.fgColor
+	if( gOtlNormalClr == "" )
+		gOtlNormalClr=document.bgColor
+	else
+		document.bgColor=gOtlNormalClr  
+
+	InitArray()
+
+	if( ObjExists( parent.gCurSld ) ) {
+		ChangeState( parent.gCurSld,gOtlNormalClr,gOtlHiliteClr )
+		gSelected=parent.gCurSld
+	}
+	else gSelected = -1
+
+	UpdOtl()
+}
+function UpdOtl(){ UpdIdx(parent.gCurSld) }
+function UpdIdx( idx )
+{
+	if( gSelected != idx ) {
+		if( gSelected > 0 )
+			ChangeState( gSelected,gOtlHiliteClr,gOtlNormalClr )
+
+		if( ObjExists( idx ) ) {
+			gSelected = idx
+			ChangeState( gSelected,gOtlNormalClr,gOtlHiliteClr )
+		}
+		else gSelected = -1
+	}
+
+	if( gTxtState != parent.gOtlTxtExp ) {
+		state = "block"
+		if( !parent.gOtlTxtExp )
+			state="none"
+
+		for(ii=0; ii<gChildEntryTable.length; ii++) {
+			obj=gChildEntryTable[ii];
+			if( obj.id == null ) continue;
+
+			if( obj.id.indexOf("PPTC") >= 0 )
+				obj.style.display=state;
+		} 
+		gTxtState=parent.gOtlTxtExp
+		if( ObjExists( gSelected ) )
+			ChangeState( gSelected,gOtlNormalClr,gOtlHiliteClr )
+	}
+}
+function InitArray()
+{
+	count=0
+	for(ii=0; ii<document.all.tags("DIV").length; ii++) {
+		obj=document.all.tags("DIV").item(ii)
+		if( obj.id == null ) continue
+
+		if( obj.id.indexOf("PPTC") >= 0 ) {   
+			gChildEntryTable[count++]=obj
+			obj.children.tags("TABLE").item(0).style.borderColor=gOtlNormalClr
+		}
+	}
+}
+function ChangeState( idx,fgColor,bgColor )
+{
+	obj=document.all.item("PPTL"+idx)
+	obj.style.color=fgColor
+
+	obj=document.all.item("PPTP"+idx)
+	obj.style.backgroundColor=bgColor
+
+	obj=document.all.item("PPTB"+idx)
+	if( obj )
+		obj.style.borderLeftColor=obj.style.borderBottomColor=bgColor
+}
+function ChgClr( o,clr ){ if( o.id != "PPTL"+gSelected ) o.style.color=clr }
+function Over( obj ){ ChgClr(obj,gOtlActiveClr) }
+function Out( obj ){ ChgClr(obj,gOtlHiliteClr) }
+function ObjExists( ii ) { obj=document.all("PPTP"+ii ); return( obj ) }
+function GoToSld( href ){ UpdIdx(parent.GetSldNum(href)); parent.GoToSld( href ) }
+function CancelDrag(){ window.event.cancelBubble=true;window.event.returnValue=false}
+
+function UpdNav()
+{
+	txt = "<center>";
+	if( parent.GetHrefObj( parent.gCurSld ).mOrigVis == 1 )
+		txt += "Lysbilde " + parent.GetCurSldNum() + " av " + parent.GetNumSlds()
+	else
+		txt += "Skjult lysbilde"
+	txt += "</center>";
+	nav_text.innerHTML = txt;
+
+	if( !parent.HasPrevSld() )
+		gBtnArr["nb_prev"].Enabled(0)
+	else
+		gBtnArr["nb_prev"].Enabled(1)
+
+	if( !parent.HasNextSld() )
+		gBtnArr["nb_next"].Enabled(0)
+	else
+		gBtnArr["nb_next"].Enabled(1)
+	gBtnArr["nb_nts"].SetEnabled()
+	gBtnArr["nb_nts"].SetFlag( parent.gHasNts )
+
+	gBtnArr["nb_sldshw"].Enabled(1)
+	gBtnArr["nb_voice"].Enabled(1)
+}
+
+function UpdOtlNav()
+{
+	gBtnArr["nb_otl"].SetEnabled();
+
+	if( parent.gOtlOpen )
+		gBtnArr["nb_otlTxt"].Enabled( true );
+	else
+		document.all.item("nb_otlTxtBorder").style.visibility = "hidden";
+}
+
+
+
+//-->
+</script>
+<style>
+<!--.PTxt
+	{position:relative;
+	width:100%;
+	margin-top:5px;
+	padding-left:5px;
+	font-weight:bold;}
+.CTxt
+	{position:relative;
+	width:100%;
+	padding-left:10px;}
+.CBorder
+	{position:relative;
+	width:100%;
+	border-style:solid;
+	border-width:1px;
+	border-color:black;
+	padding-bottom:5px;}
+a
+	{color:white;
+	text-decoration:none;}
+.button
+	{position:absolute;
+	width:32px;
+	height:20px;
+	border-style:solid;
+	border-width:1px;
+	border-color:threedface;}
+-->
+</style>
+</head>
+
+<body onload="Load()">
+
+<div id=NavObj onload="Load()" onmouseover="BtnOnOver().html"
+onmousedown="BtnOnDown()" onmouseout="BtnOnOut()" onmouseup="BtnOnUp()"
+onkeypress="_KPH()" style='display:none;visibility:hidden'>
+
+<table style='position:absolute;width:70px;visibility:hidden' align=left
+ cellpadding=0 cellspacing=0>
+ <td nowrap>
+ <div id="nb_ntsElem" align=center style='position:relative;padding:3px;
+ font-family:Arial;color:buttontext;font-size:9pt'><img src="notes_flag.gif"
+ border=0 id="notes_flag" style='display:none'><span style="mso-spacerun:
+ yes">  </span>Notater</div>
+ <div title="Vis/skjul notater" id="nb_nts" style='position:absolute;
+ top:0%;left:0%;width:100%;height:100%'></div>
+ </td>
+</table>
+
+<table style='position:relative' align=right cellpadding=0 cellspacing=0>
+ <td>
+ <div id="nb_sldshwBorder" style='position:absolute;left:-20px;width:20px;
+ height:20px'>
+ <div style='position:absolute;clip:rect(0px, 18px, 18px, 0px)'><img
+ src=buttons.gif id="nb_sldshw" title="Lysbildefremvisning i fullt skjermvindu"
+ style='position:relative;left:-254px' width="344" height="18"></div>
+ </div>
+ </td>
+ <td>
+ <div id="nb_voiceBorder" style='display:none;position:absolute;left:-40px;
+ width:20px;height:20px'>
+ <div style='position:absolute;clip:rect(0px, 18px, 18px, 0px)'><img
+ src=buttons.gif id="nb_voice" title="Stans / spill av lydkommentar"
+ style='position:relative;left:-290px' width="344" height="18"></div>
+ </div>
+ </td>
+</table>
+
+<table style='position:relative' align=center cellpadding=0 cellspacing=0>
+ <td nowrap>
+ <div id="nb_prevBorder" class=button style='left:-30px'>
+ <div style='position:absolute;clip:rect(0px, 30px, 18px, 0px)'><img
+ src=buttons.gif id="nb_prev" title="Forrige lysbilde" style='position:relative;
+ left:0px' width="344" height="18"></div>
+ </div>
+ <span id="nav_text" style='position:relative;top:3px;width:100px;font-family:
+ Arial;color:buttontext;font-size:9pt'></span>
+ <div id="nb_nextBorder" class=button>
+ <div style='position:absolute;clip:rect(0px, 30px, 18px, 0px)'><img
+ src=buttons.gif id="nb_next" title="Neste lysbilde" style='position:relative;
+ left:-90px' width="344" height="18"></div>
+ </div>
+ </td>
+</table>
+
+</div>
+
+<div id=OtlNavObj onload="Load()" onmouseover="BtnOnOver().html"
+onmousedown="BtnOnDown()" onmouseout="BtnOnOut()" onmouseup="BtnOnUp()"
+onkeypress="_KPH()" style='display:none;visibility:hidden'>
+
+<table style='position:relative;width:70px' align=left cellpadding=0
+ cellspacing=0>
+ <td nowrap>
+ <div id="nb_otlElem" align=center style='position:relative;padding:3px;
+ font-family:Arial;color:buttontext;font-size:9pt'>Disposisjon</div>
+ <div title="Vis/skjul disposisjon" id="nb_otl" style='position:absolute;
+ top:0%;left:0%;width:100%;height:100%'></div>
+ </td>
+</table>
+
+<table style='position:relative' align=center cellpadding=0 cellspacing=0>
+ <td>
+ <div style='position:absolute;left:-18px;width:24px;height:20px;border-style:
+ solid;border-width:1px;border-color:threedface' id="nb_otlTxtBorder">
+ <div style='position:absolute;clip:rect(0px, 22px, 18px, 0px)'><img
+ src=buttons.gif id="nb_otlTxt" title="Vis/skjul disposisjon" style='position:
+ relative;left:-157px' width="344" height="18"></div>
+ </div>
+ </td>
+</table>
+
+</div>
+
+<div id=OtlObj style='display:none;visibility:hidden'>
+
+<table width="100%" style='font-family:Arial;font-size:9pt'>
+ <tr>
+  <td>
+  <div id=PPTP1 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0131.htm');" onmouseover="Over(this).html"
+  id=PPTL1 onmouseout="Out(this)">Den aktive stat: <br>
+  gjenreisning</a></font></div>
+  <div id=PPTC1 class=CTxt style='display:none'>
+  <table style='color:white' id=PPTB1 class=CBorder>
+   <tr>
+    <td width=5 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width="100%"></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=2><font size=2>Allerede under krigen ble det lagt planer<br>
+    for gjenreisning - særlig i Arbeiderpartiet.</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=2><font size=2>Arbeiderpartiet hadde forbilder i utlandet:</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2><span style="mso-spacerun:
+    yes"> </span>Sovjetisk planøkonomi</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2><span style="mso-spacerun:
+    yes"> </span>Britisk/amerikansk kontroll av privateid industri under krigen</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=2><font size=2>Sommeren 1945 ble landet styrt av en
+    samlingsregjering med Gerhardsen som statsminister.</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=2><font size=2>Ved valget høsten 1945 sluttet alle partier opp
+    om Fellesprogrammet med et sosialdemokratisk preg,</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=2><font size=2>som gav staten et hovedansvar i samarbeid med
+    det private næringslivet.</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=2><font size=2>Arbeiderpartiet hadde flertall på Stortinget
+    1945-61,</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=2><font size=2>og hadde regjeringsmakt (Gerhardsen eller Torp)
+    fram til 1965 (minus tre uker i 1963).</font></td>
+   </tr>
+  </table>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP2 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0132.htm');" onmouseover="Over(this).html"
+  id=PPTL2 onmouseout="Out(this)">Den aktive stat: planøkonomi</a></font></div>
+  <div id=PPTC2 class=CTxt style='display:none'>
+  <table style='color:white' id=PPTB2 class=CBorder>
+   <tr>
+    <td width=5 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width="100%"></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Flere råd og utvalg skulle sikre planlegging og
+    samarbeid, men flere av disse mistet makt etter motstand fra næringslivet.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Rasjonering og regulering ble opprettholdt i
+    etterkrigstida.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Skipsfartsinntektene, også fra krigstida, og
+    Marshall-hjelpen var viktig kapital i gjenreisningsfasen.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Enkelte statsbedrifter (Jernverket i Mo i Rana
+    og Årdal og Sunndal verk) ble ikke annerledes enn de private.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Nord-Norge-planen og Distriktenes Utbyggingsfond</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Sosialøkonomene skulle bidra til å styre landet
+    gjennom kunnskap, modeller og planer og fikk en sentral posisjon i
+    ”Ettpartistaten” i Gerhardsen-perioden.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Indirekte virkemidler: avgifter (tobakk),
+    subsidier (melk)</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Lønnskrav ble dempet gjennom subsidier og press
+    mot LO.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Statsbanker: Husbanken, Lånekassa og
+    Postsparebanken</font></td>
+   </tr>
+  </table>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP3 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0133.htm');" onmouseover="Over(this).html"
+  id=PPTL3 onmouseout="Out(this)">Velferdsstaten vokser fram:</a></font></div>
+  <div id=PPTC3 class=CTxt style='display:none'>
+  <table style='color:white' id=PPTB3 class=CBorder>
+   <tr>
+    <td width=5 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width="100%"></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>samholdet fra krigs- og okkupasjonstida</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>frykt for sosial nød – og for</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>sosiale motsetninger som i mellomkrigstida</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>inspirert av særlig britisk sosiallovgivning</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>enigheten mellom partiene slått fast i
+    Fellesprogrammet i 1945</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>en rekke sosial reformer i etterkrigstida, bl.a.
+    barnetrygd</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>Det store målet, folketrygden, måtte utsettes
+    pga. utgiftene til gjenreisning og forsvar, og ble først gjennomført under
+    Borten-regjeringen.</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>flere husholdningsmaskiner/økt mekanisering av
+    landbruket: viktig for kvinnenes stilling</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1></td>
+   </tr>
+  </table>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP4 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0134.htm');" onmouseover="Over(this).html"
+  id=PPTL4 onmouseout="Out(this)">Norge mellom vest og øst</a></font></div>
+  <div id=PPTC4 class=CTxt style='display:none'>
+  <table style='color:white' id=PPTB4 class=CBorder>
+   <tr>
+    <td width=5 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width="100%"></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=2><font size=2>Norge ville tradisjonelt være nøytralt, men
+    krigen hadde endret noe på denne holdningen:</font></td>
+   </tr>
+   <tr>
+    <td colspan=4></td>
+    <td colspan=1><font size=2>Norge var et strategisk viktig område.</font></td>
+   </tr>
+   <tr>
+    <td colspan=4></td>
+    <td colspan=1><font size=2>Norske politikere og offiserer hadde utviklet et
+    samarbeid med særlig britiske og amerikanske under krigen.</font></td>
+   </tr>
+   <tr>
+    <td colspan=4></td>
+    <td colspan=1><font size=2>Frykten for ”et nytt 9. april” var sterk.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=2><font size=2>Før den kalde krigen begynte å dominere
+    verdensbildet, gikk Norge igjen inn for å være en nøytral brubygger.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=2><font size=2>Å ta imot Marshall-hjelpen var et skritt i
+    vestlig retning.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=2><font size=2>Opinionen vendte seg mot Sovjet og NKP, særlig
+    etter kommunistenes maktovertakelse i Tsjekkoslovakia.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=2><font size=2>Strenge COCOM-regler mot eksport til Øst-Europa.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=2><font size=2>Drøftinger om nordisk forsvarsforbund brøt
+    sammen i 1949 da Norge ville knytte dette til vestmaktene.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=2></td>
+   </tr>
+  </table>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP5 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0135.htm');" onmouseover="Over(this).html"
+  id=PPTL5 onmouseout="Out(this)">Norge i NATO</a></font></div>
+  <div id=PPTC5 class=CTxt style='display:none'>
+  <table style='color:white' id=PPTB5 class=CBorder>
+   <tr>
+    <td width=5 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width="100%"></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=2><font size=2>Stortinget vedtok norsk NATO-medlemskap i 1949
+    mot 13 stemmer (NKP og 2 fra AP). Motstanden i AP ble svekket da ledelsen
+    og til slutt også Gerhardsen gikk inn for medlemskap.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=2><font size=2>Det norske forsvaret ble med Koreakrigen fra
+    1950 en del av NATOs fellesforsvar med en felles USA-dominert kommando.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=2><font size=2>NATOs nordkommando fikk hovedkvarter på Kolsås.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=2><font size=2>Utbygging av forsvaret gjorde at utgiftene økte
+    kraftig.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=2><font size=2>Det kom våpen og utstyr fra USA, flyplasser og
+    varslingsanlegg osv. ble utbygd, felles NATO-øvelser ble holdt i Norge.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=2><font size=2>Likevel har Norge innført begrensninger på noen
+    områder:</font></td>
+   </tr>
+   <tr>
+    <td colspan=4></td>
+    <td colspan=1><font size=2>Baseerklæringen tillater ikke fast stasjonering
+    av utenlandske tropper.</font></td>
+   </tr>
+   <tr>
+    <td colspan=4></td>
+    <td colspan=1><font size=2>Norske styrker skal ikke plasseres for nær
+    grensa mot Sovjet.</font></td>
+   </tr>
+   <tr>
+    <td colspan=4></td>
+    <td colspan=1><font size=2>Norge har ikke tatt imot tilbud om atomvåpen på
+    norsk jord.</font></td>
+   </tr>
+   <tr>
+    <td colspan=4></td>
+    <td colspan=1></td>
+   </tr>
+   <tr>
+    <td colspan=4></td>
+    <td colspan=1></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=2></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=2></td>
+   </tr>
+  </table>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP6 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0136.htm');" onmouseover="Over(this).html"
+  id=PPTL6 onmouseout="Out(this)">Opposisjon mot Gerhardsen og Arbeiderpartiet?</a></font></div>
+  <div id=PPTC6 class=CTxt style='display:none'>
+  <table style='color:white' id=PPTB6 class=CBorder>
+   <tr>
+    <td width=5 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width="100%"></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=3><font size=2>Sterk vekst i industriutbygging &gt; høyeste
+    andel industriarbeidere noensinne &gt; sannsynlige AP-velgere</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=3><font size=2>De borgerlige partiene stod ikke fram som noe
+    samlet alternativ til AP-regjeringene:</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=2><font size=2>Aps sterke velgeroppslutning gav lite håp.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=2><font size=2>Aps forsiktige politikk kunne i stor grad
+    aksepteres.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=2><font size=2>De borgerlige var opptatt av å markere sin egen
+    identitet:</font></td>
+   </tr>
+   <tr>
+    <td colspan=4></td>
+    <td colspan=1><font size=2>Kristelig Folkeparti som et livssynsparti på
+    tvers av sosiale skiller</font></td>
+   </tr>
+   <tr>
+    <td colspan=4></td>
+    <td colspan=1><font size=2>Bondepartiet (Senterpartiet fra 1959) som
+    representant for</font></td>
+   </tr>
+   <tr>
+    <td colspan=4></td>
+    <td colspan=1><font size=2>&#9;Utkant-Norge og <span style="mso-spacerun:
+    yes"> </span>landbruket</font></td>
+   </tr>
+   <tr>
+    <td colspan=4></td>
+    <td colspan=1><font size=2>Høyre som representant for bykultur, handel,
+    industri og skipsfart</font></td>
+   </tr>
+   <tr>
+    <td colspan=4></td>
+    <td colspan=1><font size=2>Venstre som et sosialliberalt parti (som var
+    splittet!) med sympati for den økonomiske politikken til AP - og med
+    skepsis til KRFs kulturpolitikk</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=3><font size=2>Opposisjonen internt i AP mot NATO-politikken
+    rundt avisa<span style="mso-spacerun: yes">   </span>Orientering stiftet
+    Sosialistisk Folkeparti i 1961.</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=3><font size=2>Kommunistene: godt valg i 1945, svekket av kald
+    krig.</font></td>
+   </tr>
+  </table>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP7 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0137.htm');" onmouseover="Over(this).html"
+  id=PPTL7 onmouseout="Out(this)">”De gylne 60-årene”</a></font></div>
+  <div id=PPTC7 class=CTxt style='display:none'>
+  <table style='color:white' id=PPTB7 class=CBorder>
+   <tr>
+    <td width=5 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width="100%"></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>Det første tiåret med materiell<br>
+    overflod for ”brede lag”</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>Sterk vekst i industrien</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>Gode internasjonale konjunkturer</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>Reduserte tollmurer med EFTA-samarbeidet</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>Norge klarte seg bra i konkurransen.</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>Mange flere kvinner ut på arbeidsmarkedet</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>Forbrukersamfunnet: privatbil, charterreiser, TV</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>Bruk-og-kast-mentalitet</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>Supermarkeder og varehus fortrenger
+    kjøpmannen<br>
+    og nærbutikken.</font></td>
+   </tr>
+  </table>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP8 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0138.htm');" onmouseover="Over(this).html"
+  id=PPTL8 onmouseout="Out(this)">Kings Bay-saken</a></font></div>
+  <div id=PPTC8 class=CTxt style='display:none'>
+  <table style='color:white' id=PPTB8 class=CBorder>
+   <tr>
+    <td width=5 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width="100%"></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Arbeiderpartiet hadde mistet det reine
+    flertallet på Stortinget i 1961: Det nystiftede Sosialistisk
+    Folkeparti<span style="mso-spacerun: yes">  </span>satt med to
+    representanter ”på vippen”.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Arbeiderpartiregjeringen fikk kritikk for
+    mangelfull informasjon til Stortinget etter en ulykke i en statseid gruve
+    på Svalbard (Kings Bay).</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Generell misnøye med regjeringens
+    industripolitikk<br>
+    (Norsk Koksverk ved Mo i Rana).</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>SFs to representanter felte regjeringen
+    Gerhardsen høsten 1963, men felte så Lyngs regjering av de fire borgerlige
+    partiene etter tre uker.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Ved valget i 1965 representerte de borgerlige
+    partiene<span style="mso-spacerun: yes">  </span>et samlet
+    regjeringsalternativ til AP.</font></td>
+   </tr>
+  </table>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP9 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0139.htm');" onmouseover="Over(this).html"
+  id=PPTL9 onmouseout="Out(this)">Borten-<br>
+  regjeringen 1965-71</a></font></div>
+  <div id=PPTC9 class=CTxt style='display:none'>
+  <table style='color:white' id=PPTB9 class=CBorder>
+   <tr>
+    <td width=5 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width="100%"></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Den første borgerlige flertallsregjeringen etter
+    krigen:<br>
+    H - KrF - SP - V med Per Borten (SP) som statsminister</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Regjeringen fulgte APs velferdspolitikk videre,</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>og offentlig virksomhet ble videre utbygd.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Utgifter til boligbygging, samferdsel, <br>
+    <span style="mso-spacerun: yes"> </span>utdanning, trygder og helse økte
+    mest.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Folketrygden ble vedtatt i 1966.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Momsen ble vedtatt i 1969.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2><span style="mso-spacerun:
+    yes"> </span>Regjeringen førte en utenrikspolitikk som noen ganger gikk på
+    tvers av USAs ønsker.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Regjeringen ble avløst av en
+    mindretallsregjering av AP i 1971 da spørsmålet om EF-medlemskap ble
+    aktuelt.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=2></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=2></td>
+   </tr>
+  </table>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP10 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0140.htm');" onmouseover="Over(this).html"
+  id=PPTL10 onmouseout="Out(this)">68-opprøret</a></font></div>
+  <div id=PPTC10 class=CTxt style='display:none'>
+  <table style='color:white' id=PPTB10 class=CBorder>
+   <tr>
+    <td width=5 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width="100%"></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=2><font size=2>Utdanningseksplosjonen:</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Innføring av enhetsskolen med 9-årig skoleplikt</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Utbygging av gymnas, yrkesskoler, universiteter
+    og - en ny type høyskoler: distriktshøyskoler</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Bedre muligheter for ungdom fra alle sosiale lag</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=2><font size=2>Store kull av blendingsgardin- og fredsrusbarn
+    gav store ungdomskull rundt 1968.</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=2><font size=2>Ungdom blir en egen gruppe av konsumenter.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Popen blir en industri med nye moter og idealer.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Narkotika kommer inn i deler av ungdomsmiljøet.</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=2><font size=2>Opprørstrang mot autoriteter,
+    utdanningssystemet, statusjag, sultkatastrofer og Vietnamkrigen</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>TV bringer problemene rett inn i stua.</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=2><font size=2>Den grønne bølgen</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=2></td>
+   </tr>
+  </table>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP11 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0141.htm');" onmouseover="Over(this).html"
+  id=PPTL11 onmouseout="Out(this)">EF-kampen</a></font></div>
+  <div id=PPTC11 class=CTxt style='display:none'>
+  <table style='color:white' id=PPTB11 class=CBorder>
+   <tr>
+    <td width=5 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width="100%"></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=2><font size=2>Ja til EF</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Europabevegelsen</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>70 % av stortingsrepresentantene</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>hele Høyre</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>ledelsen i AP</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>det sentrale Østlandet</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=2><font size=2>Temaer i debatten:</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>økonomisk vekst</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>fred og innflytelse i Europa</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>suverenitet og selvråderett</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>primærnæringene</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>utkantstrøk og miljøvern</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=2><font size=2>Folkebevegelsen mot norsk medlemskap i
+    Fellesmarkedet</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>hele SP, SF og NKP</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>flertallet i V og KrF</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>politiske ungdomsorganisa-sjoner minus Unge
+    Høyre</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>bondeorganisasjonene</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>fiskerorganisasjonene</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>motkulturene</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>naturvernforkjempere</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>stort mindretall i AP</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>utkantstrøk</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=2></td>
+   </tr>
+  </table>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP12 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0144.htm');" onmouseover="Over(this).html"
+  id=PPTL12 onmouseout="Out(this)">Det politiske<br>
+  etterspillet</a></font></div>
+  <div id=PPTC12 class=CTxt style='display:none'>
+  <table style='color:white' id=PPTB12 class=CBorder>
+   <tr>
+    <td width=5 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width="100%"></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=2><font size=2>Under kampen om EF hadde statsminister Bratteli
+    stilt ”kabinettspørsmål” til velgerne: AP-regjeringen går av hvis folket
+    sier nei til EF</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=2><font size=2>En ”nei-regjering” av KrF, SP og V med Korvald
+    (KrF) som statsminister overtok etter at over 53 % gikk mot medlemskap ved
+    folkeavstemningen 25. september.</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=2><font size=2>Før Stortingsvalget i 1973:</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Sosialistisk Valgforbund ble dannet av SF, NKP
+    og utbrytere fra AP,<br>
+    i 1975 etablert som Sosialistisk Venstreparti (uten NKP).</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>EF-tilhengerne i Venstre dannet DLF (som siden
+    gikk tilbake til V).</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Anders Langes Parti, siden Fremskrittspartiet,
+    ble dannet som et alternativ på høyresida, men ikke med utgangspunkt i
+    EF-kampen.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Lengst til venstre oppstod Arbeidernes
+    Kommunistparti (m-l).</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=2><font size=2>Ny Bratteli-regjering (AP) pga. SVs framgang i
+    73</font></td>
+   </tr>
+  </table>
+  </div>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,661 @@
+<html>
+<head>
+<title>analyse 7</title>
+<script language="JavaScript">
+var a
+var aa
+var aaa
+var b
+var bb
+var c
+var cc
+var ccc
+var d
+var dd
+var e
+var ee
+var eee
+var f
+var ff
+var g
+var gg
+var h
+var hh
+var hhh
+var i
+var ii
+var j
+var jj
+var poeng=0;
+var poenga=0;
+var poengb=0;
+var poengc=0;
+var poengd=0;
+var poenge=0;
+var poengf=0;
+var poengg=0;
+var poengh=0;
+var poengi=0;
+var poengj=0;
+function fasita(form) {
+if (form.a.value=="1" && form.aa.value=="3" && form.aaa.value=="4") {
+poenga=poenga+1;
+if (poenga==1) {
+poeng=poeng+poenga;
+form.poeng.value=poeng;
+  }
+  else if (poenga > 1) {
+poenga=1;
+alert ("Ja, du har klart den!");
+  }
+} else {
+alert ("S/N(m) - V - IO/D(n) - DO/A(f)");
+  }
+}
+function fasitb(form) {
+if (form.b.value=="4" && form.bb.value=="1") {
+poengb=poengb+1;
+if (poengb==1) {
+poeng=poeng+poengb;
+form.poeng.value=poeng;
+  }
+  else if (poengb > 1) {
+poengb=1;
+alert ("Ja, du har klart den!");
+  }
+} else {
+alert ("S/N(f) - V - DO/A(n) - V");
+  }
+}
+function fasitc(form) {
+if (form.c.value=="5" && form.cc.value=="3" && form.ccc.value=="5") {
+poengc=poengc+1;
+if (poengc==1) {
+poeng=poeng+poengc;
+form.poeng.value=poeng;
+  }
+  else if (poengc > 1) {
+poengc=1;
+alert ("Ja, du har klart den!");
+  }
+} else {
+alert ("S/N(n) - V - IO/D(m) - DO/A(n)");
+  }
+}
+function fasitd(form) {
+if (form.d.value=="4" && form.dd.value=="3") {
+poengd=poengd+1;
+if (poengd==1) {
+poeng=poeng+poengd;
+form.poeng.value=poeng;
+  }
+  else if (poengd > 1) {
+poengd=1;
+alert ("Ja, du har klart den!");
+  }
+} else {
+alert ("S/N(pl) - V - D(m) - V+D");
+  }
+}
+function fasite(form) {
+if (form.e.value=="1" && form.ee.value=="2" && form.eee.value=="4") {
+poenge=poenge+1;
+if (poenge==1) {
+poeng=poeng+poenge;
+form.poeng.value=poeng;
+  }
+  else if (poenge > 1) {
+poenge=1;
+alert ("Ja, du har klart den!");
+  }
+} else {
+alert ("S/N(n) - V - DO/A(m+f) - V");
+  }
+}
+function fasitf(form) {
+if (form.f.value=="4" && form.ff.value=="2") {
+poengf=poengf+1;
+if (poengf==1) {
+poeng=poeng+poengf;
+form.poeng.value=poeng;
+  }
+  else if (poengf > 1) {
+poengf=1;
+alert ("Ja, du har klart den!");
+  }
+} else {
+alert ("S/N(f) - V - D(pl) - V+D");
+  }
+}
+function fasitg(form) {
+if (form.g.value=="1" && form.gg.value=="1") {
+poengg=poengg+1;
+if (poengg==1) {
+poeng=poeng+poengg;
+form.poeng.value=poeng;
+  }
+  else if (poengg > 1) {
+poengg=1;
+alert ("Ja, du har klart den!");
+  }
+} else {
+alert ("S/N(m) - V(uselvstendig) - PIV/N(m)");
+  }
+}
+function fasith(form) {
+if (form.h.value=="1" && form.hh.value=="1" && form.hhh.value=="4") {
+poengh=poengh+1;
+if (poengh==1) {
+poeng=poeng+poengh;
+form.poeng.value=poeng;
+  }
+  else if (poengh > 1) {
+poengh=1;
+alert ("Ja, du har klart den!");
+  }
+} else {
+alert ("S/N(m) - V - IO/D(f) - DO/A(f) - V");
+  }
+}
+function fasiti(form) {
+if (form.i.value=="1" && form.ii.value=="4") {
+poengi=poengi+1;
+if (poengi==1) {
+poeng=poeng+poengi;
+form.poeng.value=poeng;
+  }
+  else if (poengi > 1) {
+poengi=1;
+alert ("Ja, du har klart den!");
+  }
+} else {
+alert ("S/N(m) - V - DO/A(f) - V");
+  }
+}
+function fasitj(form) {
+if (form.j.value=="5" && form.jj.value=="3") {
+poengj=poengj+1;
+if (poengj==1) {
+poeng=poeng+poengj;
+form.poeng.value=poeng;
+  }
+  else if (poengj > 1) {
+poengj=1;
+alert ("Ja, du har klart den!");
+  }
+} else {
+alert ("S/N(n) - V+D - D(m)");
+  }
+}
+function juks(form) {
+alert("Du prøver vel ikke å jukse med poeng?");
+form.poeng.value=poenga+poengb+poengc+poengd+poenge+poengf+poengg+poengh+poengi+poengj+0;
+}
+</script>
+<meta http-equiv="Expires" Content="0">
+<meta http-equiv="Pragma" Content="no-cache">
+<style type="text/css">
+a {font-family: Arial; font-size: 10pt; font-weight: bold; color: #000066; text-decoration: none;}
+</style>
+</head>
+<body bgcolor="#99ccff">
+<h3 align="center">Ulike typer setningsledd 1</h3>
+<p align="justify">
+Velg riktige <b>kasusformer</b>. Er svaret galt, får du tilbakemelding og kan prøve igjen.
+<form>
+<table bgcolor="#666666" width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td>
+<table bgcolor="#99ffff" width="100%">
+<tr>
+<td><nobr>
+<select name="a">
+<option value="0"></option>
+<option value="1">Der</option>
+<option value="2">Den</option>
+<option value="3">Dem</option>
+<option value="4">Die</option>
+<option value="4">Die</option>
+<option value="1">Der</option>
+<option value="5">Das</option>
+<option value="5">Das</option>
+<option value="3">Dem</option>
+<option value="4">Die</option>
+<option value="4">Die</option>
+<option value="2">Den</option>
+</select>
+Mann gab
+<select name="aa">
+<option value="0"></option>
+<option value="1">ein</option>
+<option value="2">einen</option>
+<option value="3">einem</option>
+<option value="4">eine</option>
+<option value="4">eine</option>
+<option value="5">einer</option>
+<option value="1">ein</option>
+<option value="1">ein</option>
+<option value="3">einem</option>
+</select>
+Kind
+<select name="aaa">
+<option value="0"></option>
+<option value="1">ein</option>
+<option value="2">einen</option>
+<option value="3">einem</option>
+<option value="4">eine</option>
+<option value="4">eine</option>
+<option value="5">einer</option>
+<option value="1">ein</option>
+<option value="1">ein</option>
+<option value="3">einem</option>
+</select>
+Ohrfeige.
+</td>
+<td><nobr>
+<input type=button value="OK" onClick="fasita(this.form)">
+</td>
+</tr>
+<tr>
+<td><nobr>
+<select name="b">
+<option value="0"></option>
+<option value="1">Der</option>
+<option value="2">Den</option>
+<option value="3">Dem</option>
+<option value="4">Die</option>
+<option value="4">Die</option>
+<option value="1">Der</option>
+<option value="5">Das</option>
+<option value="5">Das</option>
+<option value="3">Dem</option>
+<option value="4">Die</option>
+<option value="4">Die</option>
+<option value="2">Den</option>
+</select>Direktorin hat
+<select name="bb">
+<option value="0"></option>
+<option value="1">ein</option>
+<option value="2">einen</option>
+<option value="3">einem</option>
+<option value="4">eine</option>
+<option value="4">eine</option>
+<option value="5">einer</option>
+<option value="1">ein</option>
+<option value="1">ein</option>
+<option value="3">einem</option>
+</select>
+Kleid gekauft.
+</td>
+<td><nobr>
+<input type=button value="OK" onClick="fasitb(this.form)">
+</td>
+</tr>
+<tr>
+<td><nobr>
+<select name="c">
+<option value="0"></option>
+<option value="1">Der</option>
+<option value="2">Den</option>
+<option value="3">Dem</option>
+<option value="4">Die</option>
+<option value="4">Die</option>
+<option value="1">Der</option>
+<option value="5">Das</option>
+<option value="5">Das</option>
+<option value="3">Dem</option>
+<option value="4">Die</option>
+<option value="4">Die</option>
+<option value="2">Den</option>
+</select>
+Mädchen erklärte
+<select name="cc">
+<option value="0"></option>
+<option value="1">der</option>
+<option value="2">den</option>
+<option value="3">dem</option>
+<option value="4">die</option>
+<option value="4">die</option>
+<option value="1">der</option>
+<option value="5">das</option>
+<option value="5">das</option>
+<option value="3">dem</option>
+<option value="4">die</option>
+<option value="4">die</option>
+<option value="2">den</option>
+</select>
+Lehrer
+<select name="ccc">
+<option value="0"></option>
+<option value="1">der</option>
+<option value="2">den</option>
+<option value="3">dem</option>
+<option value="4">die</option>
+<option value="4">die</option>
+<option value="1">der</option>
+<option value="5">das</option>
+<option value="5">das</option>
+<option value="3">dem</option>
+<option value="4">die</option>
+<option value="4">die</option>
+<option value="2">den</option>
+</select>
+Problem.
+</td>
+<td><nobr>
+<input type=button value="OK" onClick="fasitc(this.form)">
+</td>
+</tr>
+<tr>
+<td><nobr>
+<select name="d">
+<option value="0"></option>
+<option value="1">Der</option>
+<option value="2">Den</option>
+<option value="3">Dem</option>
+<option value="4">Die</option>
+<option value="4">Die</option>
+<option value="1">Der</option>
+<option value="5">Das</option>
+<option value="5">Das</option>
+<option value="3">Dem</option>
+<option value="4">Die</option>
+<option value="4">Die</option>
+<option value="2">Den</option>
+</select>
+Freunde haben
+<select name="dd">
+<option value="0"></option>
+<option value="1">der</option>
+<option value="2">den</option>
+<option value="3">dem</option>
+<option value="4">die</option>
+<option value="4">die</option>
+<option value="1">der</option>
+<option value="5">das</option>
+<option value="5">das</option>
+<option value="3">dem</option>
+<option value="4">die</option>
+<option value="4">die</option>
+<option value="2">den</option>
+</select>
+Weltmeister gratuliert.
+</td>
+<td><nobr>
+<input type=button value="OK" onClick="fasitd(this.form)">
+</td>
+</tr>
+<tr>
+<td><nobr>
+<select name="e">
+<option value="0"></option>
+<option value="1">Ein</option>
+<option value="2">Einen</option>
+<option value="3">Einem</option>
+<option value="4">Eine</option>
+<option value="4">Eine</option>
+<option value="5">Einer</option>
+<option value="1">Ein</option>
+<option value="1">Ein</option>
+<option value="3">Einem</option>
+</select>
+Mädchen hat
+<select name="ee">
+<option value="0"></option>
+<option value="1">der</option>
+<option value="2">den</option>
+<option value="3">dem</option>
+<option value="4">die</option>
+<option value="4">die</option>
+<option value="1">der</option>
+<option value="5">das</option>
+<option value="5">das</option>
+<option value="3">dem</option>
+<option value="4">die</option>
+<option value="4">die</option>
+<option value="2">den</option>
+</select>
+Mann und
+<select name="eee">
+<option value="0"></option>
+<option value="1">der</option>
+<option value="2">den</option>
+<option value="3">dem</option>
+<option value="4">die</option>
+<option value="4">die</option>
+<option value="1">der</option>
+<option value="5">das</option>
+<option value="5">das</option>
+<option value="3">dem</option>
+<option value="4">die</option>
+<option value="4">die</option>
+<option value="2">den</option>
+</select>
+Frau gesehen.
+</td>
+<td><nobr>
+<input type=button value="OK" onClick="fasite(this.form)">
+</td>
+</tr>
+<tr>
+<td><nobr>
+<select name="f">
+<option value="0"></option>
+<option value="1">Ein</option>
+<option value="2">Einen</option>
+<option value="3">Einem</option>
+<option value="4">Eine</option>
+<option value="4">Eine</option>
+<option value="5">Einer</option>
+<option value="1">Ein</option>
+<option value="1">Ein</option>
+<option value="3">Einem</option>
+</select>
+Ärztin hat
+<select name="ff">
+<option value="0"></option>
+<option value="1">der</option>
+<option value="2">den</option>
+<option value="3">dem</option>
+<option value="4">die</option>
+<option value="4">die</option>
+<option value="1">der</option>
+<option value="5">das</option>
+<option value="5">das</option>
+<option value="3">dem</option>
+<option value="4">die</option>
+<option value="4">die</option>
+<option value="2">den</option>
+</select>
+Frauen geholfen.
+</td>
+<td><nobr>
+<input type=button value="OK" onClick="fasitf(this.form)">
+</td>
+</tr>
+<tr>
+<td><nobr>
+<select name="g">
+<option value="0"></option>
+<option value="1">Der</option>
+<option value="2">Den</option>
+<option value="3">Dem</option>
+<option value="4">Die</option>
+<option value="4">Die</option>
+<option value="1">Der</option>
+<option value="5">Das</option>
+<option value="5">Das</option>
+<option value="3">Dem</option>
+<option value="4">Die</option>
+<option value="4">Die</option>
+<option value="2">Den</option>
+</select>
+neue Wagen ist
+<select name="gg">
+<option value="0"></option>
+<option value="1">ein</option>
+<option value="2">einen</option>
+<option value="3">einem</option>
+<option value="4">eine</option>
+<option value="4">eine</option>
+<option value="5">einer</option>
+<option value="1">ein</option>
+<option value="1">ein</option>
+<option value="3">einem</option>
+</select>
+Volkswagen.
+</td>
+<td><nobr>
+<input type=button value="OK" onClick="fasitg(this.form)">
+</td>
+</tr>
+<tr>
+<td><nobr>
+<select name="h">
+<option value="0"></option>
+<option value="1">Der</option>
+<option value="2">Den</option>
+<option value="3">Dem</option>
+<option value="4">Die</option>
+<option value="4">Die</option>
+<option value="1">Der</option>
+<option value="5">Das</option>
+<option value="5">Das</option>
+<option value="3">Dem</option>
+<option value="4">Die</option>
+<option value="4">Die</option>
+<option value="2">Den</option>
+</select>
+Lehrer hat
+<select name="hh">
+<option value="0"></option>
+<option value="1">der</option>
+<option value="2">den</option>
+<option value="3">dem</option>
+<option value="4">die</option>
+<option value="4">die</option>
+<option value="1">der</option>
+<option value="5">das</option>
+<option value="5">das</option>
+<option value="3">dem</option>
+<option value="4">die</option>
+<option value="4">die</option>
+<option value="2">den</option>
+</select>
+Schülerin
+<select name="hhh">
+<option value="0"></option>
+<option value="1">der</option>
+<option value="2">den</option>
+<option value="3">dem</option>
+<option value="4">die</option>
+<option value="4">die</option>
+<option value="1">der</option>
+<option value="5">das</option>
+<option value="5">das</option>
+<option value="3">dem</option>
+<option value="4">die</option>
+<option value="4">die</option>
+<option value="2">den</option>
+</select>
+Wahrheit gesagt.
+</td>
+<td><nobr>
+<input type=button value="OK" onClick="fasith(this.form)">
+</td>
+</tr>
+<tr>
+<td><nobr>
+<select name="i">
+<option value="0"></option>
+<option value="1">Der</option>
+<option value="2">Den</option>
+<option value="3">Dem</option>
+<option value="4">Die</option>
+<option value="4">Die</option>
+<option value="1">Der</option>
+<option value="5">Das</option>
+<option value="5">Das</option>
+<option value="3">Dem</option>
+<option value="4">Die</option>
+<option value="4">Die</option>
+<option value="2">Den</option>
+</select>
+Tourist hat
+<select name="ii">
+<option value="0"></option>
+<option value="1">ein</option>
+<option value="2">einen</option>
+<option value="3">einem</option>
+<option value="4">eine</option>
+<option value="4">eine</option>
+<option value="5">einer</option>
+<option value="1">ein</option>
+<option value="1">ein</option>
+<option value="3">einem</option>
+</select>
+Tasse Kaffee getrunken.
+</td>
+<td><nobr>
+<input type=button value="OK" onClick="fasiti(this.form)">
+</td>
+</tr>
+<tr>
+<td><nobr>
+<select name="j">
+<option value="0"></option>
+<option value="1">Der</option>
+<option value="2">Den</option>
+<option value="3">Dem</option>
+<option value="4">Die</option>
+<option value="4">Die</option>
+<option value="1">Der</option>
+<option value="5">Das</option>
+<option value="5">Das</option>
+<option value="3">Dem</option>
+<option value="4">Die</option>
+<option value="4">Die</option>
+<option value="2">Den</option>
+</select>
+Buch gefällt
+<select name="jj">
+<option value="0"></option>
+<option value="1">der</option>
+<option value="2">den</option>
+<option value="3">dem</option>
+<option value="4">die</option>
+<option value="4">die</option>
+<option value="1">der</option>
+<option value="5">das</option>
+<option value="5">das</option>
+<option value="3">dem</option>
+<option value="4">die</option>
+<option value="4">die</option>
+<option value="2">den</option>
+</select>
+jungen Leser.
+</td>
+<td><nobr>
+<input type=button value="OK" onClick="fasitj(this.form)">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="100%">
+<tr>
+</tr>
+<tr>
+<td><b><font face="Arial" size="2">Antall rette svar:</font></b>&nbsp;<input type="text" name="poeng" value="0" size=2 onChange="juks(this.form)"></td>
+      <td><a href="analyse.html#fire" target="blank"><font color="#000000"><b>Regler 
+        og bøyningsmønster</b></font></a></td>
+</tr>
+<tr>
+      <td><a href="analyse.html"><font color="#000000"><b>Hovedside for analyse</b></font></a></td>
+<td><a href="tygram.html"><font color="#000000"><b>Hovedside for tysk grammatikk</b></font></a></td>
+</tr>
+</table>
+</form>
+</body>
+</html>

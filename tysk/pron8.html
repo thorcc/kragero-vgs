@@ -1,0 +1,1005 @@
+<html>
+<head>
+<title>Relativpronomen 3: utfylling</title>
+<meta http-equiv="Expires" Content="0">
+<meta http-equiv="Pragma" Content="no-cache">
+<style type="text/css">
+a {font-family: Arial; font-size: 10pt; font-weight: bold; color: #000066; text-decoration: none;}
+</style>
+<script language="JavaScript">
+var a
+var b
+var c
+var d
+var e
+var f
+var g
+var h
+var i
+var j
+var k
+var l
+var m
+var n
+var o
+var p
+var q
+var r
+var s
+var t
+var u
+var v
+var w
+var x
+var y
+var z
+var aa
+var bb
+var cc
+var dd
+var poeng=0;
+function svara(form) {
+if (form.a.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  } else {
+if (form.a.value=="das") {
+  alert("Pronomenet peker tilbake til et intetkjønnsord, men husk at 'in' styrer dativ på stedet. Prøv igjen!");
+  form.a.value="";
+  form.a.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else { 
+if (form.a.value=="dem") {
+  alert("Riktig! Pronomenet peker tilbake til et intetkjønnsord, og 'in' styrer dativ på stedet.");
+  form.a.value="dem";
+  form.a.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+  } else {
+  alert("Her er det noe galt. Prøv igjen!");
+  form.a.value="";
+  form.a.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+      }
+    }
+  }
+}
+function svarb(form) {
+if (form.b.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  } else {
+if ((form.b.value=="der")||(form.b.value=="dem")) {
+  alert("Pronomenet peker tilbake til et hankjønnsord, men husk at det er direkte objekt/akkusativ i leddsetningen. Prøv igjen!");
+  form.b.value="";
+  form.b.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else { 
+if (form.b.value=="den") {
+  alert("Riktig! Pronomenet peker tilbake til et hankjønnsord, og det er direkte objekt/akkusativ i leddsetningen.");
+  form.b.value="den";
+  form.b.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+  } else {
+  alert("Her er det noe galt. Prøv igjen!");
+  form.b.value="";
+  form.b.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+      }
+    }
+  }
+}
+function svarc(form) {
+if (form.c.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  } else {
+if (form.c.value=="die") {
+  alert("Pronomenet peker tilbake til et hunkjønnsord, men husk at 'aus' alltid styrer dativ. Prøv igjen!");
+  form.c.value="";
+  form.c.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else { 
+if (form.c.value=="der") {
+  alert("Riktig! Pronomenet peker tilbake til et hunkjønnsord, og 'aus' styrer alltid dativ.");
+  form.c.value="der";
+  form.c.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+  } else {
+  alert("Her er det noe galt. Prøv igjen!");
+  form.c.value="";
+  form.c.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+      }
+    }
+  }
+}
+function svard(form) {
+if (form.d.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  } else {
+if ((form.d.value=="der")||(form.d.value=="den")||(form.d.value=="die")) {
+  alert("Pronomenet peker tilbake til et flertallsord, ikke hankjønn, men husk at 'mit' alltid styrer dativ. Prøv igjen!");
+  form.d.value="";
+  form.d.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else { 
+if (form.d.value=="denen") {
+  alert("Riktig! Pronomenet peker tilbake til et flertallsord, og 'mit' alltid styrer dativ.");
+  form.d.value="denen";
+  form.d.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+  } else {
+  alert("Her er det noe galt. Prøv igjen!");
+  form.d.value="";
+  form.d.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+      }
+    }
+  }
+}
+function svare(form) {
+if (form.e.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  } else {
+if ((form.e.value=="der")||(form.e.value=="dem")) {
+  alert("Pronomenet peker tilbake til et hankjønnsord, men husk at det er direkte objekt/akkusativ i leddsetningen. Prøv igjen!");
+  form.e.value="";
+  form.e.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else { 
+if (form.e.value=="den") {
+  alert("Riktig! Pronomenet peker tilbake til et hankjønnsord, og det er direkte objekt/akkusativ i leddsetningen.");
+  form.e.value="den";
+  form.e.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+  } else {
+  alert("Her er det noe galt. Prøv igjen!");
+  form.e.value="";
+  form.e.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+      }
+    }
+  }
+}
+function svarf(form) {
+if (form.f.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  } else {
+if (form.f.value=="der") {
+  alert("Pronomenet peker tilbake til et hunkjønnsord, og det er direkte objekt/akkusativ i leddsetningen. Prøv igjen!");
+  form.f.value="";
+  form.f.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else { 
+if (form.f.value=="die") {
+  alert("Riktig! Pronomenet peker tilbake til et hunkjønnsord, og det er direkte objekt/akkusativ i leddsetningen.");
+  form.f.value="die";
+  form.f.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+  } else {
+  alert("Her er det noe galt. Prøv igjen!");
+  form.f.value="";
+  form.f.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+      }
+    }
+  }
+}
+function svarg(form) {
+if (form.g.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  } else {
+if ((form.g.value=="der")||(form.g.value=="den")) {
+  alert("Pronomenet peker tilbake til et hankjønnsord, men husk at 'auf' styrer dativ på stedet. Prøv igjen!");
+  form.g.value="";
+  form.g.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else { 
+if (form.g.value=="dem") {
+  alert("Riktig! Pronomenet peker tilbake til et hankjønnsord, og 'auf' styrer dativ på stedet.");
+  form.g.value="dem";
+  form.g.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+  } else {
+  alert("Her er det noe galt. Prøv igjen!");
+  form.g.value="";
+  form.g.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+      }
+    }
+  }
+}
+function svarh(form) {
+if (form.h.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  } else {
+if (form.h.value=="das") {
+  alert("Det er nok intetkjønn, men husk hva det blir når pronomenet peker tilbake til 'alles' m.fl. Prøv igjen!");
+  form.h.value="";
+  form.h.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else { 
+if (form.h.value=="was") {
+  alert("Riktig! Det blir 'was' når pronomenet peker tilbake til 'alles' m.fl.");
+  form.h.value="was";
+  form.h.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+  } else {
+  alert("Her er det noe galt. Prøv igjen!");
+  form.h.value="";
+  form.h.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+      }
+    }
+  }
+}
+function svari(form) {
+if (form.i.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  } else {
+if (form.i.value=="dem") {
+  alert("Pronomenet peker tilbake til et intetkjønnsord, men husk at 'in' styrer akkusativ ved bevegelse til stedet. Prøv igjen!");
+  form.i.value="";
+  form.i.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else { 
+if (form.i.value=="das") {
+  alert("Riktig! Pronomenet peker tilbake til et intetkjønnsord, og 'in' styrer akkusativ ved bevegelse til stedet.");
+  form.i.value="das";
+  form.i.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+  } else {
+  alert("Her er det noe galt. Prøv igjen!");
+  form.i.value="";
+  form.i.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+      }
+    }
+  }
+}
+function svarj(form) {
+if (form.j.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  } else {
+if (form.j.value=="dem") {
+  alert("Pronomenet peker tilbake til et intetkjønnsord, men husk at det er subjekt/nominativ i leddsetningen. Prøv igjen!");
+  form.j.value="";
+  form.j.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else { 
+if (form.j.value=="das") {
+  alert("Riktig! Pronomenet peker tilbake til et intetkjønnsord, og det er subjekt/nominativ i leddsetningen.");
+  form.j.value="das";
+  form.j.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+  } else {
+  alert("Her er det noe galt. Prøv igjen!");
+  form.j.value="";
+  form.j.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+      }
+    }
+  }
+}
+function svark(form) {
+if (form.k.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  } else {
+if (form.k.value=="das") {
+  alert("Det er nok intetkjønn, men husk hva det blir når pronomenet peker tilbake til 'das' m.fl. Prøv igjen!");
+  form.k.value="";
+  form.k.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else { 
+if (form.k.value=="was") {
+  alert("Riktig! Det blir 'was' når pronomenet peker tilbake til 'das' m.fl.");
+  form.k.value="was";
+  form.k.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+  } else {
+  alert("Her er det noe galt. Prøv igjen!");
+  form.k.value="";
+  form.k.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+      }
+    }
+  }
+}
+function svarl(form) {
+if (form.l.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  } else {
+if (form.l.value=="denen") {
+  alert("Pronomenet peker tilbake til et flertallsord, men husk at det er subjekt/nominativ i leddsetningen. Prøv igjen!");
+  form.l.value="";
+  form.l.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else { 
+if (form.l.value=="die") {
+  alert("Riktig! Pronomenet peker tilbake til et flertallsord, og det er subjekt/nominativ i leddsetningen.");
+  form.l.value="die";
+  form.l.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+  } else {
+  alert("Her er det noe galt. Prøv igjen!");
+  form.l.value="";
+  form.l.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+      }
+    }
+  }
+}
+function svarm(form) {
+if (form.m.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  } else {
+if (form.m.value=="die") {
+  alert("Pronomenet peker tilbake til et flertallsord, men husk at 'bei' alltid styrer dativ. Prøv igjen!");
+  form.m.value="";
+  form.m.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else { 
+if (form.m.value=="denen") {
+  alert("Riktig! Pronomenet peker tilbake til et flertallsord, og 'bei' styrer alltid dativ.");
+  form.m.value="denen";
+  form.m.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+  } else {
+  alert("Her er det noe galt. Prøv igjen!");
+  form.m.value="";
+  form.m.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+      }
+    }
+  }
+}
+function svarn(form) {
+if (form.n.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  } else {
+if (form.n.value=="der") {
+  alert("Pronomenet peker tilbake til et hunkjønnsord, men husk at 'für' alltid styrer akkusativ. Prøv igjen!");
+  form.n.value="";
+  form.n.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else { 
+if (form.n.value=="die") {
+  alert("Riktig! Pronomenet peker tilbake til et hunkjønnsord, og 'für' styrer alltid akkusativ.");
+  form.n.value="die";
+  form.n.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+  } else {
+  alert("Her er det noe galt. Prøv igjen!");
+  form.n.value="";
+  form.n.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+      }
+    }
+  }
+}
+function svaro(form) {
+if (form.o.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  } else {
+if ((form.o.value=="der")||(form.o.value=="den")) {
+  alert("Pronomenet peker tilbake til et hankjønnsord, men husk at 'helfen' tar dativ. Prøv igjen!");
+  form.o.value="";
+  form.o.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else { 
+if (form.o.value=="dem") {
+  alert("Riktig! Pronomenet peker tilbake til et hankjønnsord, og 'helfen' tar dativ.");
+  form.o.value="dem";
+  form.o.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+  } else {
+  alert("Her er det noe galt. Prøv igjen!");
+  form.o.value="";
+  form.o.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+      }
+    }
+  }
+}
+function svarp(form) {
+if (form.p.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  } else {
+if ((form.p.value=="der")||(form.p.value=="dem")) {
+  alert("Pronomenet peker tilbake til et hankjønnsord, men husk at det er direkte objekt/akkusativ i leddsetningen. Prøv igjen!");
+  form.p.value="";
+  form.p.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else { 
+if (form.p.value=="den") {
+  alert("Riktig! Pronomenet peker tilbake til et hankjønnsord, og det er direkte objekt/akkusativ i leddsetningen.");
+  form.p.value="den";
+  form.p.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+  } else {
+  alert("Her er det noe galt. Prøv igjen!");
+  form.p.value="";
+  form.p.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+      }
+    }
+  }
+}
+function svarq(form) {
+if (form.q.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  } else {
+if ((form.q.value=="den")||(form.q.value=="dem")) {
+  alert("Pronomenet peker tilbake til et hankjønnsord, men husk at det er subjekt/nominativ i leddsetningen. Prøv igjen!");
+  form.q.value="";
+  form.q.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else { 
+if (form.q.value=="der") {
+  alert("Riktig! Pronomenet peker tilbake til et hankjønnsord, og det er subjekt/nominativ i leddsetningen.");
+  form.q.value="der";
+  form.q.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+  } else {
+  alert("Her er det noe galt. Prøv igjen!");
+  form.q.value="";
+  form.q.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+      }
+    }
+  }
+}
+function svarr(form) {
+if (form.r.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  } else {
+if (form.r.value=="die") {
+  alert("Pronomenet peker tilbake til et flertallsord, men husk at 'in' styrer dativ på stedet. Prøv igjen!");
+  form.r.value="";
+  form.r.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else { 
+if (form.r.value=="denen") {
+  alert("Riktig! Pronomenet peker tilbake til et flertallsord, og 'in' styrer dativ på stedet.");
+  form.r.value="denen";
+  form.r.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+  } else {
+  alert("Her er det noe galt. Prøv igjen!");
+  form.r.value="";
+  form.r.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+      }
+    }
+  }
+}
+function svars(form) {
+if (form.s.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  } else {
+if (form.s.value=="das") {
+  alert("Pronomenet peker tilbake til et intetkjønnsord, men husk at 'von' alltid styrer dativ. Prøv igjen!");
+  form.s.value="";
+  form.s.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else { 
+if (form.s.value=="dem") {
+  alert("Riktig! Pronomenet peker tilbake til et intetkjønnsord, og 'von' styrer alltid dativ.");
+  form.s.value="dem";
+  form.s.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+  } else {
+  alert("Her er det noe galt. Prøv igjen!");
+  form.s.value="";
+  form.s.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+      }
+    }
+  }
+}
+function svart(form) {
+if (form.t.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  } else {
+if (form.t.value=="das") {
+  alert("Det er nok intetkjønn, men husk hva det blir når pronomenet peker tilbake til 'nichts' m.fl. Prøv igjen!");
+  form.t.value="";
+  form.t.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else { 
+if (form.t.value=="was") {
+  alert("Riktig! Det blir 'was' når pronomenet peker tilbake til 'nichts' m.fl.");
+  form.t.value="was";
+  form.t.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+  } else {
+  alert("Her er det noe galt. Prøv igjen!");
+  form.t.value="";
+  form.t.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+      }
+    }
+  }
+}
+function svaru(form) {
+if (form.u.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  } else {
+if (form.u.value=="das") {
+  alert("Pronomenet peker tilbake til et intetkjønnsord, men husk at det er indirekte objekt/dativ i leddsetningen. Prøv igjen!");
+  form.u.value="";
+  form.u.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else { 
+if (form.u.value=="dem") {
+  alert("Riktig! Pronomenet peker tilbake til et intetkjønnsord, og det er indirekte objekt/dativ i leddsetningen.");
+  form.u.value="dem";
+  form.u.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+  } else {
+  alert("Her er det noe galt. Prøv igjen!");
+  form.u.value="";
+  form.u.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+      }
+    }
+  }
+}
+function svarv(form) {
+if (form.v.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  } else {
+if ((form.v.value=="die")||(form.v.value=="dem")) {
+  alert("Pronomenet peker tilbake til et hunkjønnsord, men husk at 'in' styrer dativ på stedet. Prøv igjen!");
+  form.v.value="";
+  form.v.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else { 
+if (form.v.value=="der") {
+  alert("Riktig! Pronomenet peker tilbake til et hunkjønnsord, og 'in' styrer dativ på stedet.");
+  form.v.value="der";
+  form.v.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+  } else {
+  alert("Her er det noe galt. Prøv igjen!");
+  form.v.value="";
+  form.v.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+      }
+    }
+  }
+}
+function svarw(form) {
+if (form.w.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  } else {
+if (form.w.value=="der") {
+  alert("Pronomenet peker tilbake til et hunkjønnsord, men husk at det er subjekt/nominativ i leddsetningen. Prøv igjen!");
+  form.w.value="";
+  form.w.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else { 
+if (form.w.value=="die") {
+  alert("Riktig! Pronomenet peker tilbake til et hunkjønnsord, og det er subjekt/nominativ i leddsetningen.");
+  form.w.value="die";
+  form.w.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+  } else {
+  alert("Her er det noe galt. Prøv igjen!");
+  form.w.value="";
+  form.w.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+      }
+    }
+  }
+}
+function svarx(form) {
+if (form.x.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  } else {
+if ((form.x.value=="der")||(form.x.value=="dem")) {
+  alert("Pronomenet peker tilbake til et hankjønnsord, men husk at det er direkte objekt/akkusativ i leddsetningen. Prøv igjen!");
+  form.x.value="";
+  form.x.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else { 
+if (form.x.value=="den") {
+  alert("Riktig! Pronomenet peker tilbake til et hankjønnsord, og det er direkte objekt/akkusativ i leddsetningen.");
+  form.x.value="den";
+  form.x.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+  } else {
+  alert("Her er det noe galt. Prøv igjen!");
+  form.x.value="";
+  form.x.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+      }
+    }
+  }
+}
+function svary(form) {
+if (form.y.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  } else {
+if ((form.y.value=="der")||(form.y.value=="dem")) {
+  alert("Pronomenet peker tilbake til et hankjønnsord, men merk at det er direkte objekt/akkusativ i leddsetningen. Prøv igjen!");
+  form.y.value="";
+  form.y.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else { 
+if (form.y.value=="den") {
+  alert("Riktig! Pronomenet peker tilbake til et hankjønnsord, og det er direkte objekt/akkusativ i leddsetningen.");
+  form.y.value="den";
+  form.y.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+  } else {
+  alert("Her er det noe galt. Prøv igjen!");
+  form.y.value="";
+  form.y.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+      }
+    }
+  }
+}
+function svarz(form) {
+if (form.z.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  } else {
+if (form.z.value=="der") {
+  alert("Pronomenet peker tilbake til et hunkjønnsord, men merk at det er subjekt/nominativ i leddsetningen. Prøv igjen!");
+  form.z.value="";
+  form.z.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else { 
+if (form.z.value=="die") {
+  alert("Riktig! Pronomenet peker tilbake til et intetkjønnsord, og det er subjekt/nominativ i leddsetningen.");
+  form.z.value="die";
+  form.z.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+  } else {
+  alert("Her er det noe galt. Prøv igjen!");
+  form.z.value="";
+  form.z.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+      }
+    }
+  }
+}
+function svaraa(form) {
+if (form.aa.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  } else {
+if (form.aa.value=="das") {
+  alert("Det er nok intetkjønn, men husk hva det blir når pronomenet peker tilbake til 'etwas' m.fl. Prøv igjen!");
+  form.aa.value="";
+  form.aa.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else { 
+if (form.aa.value=="was") {
+  alert("Riktig! Det blir 'was' når pronomenet peker tilbake til 'etwas' m.fl.");
+  form.aa.value="was";
+  form.aa.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+  } else {
+  alert("Her er det noe galt. Prøv igjen!");
+  form.aa.value="";
+  form.aa.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+      }
+    }
+  }
+}
+function svarbb(form) {
+if (form.bb.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  } else {
+if ((form.bb.value=="der")||(form.bb.value=="den")) {
+  alert("Pronomenet peker tilbake til et hankjønnsord, men husk at 'in' styrer dativ på stedet. Prøv igjen!");
+  form.bb.value="";
+  form.bb.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else { 
+if (form.bb.value=="dem") {
+  alert("Riktig! Pronomenet peker tilbake til et hankjønnsord, og 'in' styrer dativ på stedet.");
+  form.bb.value="dem";
+  form.bb.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+  } else {
+  alert("Her er det noe galt. Prøv igjen!");
+  form.bb.value="";
+  form.bb.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+      }
+    }
+  }
+}
+function svarcc(form) {
+if (form.cc.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  } else {
+if (form.cc.value=="die") {
+  alert("Pronomenet peker tilbake til et flertallsord, men merk at 'helfen' tar dativ. Prøv igjen!");
+  form.cc.value="";
+  form.cc.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else { 
+if (form.cc.value=="denen") {
+  alert("Riktig! Pronomenet peker tilbake til et flertallsord, og 'helfen' tar dativ.");
+  form.cc.value="denen";
+  form.cc.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+  } else {
+  alert("Her er det noe galt. Prøv igjen!");
+  form.cc.value="";
+  form.cc.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+      }
+    }
+  }
+}
+function svardd(form) {
+if (form.dd.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  } else {
+if ((form.dd.value=="dem")||(form.dd.value=="der")) {
+  alert("Preposisjonen 'mit' styrer dativ, men merk at pronomenet peker tilbake til et flertallsord. Prøv igjen!");
+  form.dd.value="";
+  form.dd.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else { 
+if (form.dd.value=="denen") {
+  alert("Riktig! Pronomenet peker tilbake til et flertallsord, og 'mit' styrer alltid dativ.");
+  form.dd.value="denen";
+  form.dd.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+  } else {
+  alert("Her er det noe galt. Prøv igjen!");
+  form.dd.value="";
+  form.dd.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+      }
+    }
+  }
+}
+function juks(form) {
+alert("Du prøver vel ikke å jukse med poeng?");
+poeng=poeng+0;
+form.poeng.value=poeng;
+}
+</script>
+</head>
+<body bgcolor="#99ccff">
+<h3 align="center">Relativpronomen 3: utfylling</h3>
+<p align="justify">
+Sett inn rett form av <b>relativpronomenet</b>. Bruk <b>sm&aring; bokstaver.</b> 
+Er svaret galt, kan du fortsette til du har klart det. Du f&aring;r ett minuspoeng 
+for hvert mislykte fors&oslash;k i feltet nederst, mens det er to plusspoeng for riktig svar. 
+<form>
+<table bgcolor="#666666" width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td>
+<table bgcolor="#ccff66" width="100%">
+<tr>
+<td>
+<nobr>Das ist das Haus, in <input type="text" name="a" value="" size=5 onChange="svara(this.form)"> wir wohnen.
+</td>
+<td>
+<nobr>Der Mann, <input type="text" name="b" value="" size=5 onChange="svarb(this.form)"> ich besuche, ist mein Vetter.
+</td>
+</tr>
+<tr>
+<td>
+<nobr>Die Stadt, aus <input type="text" name="c" value="" size=5 onChange="svarc(this.form)"> er kommt, ist klein.
+</td>
+<td>
+<nobr>Die Männer, mit <input type="text" name="d" value="" size=5 onChange="svard(this.form)"> ich sprach, sind Russen.
+</td>
+</tr>
+<tr>
+<td>
+<nobr>Er ist ein Junge, <input type="text" name="e" value="" size=5 onChange="svare(this.form)"> ich oft treffe.
+</td>
+<td>
+<nobr>Die Jacke, <input type="text" name="f" value="" size=5 onChange="svarf(this.form)"> sie kaufte, war teuer.
+</td>
+</tr>
+<tr>
+<td>
+<nobr>Wo ist der Platz, auf <input type="text" name="g" value="" size=5 onChange="svarg(this.form)"> ich saß?
+</td>
+<td>
+<nobr>Das ist alles, <input type="text" name="h" value="" size=5 onChange="svarh(this.form)"> ich weiß.
+</td>
+</tr>
+<tr>
+<td>
+<nobr>Da liegt das Lokal, in <input type="text" name="i" value="" size=5 onChange="svari(this.form)"> ich ging.
+</td>
+<td>
+<nobr>Da siehst du das Boot, <input type="text" name="j" value="" size=5 onChange="svarj(this.form)"> mir gehört.
+</td>
+</tr>
+<tr>
+<td>
+<nobr>Das, <input type="text" name="k" value="" size=5 onChange="svark(this.form)"> du sagst, ist falsch!.
+</td>
+<td>
+<nobr>Er wohnt bei den Eltern, <input type="text" name="l" value="" size=5 onChange="svarl(this.form)"> viel Geld haben.
+</td>
+</tr>
+<tr>
+<td>
+<nobr>Die Leute, bei <input type="text" name="m" value="" size=5 onChange="svarm(this.form)"> ich wohne, sind alt.
+</td>
+<td>
+<nobr>Die Frau, für <input type="text" name="n" value="" size=5 onChange="svarn(this.form)"> ich arbeite, ist nett.
+</td>
+</tr>
+<tr>
+<td>
+<nobr>Der D&auml;ne, <input type="text" name="o" value="" size=5 onChange="svaro(this.form)"> ich geholfen habe, ist da.
+</td>
+<td>
+<nobr>Kennst du den Mann, <input type="text" name="p" value="" size=5 onChange="svarp(this.form)"> ich besuchte?
+</td>
+</tr>
+<tr>
+<td>
+<nobr>Ich habe einen Sohn, <input type="text" name="q" value="" size=5 onChange="svarq(this.form)"> im Garten sitzt.
+</td>
+<td>
+<nobr>Die Häuser, in <input type="text" name="r" value="" size=5 onChange="svarr(this.form)"> sie wohnen, sind gelb.
+</td>
+</tr>
+<tr>
+<td>
+<nobr>Was ist das Thema, von <input type="text" name="s" value="" size=5 onChange="svars(this.form)"> er spricht?
+</td>
+<td>
+<nobr>Ich habe nichts gesagt, <input type="text" name="t" value="" size=5 onChange="svart(this.form)"> nicht stimmt.
+</td>
+</tr>
+<tr>
+<td>
+<nobr>Da ist das Kind, <input type="text" name="u" value="" size=5 onChange="svaru(this.form)"> jemand das Geld stahl.
+</td>
+<td>
+<nobr>Die Wohnung, in <input type="text" name="v" value="" size=5 onChange="svarv(this.form)"> er wohnt, ist groß.
+</td>
+</tr>
+<tr>
+<td>
+<nobr>Er wohnt bei der Frau, <input type="text" name="w" value="" size=5 onChange="svarw(this.form)"> das Auto f&auml;hrt.
+</td>
+<td>
+<nobr>Der Artikel, <input type="text" name="x" value="" size=5 onChange="svarx(this.form)"> ich gelesen habe, ist sehr kurz.
+</td>
+</tr>
+<tr>
+<td>
+<nobr>Das ist der Stuhl, <input type="text" name="y" value="" size=5 onChange="svary(this.form)"> ich holte.
+</td>
+<td>
+<nobr>Er kennt die D&auml;nin, <input type="text" name="z" value="" size=5 onChange="svarz(this.form)"> f&uuml;r die Firma arbeitet.
+</td>
+</tr>
+<tr>
+<td>
+<nobr>Hast du etwas erlebt, <input type="text" name="aa" value="" size=5 onChange="svaraa(this.form)"> dir gefällt?
+</td>
+<td>
+<nobr>Der Wagen, in <input type="text" name="bb" value="" size=5 onChange="svarbb(this.form)"> er saß, war elegant.
+</td>
+</tr>
+<tr>
+<td>
+<nobr>Das sind Leute, <input type="text" name="cc" value="" size=5 onChange="svarcc(this.form)"> ich gern helfe.
+</td>
+<td>
+<nobr>Da sind die Kinder, mit <input type="text" name="dd" value="" size=5 onChange="svardd(this.form)"> ich sprach.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="100%">
+<tr>
+<td><b><font face="Arial" size="2">Antall poeng:</font></b>&nbsp;<input type="text" name="poeng" value="0" size=3 onChange="juks(this.form)"></td>
+<td><a href="pron.html#tre" target="blank"><font color="#000000"><b>Regler og b&oslash;yningsm&oslash;nster</b></font></a></td>
+</tr>
+<tr>
+<td><a href="pron.html"><font color="#000000"><b>Hovedside for pronomen</b></font></a></td>
+<td><a href="tygram.html"><font color="#000000"><b>Hovedside for tysk grammatikk</b></font></a></td>
+</tr>
+</table>
+</form>
+</body>
+</html>

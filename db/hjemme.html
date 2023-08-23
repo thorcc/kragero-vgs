@@ -1,0 +1,192 @@
+
+<HTML>
+<HEAD>
+<TITLE>info</TITLE>
+<SCRIPT LANGUAGE = "JavaScript">
+
+   var counter = 0;
+   var whichImage = 0;
+
+   function blend()
+   {
+      if ( whichImage ) {
+         image1.filters( "revealTrans" ).apply();
+         image1.style.visibility = "hidden";
+         image1.filters( "revealTrans" ).play();
+      }
+      else {
+         image2.filters( "revealTrans" ).apply();
+         image2.style.visibility = "hidden";
+         image2.filters( "revealTrans" ).play();
+      }
+   }
+
+   function reBlend ( fromImage )
+   {
+      counter++;
+
+      if ( fromImage ) {
+         image1.style.zIndex -= 2;
+         image1.style.visibility = "visible";
+         image2.filters("revealTrans").transition = counter % 24;
+      }
+      else {
+         image1.style.zIndex += 2;
+         image2.style.visibility = "visible";
+         image1.filters("revealTrans").transition = counter % 24;
+      }
+
+      whichImage = !whichImage;
+      blend();
+   }
+
+</SCRIPT>
+<style type="text/css">
+a {font-family: Arial; font-size: 11pt; font-weight: bold; color: #000066; text-decoration: none}
+</style>
+</HEAD>
+<BODY ONLOAD = "blend()" bgcolor="#99ccff">
+<table bgcolor="#99ccff" align=center border=2 cellspacing=0 cellpadding=0 frame=above width=100%>
+<tr>
+<td width=100%>
+<table width=100% border=0 cellpadding=0 cellspacing=0>
+<tr>
+<td align=center>
+<table width=100% align=center cellspacing=0 cellpadding=1 height=21 style="border-top: none; border-right: solid; border-bottom: solid; border-left: solid; border-width: 1px; border-color: #666666">
+<tr>
+<td background="..\images\fylkesbg.jpg" align=center>
+<a href="hjemme.html" target="innmat"><font color="#ffffff"><nobr>Hjem</font>
+</a></td>
+</tr>
+</table>
+</td>
+<td width=2 border=0 cellspacing=0 cellpadding=0>
+</td>
+<td align=center>
+<table width=100% align=center cellspacing=0 cellpadding=1 height=21 style="border-top: none; border-right: solid; border-bottom: solid; border-left: solid; border-width: 1px; border-color: #666666">
+<tr>
+<td bgcolor="#ffffff" align=center>
+<a href="..\hjemme.html" target="innmat"><nobr>KVS & Krager&oslash;
+</a></td>
+</tr>
+</table>
+</td>
+<td width=2 border=0 cellspacing=0 cellpadding=0>
+</td>
+<td align=center>
+<table width=100% align=center cellspacing=0 cellpadding=1 height=21 style="border-top: none; border-right: solid; border-bottom: solid; border-left: solid; border-width: 1px; border-color: #666666">
+<tr>
+<td bgcolor="#ffffff" align=center>
+<a href="..\skolehistorie.html" target="innmat"><nobr>Skolehistorie
+</a></td>
+</tr>
+</table>
+</td>
+<td width=2 border=0 cellspacing=0 cellpadding=0>
+</td>
+<td align=center>
+<table width=100% align=center cellspacing=0 cellpadding=1 height=21 style="border-top: none; border-right: solid; border-bottom: solid; border-left: solid; border-width: 1px; border-color: #666666">
+<tr>
+<td bgcolor="#ffffff" align=center>
+<a href="..\bygning.html" target="innmat"><nobr>Skolebygningen
+</a></td>
+</tr>
+</table>
+</td>
+<td width=2 border=0 cellspacing=0 cellpadding=0>
+</td>
+<td align=center>
+<table width=100% align=center cellspacing=0 cellpadding=1 height=21 style="border-top: none; border-right: solid; border-bottom: solid; border-left: solid; border-width: 1px; border-color: #666666">
+<tr>
+<td bgcolor="#ffffff" align=center>
+<a href="..\plattform.html" target="innmat"><nobr>Pedagogisk plattform
+</a></td>
+</tr>
+</table>
+</td>
+<td width=2 border=0 cellspacing=0 cellpadding=0>
+</td>
+<td align=center>
+<table width=100% align=center cellspacing=0 cellpadding=1 height=21 style="border-top: none; border-right: solid; border-bottom: solid; border-left: solid; border-width: 1px; border-color: #666666">
+<tr>
+<td bgcolor="#ffffff" align=center>
+<a href="..\arkiv.html" target="innmat"><nobr>Fra arkivet
+</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<p>
+<TABLE cellSpacing=0 cellPadding=0 width=580 border=0>
+  
+  <TR>
+    <TD vAlign=top align=left>
+<table cellspacing="2" bgcolor="#ffcc66" border="2" 
+style = "position: absolute; left: 10; top: 70; height: 188; width: 255">
+<tr>
+<td bgcolor="#ffffff">
+<table>
+<tr>
+<td height="156">
+<IMG ID = "image2" SRC = "..\images\kvs-vinter.jpg"
+   ONFILTERCHANGE = "reBlend(false )"
+   STYLE = "position: absolute; left: 6; top: 6;
+   filter: revealTrans( duration = 4, transition = 0 ); z-index: 1">
+
+<IMG ID = "image1" SRC = "..\images\kvs-sommer.jpg"
+   ONFILTERCHANGE = "reBlend( true )"
+   STYLE = "position: absolute; left: 6; top: 6;
+   filter: revealTrans( duration = 8, transition = 0 ); z-index: 2">
+</td>
+</tr>
+<tr>
+<td>
+<font face="Arial" size=1 color="#000000">
+Foto: Arvid Henriksen
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<BR>
+<table width="255" cellpadding="1" style="position: absolute; left: 10; top: 265">
+<tr>
+<td style="border-top: none; border-right: none; border-bottom: dotted; border-left: none; border-width: 4px; border-color: #ffffff">
+<FONT face=Arial color=#000066 size=2>
+<p align="justify">
+Hva skjuler seg bak murene på Kalstad? Disse websidene gir 
+      svaret!<br>&nbsp;</FONT>
+</td>
+</tr>
+<tr>
+<td>
+<FONT face=Arial color=#000066 
+      size=2>&nbsp;<br>Også Kragerø sentrum fortjener et bilde! </FONT>
+</td>
+</tr>
+</table>
+      <P>
+<table cellspacing="2" cellpadding="3" bgcolor="#ffcc66" border="2" 
+style = "position: absolute; left: 10; top: 370; height: 188; width: 255">
+        
+        <TR>
+          <TD bgColor="#ffffff">
+          <IMG src="..\images\krageroa.jpg"><BR><FONT 
+            face=Arial color=#000000 size=1>Foto: Arne-Fred Solbekk 
+        </FONT></TD></TR></TABLE><BR>
+</TD>
+<td valign="top" align="right" width="300">
+  <TABLE width="100%" cellspacing="0" cellpadding="1" bgColor="#99ccff" border="0" style="position: absolute; left: 290; top: 70">
+<tr><td align='right'><table width='100%' align='center' cellspacing='0' cellpadding='0' style='border-top: dotted; border-right: none; border-bottom: none; border-left: none; border-width: 4px; border-color: #ffffff'><tr><td align='left'><FONT face='Arial' color='#000066' size='2'><i>28.06.2006</i></font></td></tr><tr><td><font size='2' face='Arial' color='#000066'><p align='justify'>Bilder fra <a href="..\revy06.html">russerevyen</a> er endelig på plass.</font></td></tr><tr><td align='right'><font size='2' face='Arial' color='#000066'><i>AH</i></font></td></tr></table></td></tr><tr><td align='right'><table width='100%' align='center' cellspacing='0' cellpadding='0' style='border-top: dotted; border-right: none; border-bottom: none; border-left: none; border-width: 4px; border-color: #ffffff'><tr><td align='left'><FONT face='Arial' color='#000066' size='2'><i>21.06.2006</i></font></td></tr><tr><td><font size='2' face='Arial' color='#000066'><p align='justify'>KVS har hatt <a href="..\avslutning06.html">avslutning</a> for skoleåret 2005/06.</font></td></tr><tr><td align='right'><font size='2' face='Arial' color='#000066'><i>AH</i></font></td></tr></table></td></tr><tr><td align='right'><table width='100%' align='center' cellspacing='0' cellpadding='0' style='border-top: dotted; border-right: none; border-bottom: none; border-left: none; border-width: 4px; border-color: #ffffff'><tr><td align='left'><FONT face='Arial' color='#000066' size='2'><i>06.06.2006</i></font></td></tr><tr><td><font size='2' face='Arial' color='#000066'><p align='justify'>Idrettslinja startet <a href="..\dykking06.html">badesesongen</a> tidlig i vår - med dykking.</font></td></tr><tr><td align='right'><font size='2' face='Arial' color='#000066'><i>AH</i></font></td></tr></table></td></tr><tr><td align='right'><table width='100%' align='center' cellspacing='0' cellpadding='0' style='border-top: dotted; border-right: none; border-bottom: none; border-left: none; border-width: 4px; border-color: #ffffff'><tr><td align='left'><FONT face='Arial' color='#000066' size='2'><i>02.05.2006</i></font></td></tr><tr><td><font size='2' face='Arial' color='#000066'><p align='justify'>KVS har hatt besøk fra <a href="..\armenia06.html">Armenia</a>.</font></td></tr><tr><td align='right'><font size='2' face='Arial' color='#000066'><i>AH</i></font></td></tr></table></td></tr><tr><td align='right'><table width='100%' align='center' cellspacing='0' cellpadding='0' style='border-top: dotted; border-right: none; border-bottom: none; border-left: none; border-width: 4px; border-color: #ffffff'><tr><td align='left'><FONT face='Arial' color='#000066' size='2'><i>28.04.2006</i></font></td></tr><tr><td><font size='2' face='Arial' color='#000066'><p align='justify'>KVS-ansatt Lars Erik Bjørnsen er kåret til beste spiller på høyrekanten i håndballens eliteserie 2005/06. Vi gratulerer!
+</font></td></tr><tr><td align='right'><font size='2' face='Arial' color='#000066'><i>AH</i></font></td></tr></table></td></tr><tr><td align='right'><table width='100%' align='center' cellspacing='0' cellpadding='0' style='border-top: dotted; border-right: none; border-bottom: none; border-left: none; border-width: 4px; border-color: #ffffff'><tr><td align='left'><FONT face='Arial' color='#000066' size='2'><i>19.04.2006</i></font></td></tr><tr><td><font size='2' face='Arial' color='#000066'><p align='justify'>I dag var det finale i <a href="..\volley06.html">volleyball</a> i midttimen.</font></td></tr><tr><td align='right'><font size='2' face='Arial' color='#000066'><i>AH</i></font></td></tr></table></td></tr><tr><td align='right'><table width='100%' align='center' cellspacing='0' cellpadding='0' style='border-top: dotted; border-right: none; border-bottom: none; border-left: none; border-width: 4px; border-color: #ffffff'><tr><td align='left'><FONT face='Arial' color='#000066' size='2'><i>07.04.2006</i></font></td></tr><tr><td><font size='2' face='Arial' color='#000066'><p align='justify'>Vi har hatt elever på besøk i <a href="..\skottland06b.html">Skottland</a>, og her er bildene.</font></td></tr><tr><td align='right'><font size='2' face='Arial' color='#000066'><i>AH</i></font></td></tr></table></td></tr><tr><td align='right'><table width='100%' align='center' cellspacing='0' cellpadding='0' style='border-top: dotted; border-right: none; border-bottom: none; border-left: none; border-width: 4px; border-color: #ffffff'><tr><td align='left'><FONT face='Arial' color='#000066' size='2'><i>29.03.2006</i></font></td></tr><tr><td><font size='2' face='Arial' color='#000066'><p align='justify'>Presentasjonen av årets tur til <a href="..\tyskland06.html">Tyskland</a> er på plass.</font></td></tr><tr><td align='right'><font size='2' face='Arial' color='#000066'><i>AH</i></font></td></tr></table></td></tr><tr><td align='right'><table width='100%' align='center' cellspacing='0' cellpadding='0' style='border-top: dotted; border-right: none; border-bottom: none; border-left: none; border-width: 4px; border-color: #ffffff'><tr><td align='left'><FONT face='Arial' color='#000066' size='2'><i>14.03.2006</i></font></td></tr><tr><td><font size='2' face='Arial' color='#000066'><p align='justify'>Håkon Rogne Langlo har fullført presentasjonen av <a href="..\skolehistorie.html">skolens historie</a>.</font></td></tr><tr><td align='right'><font size='2' face='Arial' color='#000066'><i>AH</i></font></td></tr></table></td></tr><tr><td align='right'><table width='100%' align='center' cellspacing='0' cellpadding='0' style='border-top: dotted; border-right: none; border-bottom: none; border-left: none; border-width: 4px; border-color: #ffffff'><tr><td align='left'><FONT face='Arial' color='#000066' size='2'><i>10.02.2006</i></font></td></tr><tr><td><font size='2' face='Arial' color='#000066'><p align='justify'>Guttelaget i håndball fra KVS vant kvalifiseringen for Telemark fylke og går til landsfinalen, som blir arrangert i slutten av mars, mens jentelaget røk ut i semifinalen mot vinnerlaget. 
+</font></td></tr><tr><td align='right'><font size='2' face='Arial' color='#000066'><i>AH</i></font></td></tr></table></td></tr><tr><td align='right'><table width='100%' align='center' cellspacing='0' cellpadding='0' style='border-top: dotted; border-right: none; border-bottom: none; border-left: none; border-width: 4px; border-color: #ffffff'><tr><td align='left'><FONT face='Arial' color='#000066' size='2'><i>21.12.2005</i></font></td></tr><tr><td><font size='2' face='Arial' color='#000066'><p align='justify'>Nå er bildene fra årets <a href="..\jul05.html">juleavslutning</a> på plass.</font></td></tr><tr><td align='right'><font size='2' face='Arial' color='#000066'><i>AH</i></font></td></tr></table></td></tr><tr><td align='right'><table width='100%' align='center' cellspacing='0' cellpadding='0' style='border-top: dotted; border-right: none; border-bottom: none; border-left: none; border-width: 4px; border-color: #ffffff'><tr><td align='left'><FONT face='Arial' color='#000066' size='2'><i>01.12.2005</i></font></td></tr><tr><td><font size='2' face='Arial' color='#000066'><p align='justify'>I dag hadde formingsavdelingen ved KVS besøk av hospitanter fra <a href="..\hospitering05.html">ungdomsskolen</a>.</font></td></tr><tr><td align='right'><font size='2' face='Arial' color='#000066'><i>AH</i></font></td></tr></table></td></tr><tr><td align='right'><table width='100%' align='center' cellspacing='0' cellpadding='0' style='border-top: dotted; border-right: none; border-bottom: none; border-left: none; border-width: 4px; border-color: #ffffff'><tr><td align='left'><FONT face='Arial' color='#000066' size='2'><i>03.11.2005</i></font></td></tr><tr><td><font size='2' face='Arial' color='#000066'><p align='justify'>Se <a href="..\od-reportasje05.html">KV-reportasje</a> fra OD 2005 ved KVS laget av to elever.</font></td></tr><tr><td align='right'><font size='2' face='Arial' color='#000066'><i>AH</i></font></td></tr></table></td></tr><tr><td align='right'><table width='100%' align='center' cellspacing='0' cellpadding='0' style='border-top: dotted; border-right: none; border-bottom: none; border-left: none; border-width: 4px; border-color: #ffffff'><tr><td align='left'><FONT face='Arial' color='#000066' size='2'><i>25.10.2005</i></font></td></tr><tr><td><font size='2' face='Arial' color='#000066'><p align='justify'>Sambaen var løs ved KVS under <a href="..\od05.html">OD-arrangementet</a> fredag 21. oktober.</font></td></tr><tr><td align='right'><font size='2' face='Arial' color='#000066'><i>AH</i></font></td></tr></table></td></tr><tr><td align='right'><table width='100%' align='center' cellspacing='0' cellpadding='0' style='border-top: dotted; border-right: none; border-bottom: none; border-left: none; border-width: 4px; border-color: #ffffff'><tr><td align='left'><FONT face='Arial' color='#000066' size='2'><i>26.09.2005</i></font></td></tr><tr><td><font size='2' face='Arial' color='#000066'><p align='justify'>Det er lagt ut bilder av <a href="..\friluft05.html">sykkelturen</a> til 3. klasse idrett og valgfag friluftsliv.</font></td></tr><tr><td align='right'><font size='2' face='Arial' color='#000066'><i>AH</i></font></td></tr></table></td></tr><tr><td align='right'><table width='100%' align='center' cellspacing='0' cellpadding='0' style='border-top: dotted; border-right: none; border-bottom: none; border-left: none; border-width: 4px; border-color: #ffffff'><tr><td align='left'><FONT face='Arial' color='#000066' size='2'><i>11.09.2005</i></font></td></tr><tr><td><font size='2' face='Arial' color='#000066'><p align='justify'>I uke 36 var det tyske elever på <a href="..\kvs2005.html">skoleutveksling</a> i Kragerø.</font></td></tr><tr><td align='right'><font size='2' face='Arial' color='#000066'><i>AH</i></font></td></tr></table></td></tr><tr><td align='right'><table width='100%' align='center' cellspacing='0' cellpadding='0' style='border-top: dotted; border-right: none; border-bottom: none; border-left: none; border-width: 4px; border-color: #ffffff'><tr><td align='left'><FONT face='Arial' color='#000066' size='2'><i>07.09.2005</i></font></td></tr><tr><td><font size='2' face='Arial' color='#000066'><p align='justify'>Slik ble resultatet av <a href="..\skolevalg2003.html">skolevalget</a> mandag 5. september.</font></td></tr><tr><td align='right'><font size='2' face='Arial' color='#000066'><i>AH</i></font></td></tr></table></td></tr><tr><td align='right'><table width='100%' align='center' cellspacing='0' cellpadding='0' style='border-top: dotted; border-right: none; border-bottom: none; border-left: none; border-width: 4px; border-color: #ffffff'><tr><td align='left'><FONT face='Arial' color='#000066' size='2'><i>31.08.2005</i></font></td></tr><tr><td><font size='2' face='Arial' color='#000066'><p align='justify'><a href="..\kjetilkjartan.html">Kjetil og Kjartan</a> holdt kurs i mobbing m.m. ved skolen.</font></td></tr><tr><td align='right'><font size='2' face='Arial' color='#000066'><i>AH</i></font></td></tr></table></td></tr><tr><td align='right'><table width='100%' align='center' cellspacing='0' cellpadding='0' style='border-top: dotted; border-right: none; border-bottom: none; border-left: none; border-width: 4px; border-color: #ffffff'><tr><td align='left'><FONT face='Arial' color='#000066' size='2'><i>23.08.2005</i></font></td></tr><tr><td><font size='2' face='Arial' color='#000066'><p align='justify'>I går var det <a href="..\valg05.html">debatt</a> i kantina med representanter for de politiske partiene.</font></td></tr><tr><td align='right'><font size='2' face='Arial' color='#000066'><i>AH</i></font></td></tr></table></td></tr>
+</table>
+</td></tr></table>
+</body>
+</html>

@@ -1,0 +1,245 @@
+<HTML>
+<HEAD>
+<TITLE>litauenutveksling2</TITLE>
+<SCRIPT LANGUAGE = "JavaScript">
+   var whichImage = true;
+
+   function blend() 
+   {
+      if ( whichImage ) {
+         image1.filters( "blendTrans" ).apply();
+         image1.style.visibility = "hidden";
+         image1.filters( "blendTrans" ).play();
+      }
+      else {
+         image2.filters( "blendTrans" ).apply();
+         image2.style.visibility = "hidden";
+         image2.filters( "blendTrans" ).play();
+      } 
+   }
+
+   function reBlend ( fromImage ) 
+   {
+      if ( fromImage ) {
+         image1.style.zIndex -= 2;
+         image1.style.visibility = "visible";
+      }
+      else {
+         image1.style.zIndex += 2;
+         image2.style.visibility = "visible";
+      }
+   
+      whichImage = !whichImage;
+      blend();
+   }
+</SCRIPT>
+<style type="text/css">
+a {font-family: Arial; font-size: 11pt; font-weight: bold; color: #000066; text-decoration: none;}
+img {border-color: #666666}
+</style>
+</HEAD>
+
+<BODY ONLOAD = "blend()" bgcolor="#99ccff">
+<table bgcolor="#99ccff" align=center border=2 cellspacing=0 cellpadding=0 frame=above width=100%>
+<tr>
+<td width=100%>
+<table width=100% border=0 cellpadding=0 cellspacing=0>
+<tr>
+<td align=center>
+<table width=100% align=center cellspacing=0 cellpadding=1 height=21 style="border-top: none; border-right: solid; border-bottom: solid; border-left: solid; border-width: 1px; border-color: #666666">
+<tr>
+<td bgcolor="#ffffff" align=center>
+<a href="tyskutv.html" target="innmat"><nobr>Tyskland/BeNeLux
+</a></td>
+</tr>
+</table>
+</td>
+<td width=2 border=0 cellspacing=0 cellpadding=0>
+</td>
+<td align=center>
+<table width=100% align=center cellspacing=0 cellpadding=1 height=21 style="border-top: none; border-right: solid; border-bottom: solid; border-left: solid; border-width: 1px; border-color: #666666">
+<tr>
+<td background="fylkesbg.jpg" align=center>
+<a href="pasvalys.html" target="innmat"><nobr><font color="#ffffff">Litauen</font>
+</a></td>
+</tr>
+</table>
+</td>
+<td width=2 border=0 cellspacing=0 cellpadding=0>
+</td>
+<td align=center>
+<table width=100% align=center cellspacing=0 cellpadding=1 height=21 style="border-top: none; border-right: solid; border-bottom: solid; border-left: solid; border-width: 1px; border-color: #666666">
+<tr>
+<td bgcolor="#ffffff" align=center>
+<a href="polen.html" target="innmat"><nobr>Polen
+</a></td>
+</tr>
+</table>
+</td>
+<td width=2 border=0 cellspacing=0 cellpadding=0>
+</td>
+<td align=center>
+<table width=100% align=center cellspacing=0 cellpadding=1 height=21 style="border-top: none; border-right: solid; border-bottom: solid; border-left: solid; border-width: 1px; border-color: #666666">
+<tr>
+<td bgcolor="#ffffff" align=center>
+<a href="frankrike04.html" target="innmat"><nobr>Frankrike
+</a></td>
+</tr>
+</table>
+</td>
+<td width=2 border=0 cellspacing=0 cellpadding=0>
+</td>
+<td align=center>
+<table width=100% align=center cellspacing=0 cellpadding=1 height=21 style="border-top: none; border-right: solid; border-bottom: solid; border-left: solid; border-width: 1px; border-color: #666666">
+<tr>
+<td bgcolor="#ffffff" align=center>
+<a href="belgia04.html" target="innmat"><nobr>Belgia
+</a></td>
+</tr>
+</table>
+</td>
+<td width=2 border=0 cellspacing=0 cellpadding=0>
+</td>
+<td align=center>
+<table width=100% align=center cellspacing=0 cellpadding=1 height=21 style="border-top: none; border-right: solid; border-bottom: solid; border-left: solid; border-width: 1px; border-color: #666666">
+<tr>
+<td bgcolor="#ffffff" align=center>
+<a href="hellas.html" target="innmat"><nobr>Hellas
+</a></td>
+</tr>
+</table>
+</td>
+<td width=2 border=0 cellspacing=0 cellpadding=0>
+</td>
+<td align=center>
+<table width=100% align=center cellspacing=0 cellpadding=1 height=21 style="border-top: none; border-right: solid; border-bottom: solid; border-left: solid; border-width: 1px; border-color: #666666">
+<tr>
+<td bgcolor="#ffffff" align=center>
+<a href="england.html" target="innmat"><nobr>London
+</a></td>
+</tr>
+</table>
+</td>
+<td width=2 border=0 cellspacing=0 cellpadding=0>
+</td>
+<td bgcolor="#ffffff" align=center>
+<table width=100% align=center cellspacing=0 cellpadding=1 height=21 style="border-top: none; border-right: solid; border-bottom: solid; border-left: solid; border-width: 1px; border-color: #666666">
+<tr>
+<td bgcolor="ffffff" align=center>
+<a href="skottland06b.html" target="innmat"><nobr>Skottland
+</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="3" width="580">
+<tr>
+<td>
+<img src="images\utveksling.gif" STYLE = "position: absolute; left: 50; top: 60;" width="200" height="50">
+</td>
+<td>
+<IMG ID = "image2" SRC = "images\Graphic2.gif"
+   ONFILTERCHANGE = "reBlend(false )" 
+   STYLE = "position: absolute; left: 350; top: 60;
+   filter: blendTrans( duration = 6 ); z-index: 1" width="200" height="50">
+
+<IMG ID = "image1" SRC = "images\Graphic4.gif"
+   ONFILTERCHANGE = "reBlend( true )" 
+   STYLE = "position: absolute; left: 350; top: 60;
+   filter: blendTrans( duration = 6 ); z-index: 2" width="200" height="50">
+</td>
+</tr>
+<tr STYLE = "position: absolute; top: 120;">
+<td valign="top">
+<table>
+<tr>
+<td valign="top">
+<img src="images\konf.jpg" border="1" width="280" height="189">
+</td>
+<td valign="top">
+<font face="arial" size="2" color="#000066">
+<p align="justify">
+27. november til 2. desember 2001 var to l&aelig;rere og fem elever fra tredjeklasse allmennfag p&aring; 
+utveksling i Pasvalys i Litauen. 
+De fem elevene bodde alle privat hos elever ved skolen i Pasvalys. Her sitter Einar Mesel 
+og elevene klar til &aring; delta p&aring; en konferanse. Ogs&aring; de norske 
+deltakerne m&aring;tte holde innlegg p&aring; engelsk, som ble oversatt av en tolk. 
+I bakgrunnen skimtes elever som var utkommandert for anledningen.
+<p>Foto: <i>Anne-Kristine Aas</i>
+</font>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<img src="images\vilnius1.jpg" border="1" width="280" height="428">
+</td>
+<td valign="top">
+<p align="justify">
+<font face="arial" size="2" color="#000066">
+Inntrykkene fra turen var sterke og ikke alltid like lette &aring; formidle. Et 
+problem i Litauen, som ogs&aring; er sv&aelig;rt i&oslash;ynefallende n&aring;r det 
+gjelder skolen, er at det ikke er lett &aring; kvitte seg med det autorit&aelig;re 
+systemet fra tida fram til 1991, da landet var en del av Sovjetunionen. Det var for 
+eksempel lett &aring; registrere at avstanden mellom l&aelig;rer og elev 
+fortsatt var mye st&oslash;rre enn i Norge. Store deler av samfunnslivet har 
+v&aelig;rt hemmet av det undertrykkende Sovjet-systemet, og noen form for 
+kontakt med land utenfor Sovjet var sv&aelig;rt uvanlig tidligere. Derfor legges det 
+n&aring; stor vekt p&aring; &aring; bygge opp forbindelser med skandinaviske land med 
+sine demokratiske tradisjoner. 
+<p align="justify">
+Det var en helt ny opplevelse for vertsfamiliene 
+&aring; f&aring; bes&oslash;k fra et annet land, og de norske elevene, som selv hadde 
+erfaring med &aring; bo privat i en tysk familie et halv&aring;r i forveien, ble tatt 
+sv&aelig;rt godt imot. Her er tre av dem fotografert p&aring; en tur til hovedstaden 
+Vilnius, fra venstre Margrethe Kaasa, Tonje S&oslash;rdalen og Renate Brokeland Hansen.
+<p>Foto: <i>Anne-Kristine Aas</i>
+</font>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<img src="images\vilnius2.jpg" border="1" width="280" height="479">
+<br>
+<img src="images\hjemme.jpg" border="1" width="280" height="164">
+</td>
+<td valign="top">
+<p align="justify">
+<font face="arial" size="2" color="#000066">
+De to andre elevene som var med p&aring; turen, var Malin Hjetland Gundrosen (til venstre) 
+og Marica Ellefsen (til h&oslash;yre). I bakgrunnen ser vi klokket&aring;rnet til katedralen 
+i Vilnius. I den sammenheng kan det v&aelig;re p&aring; sin plass &aring; minne om at 
+befolkningen i Litauen i hovedsak er romersk-katolsk (over 80 %), i motsetning til for 
+eksempel i Russland, hvor den ortodokse kirken dominerer.
+<p align="justify">
+Litauen har mer enn 3,7 millioner innbyggere, og nesten 600000 av disse bor i Vilnius. 
+Litauisk er i likhet med latvisk et baltisk spr&aring;k. Baltiske spr&aring;k er en 
+grein av det indoeuropeiske "spr&aring;ktreet", p&aring; samme m&aring;te som for 
+eksempel germanske, italiske og slaviske spr&aring;k. Det er blant annet en 
+polsk og en russisk minoritet i landet i tillegg til et relativt stort 
+j&oslash;disk innslag i befolkningen. Gjennomsnittlig levealder er i 
+underkant av 70 &aring;r, og det er s&aelig;rlig den mannlige delen 
+av befolkningen som trekker ned (mer enn 10 &aring;r lavere enn for kvinnene). 
+BNP per innbygger er (if&oslash;lge offisiell statistikk fra 1995) 6,1 % 
+av det vi har i Norge.
+<p>Foto: <i>Anne-Kristine Aas</i>
+<p align="justify">
+Nederst er det bes&oslash;k hjemme hos en av kollegene ved skolen i Pasvalys. 
+Fra venstre ser vi Neringa Plungaile, Ausra Damoiiene og Anne-Kristine Aas. Ausra, 
+som ved denne anledningen er vert, og Neringa har selv v&aelig;rt p&aring; bes&oslash;k ved 
+Krager&oslash; videreg&aring;ende skole. L&aelig;rerne i Litauen har en arbeidssituasjon 
+som ingen i Norge ville misunne dem: n&aelig;rmest iskalde klasserom og stor avstand til skoleledelsen. ...Og her er inntrykk fra
+<a href="pasvalys.html"><font color="#000066" size="2"><b><u>HS-elevenes bes&oslash;k v&aring;ren 2001</u></b></font></a> og 
+<a href="litauen03.html"><font color="#000066" size="2"><b><u>AF- og HS-elevenes bes&oslash;k v&aring;ren 2003</u></b></font></a>.
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</BODY>
+</HTML>

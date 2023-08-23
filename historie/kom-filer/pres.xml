@@ -1,0 +1,64 @@
+<xml xmlns:v="urn:schemas-microsoft-com:vml"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:p="urn:schemas-microsoft-com:office:powerpoint">
+ <p:presentation notessizex="4197" notessizey="6215">
+  <p:master id="4" type="main" href="master04.htm" xmlhref="master04.xml"
+   template="Pnslstrk" layout="title_body"
+   slots="title,body,dateTime,footer,slideNumber">
+   <p:schemes>
+    <p:colorscheme
+     colors="#000000,#FFFFCC,#5E574E,#FFCC00,#CC9900,#FF6600,#FF0000,#FFFFCC"/>
+    <p:colorscheme
+     colors="#FFFFFF,#000000,#5E574E,#000000,#FF6600,#FFCC00,#996633,#808000"/>
+    <p:colorscheme
+     colors="#FFFFFF,#000000,#393939,#000000,#CBCBCB,#868686,#4D4D4D,#EAEAEA"/>
+    <p:colorscheme
+     colors="#FFFFFF,#000000,#5E574E,#800000,#FF6600,#FFCC00,#FF0000,#FFFFCC"/>
+    <p:colorscheme
+     colors="#FFFFFF,#000066,#000000,#0000FF,#0066FF,#33CCCC,#FF00FF,#9933FF"/>
+    <p:colorscheme
+     colors="#000066,#FFFFFF,#000000,#FFCC00,#0066FF,#33CCCC,#FF00FF,#9933FF"/>
+    <p:colorscheme
+     colors="#800000,#FFFFCC,#5E574E,#FFCC00,#CC9900,#FF6600,#FF0000,#FFFFCC"/>
+   </p:schemes>
+  </p:master>
+  <p:master id="5" type="title" href="master05.htm" xmlhref="master05.xml"
+   layout="title_subtitle"
+   slots="centerTitle,subTitle,dateTime,footer,slideNumber"/>
+  <p:master id="1" type="notes" href="master01.htm" layout="notes"
+   slots="header,dateTime,slideImage,body,footer,slideNumber"/>
+  <p:master id="2" type="handout" href="master02.htm" layout="handout"
+   slots="header,dateTime,footer,slideNumber"/>
+  <p:slide id="98" href="slide0098.htm" layout="title_body" slots="title,body"/>
+  <p:slide id="99" href="slide0099.htm" layout="title_body" slots="title,body"/>
+  <p:slide id="127" href="slide0127.htm" layout="title_body" slots="title,body"/>
+  <p:slide id="103" href="slide0103.htm" layout="title_body" slots="title,body"/>
+  <p:slide id="121" href="slide0121.htm" layout="2_columns"
+   slots="title,body,body"/>
+  <p:slide id="104" href="slide0104.htm" layout="title_body" slots="title,body"/>
+  <p:slide id="107" href="slide0107.htm" layout="title_body" slots="title,body"/>
+  <p:slide id="122" href="slide0122.htm" layout="title_body" slots="title,body"/>
+  <p:slide id="123" href="slide0123.htm" layout="title_body" slots="title,body"/>
+  <p:slide id="108" href="slide0108.htm" layout="title_body" slots="title,body"/>
+  <p:viewstate type="slideView" slidehref="slide0100.htm" scale="50"
+   restoredtop="951" vertbarstate="0" horizbarstate="2" manualadjusttop="t"/>
+  <p:slideshowsettings pencolor="schemeText" manualadvance="t"/>
+  <p:kinsoku language="Japanese" level="levelOne"/>
+  <p:font name="Times New Roman" charset="0" type="6" family="18"/>
+  <p:font name="Arial Black" charset="0" type="6" family="34"/>
+  <p:font name="Tahoma" charset="0" type="6" family="34"/>
+  <p:font name="Monotype Sorts" charset="2" type="6" family="2"/>
+  <p:font name="Arial" charset="0" type="6" family="34"/>
+  <p:font name="Arial Unicode MS" charset="128" type="6" family="34"/>
+  <p:headersfooters slidenumber="t" noheader="t" nodate="t"/>
+  <p:headersfooters notes="t" slidenumber="t"/>
+  <p:pptdocumentsettings framecolors="WhiteTextOnBlack"/>
+  <p:htmlpublishsettings browsersupport="v4"
+   href="C:\WINDOWS\Desktop\NVU\PIOL\prosjekt\kom.html" startslide="94"
+   endslide="103" hidespeakernote="t" noloadinbrowser="t"/>
+ </p:presentation>
+ <o:shapedefaults v:ext="edit" spidmax="247810" fill="f" stroke="f">
+  <v:fill on="f"/>
+  <v:stroke on="f"/>
+  <o:colormru v:ext="edit" colors="#c00,#00c,#33d32b"/>
+ </o:shapedefaults></xml>

@@ -1,0 +1,278 @@
+<HTML>
+<HEAD>
+<TITLE>tyskutveksling</TITLE>
+<SCRIPT LANGUAGE = "JavaScript">
+   var whichImage = true;
+
+   function blend() 
+   {
+      if ( whichImage ) {
+         image1.filters( "blendTrans" ).apply();
+         image1.style.visibility = "hidden";
+         image1.filters( "blendTrans" ).play();
+      }
+      else {
+         image2.filters( "blendTrans" ).apply();
+         image2.style.visibility = "hidden";
+         image2.filters( "blendTrans" ).play();
+      } 
+   }
+
+   function reBlend ( fromImage ) 
+   {
+      if ( fromImage ) {
+         image1.style.zIndex -= 2;
+         image1.style.visibility = "visible";
+      }
+      else {
+         image1.style.zIndex += 2;
+         image2.style.visibility = "visible";
+      }
+   
+      whichImage = !whichImage;
+      blend();
+   }
+</SCRIPT>
+<style type="text/css">
+a {font-family: Arial; font-size: 11pt; font-weight: bold; color: #000066; text-decoration: none;}
+</style>
+</HEAD>
+<BODY ONLOAD = "blend()" bgcolor="#99ccff">
+<table bgcolor="#99ccff" align=center border=2 cellspacing=0 cellpadding=0 frame=above width=100%>
+<tr>
+<td width=100%>
+<table width=100% border=0 cellpadding=0 cellspacing=0>
+<tr>
+<td align=center>
+<table width=100% align=center cellspacing=0 cellpadding=1 height=21 style="border-top: none; border-right: solid; border-bottom: solid; border-left: solid; border-width: 1px; border-color: #666666">
+<tr>
+<td background="images\fylkesbg.jpg" align=center>
+<a href="tyskutvt.html" target="innmat"><nobr><font color="#ffffff">Deutschland/BeNeLux</font>
+</a></td>
+</tr>
+</table>
+</td>
+<td width=2 border=0 cellspacing=0 cellpadding=0>
+</td>
+<td align=center>
+<table width=100% align=center cellspacing=0 cellpadding=1 height=21 style="border-top: none; border-right: solid; border-bottom: solid; border-left: solid; border-width: 1px; border-color: #666666">
+<tr>
+<td bgcolor="#ffffff" align=center>
+<a href="pasvalys.html" target="innmat"><nobr>Litauen
+</a></td>
+</tr>
+</table>
+</td>
+<td width=2 border=0 cellspacing=0 cellpadding=0>
+</td>
+<td align=center>
+<table width=100% align=center cellspacing=0 cellpadding=1 height=21 style="border-top: none; border-right: solid; border-bottom: solid; border-left: solid; border-width: 1px; border-color: #666666">
+<tr>
+<td bgcolor="#ffffff" align=center>
+<a href="polen.html" target="innmat"><nobr>Polen
+</a></td>
+</tr>
+</table>
+</td>
+<td width=2 border=0 cellspacing=0 cellpadding=0>
+</td>
+<td align=center>
+<table width=100% align=center cellspacing=0 cellpadding=1 height=21 style="border-top: none; border-right: solid; border-bottom: solid; border-left: solid; border-width: 1px; border-color: #666666">
+<tr>
+<td bgcolor="#ffffff" align=center>
+<a href="frankrike04.html" target="innmat"><nobr>Frankreich
+</a></td>
+</tr>
+</table>
+</td>
+<td width=2 border=0 cellspacing=0 cellpadding=0>
+</td>
+<td align=center>
+<table width=100% align=center cellspacing=0 cellpadding=1 height=21 style="border-top: none; border-right: solid; border-bottom: solid; border-left: solid; border-width: 1px; border-color: #666666">
+<tr>
+<td bgcolor="#ffffff" align=center>
+<a href="belgia04.html" target="innmat"><nobr>Belgien
+</a></td>
+</tr>
+</table>
+</td>
+<td width=2 border=0 cellspacing=0 cellpadding=0>
+</td>
+<td align=center>
+<table width=100% align=center cellspacing=0 cellpadding=1 height=21 style="border-top: none; border-right: solid; border-bottom: solid; border-left: solid; border-width: 1px; border-color: #666666">
+<tr>
+<td bgcolor="#ffffff" align=center>
+<a href="hellas.html" target="innmat"><nobr>Griechenland
+</a></td>
+</tr>
+</table>
+</td>
+<td width=2 border=0 cellspacing=0 cellpadding=0>
+</td>
+<td align=center>
+<table width=100% align=center cellspacing=0 cellpadding=1 height=21 style="border-top: none; border-right: solid; border-bottom: solid; border-left: solid; border-width: 1px; border-color: #666666">
+<tr>
+<td bgcolor="#ffffff" align=center>
+<a href="england.html" target="innmat"><nobr>London
+</a></td>
+</tr>
+</table>
+</td>
+<td width=2 border=0 cellspacing=0 cellpadding=0>
+</td>
+<td bgcolor="#ffffff" align=center>
+<table width=100% align=center cellspacing=0 cellpadding=1 height=21 style="border-top: none; border-right: solid; border-bottom: solid; border-left: solid; border-width: 1px; border-color: #666666">
+<tr>
+<td bgcolor="ffffff" align=center>
+<a href="skottland06b.html" target="innmat"><nobr>Schottland
+</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<p>
+<table border="0" width="600">
+<tr>
+<td>
+<img src="images\sch.gif" STYLE = "position: absolute; left: 50; top: 60;" width="200" height="50">
+</td>
+<td>
+<IMG ID = "image2" SRC = "images\Graphic2.gif"
+   ONFILTERCHANGE = "reBlend(false )" 
+   STYLE = "position: absolute; left: 350; top: 60;
+   filter: blendTrans( duration = 6 ); z-index: 1" width="200" height="50">
+
+<IMG ID = "image1" SRC = "images\Graphic3.gif"
+   ONFILTERCHANGE = "reBlend( true )" 
+   STYLE = "position: absolute; left: 350; top: 60;
+   filter: blendTrans( duration = 6 ); z-index: 2" width="200" height="50">
+</td>
+</tr>
+<tr STYLE = "position: absolute; top: 120;">
+<td>
+<font face="Arial" size="2" color="#000066">
+<p align="justify">
+Seit dem Schuljahr 1992/1993 hat die "Kragerø videregående skole" regelmässigen Austausch 
+mit der Bischöflichen Marienschule in Mönchengladbach, einer Stadt, die Fußballfans 
+in Norwegen mit den 70er Jahren verknüpfen. Die Schüler aus Kragerø fahren im Frühjahr und 
+bleiben eine knappe Woche bei deutschen Gastschülern, während die deutschen Schüler im 
+frühen Herbst auf Gegenbesuch kommen. Mönchengladbach liegt im bevölkerungsreichsten Bundesland 
+Deutschlands, Nordrhein-Westfalen, welches fast ebenso viele Einwohner wie Schweden, Dänemark 
+und Norwegen zusammen hat. Dieser Ort ist auch als Ausgangspunkt für Tagesfahrten nach Holland 
+und Belgien, zu Großstädten wie Düsseldorf und Köln, zu Städten wie Bonn, Aachen und Trier - 
+mit einer interessanten Geschichte - und nach Koblenz und ins Rheintal gut geeignet. Nur wenige dieser Ausflugsziele sind in einer knappen Woche zu erreichen, 
+in der auch einige Stunden in der Bischöflichen Marienschule auf dem Programm stehen. 
+Für die deutschen Schüler in Norwegen gibt es jedes Jahr eine Fahrt nach Oslo. Sonst 
+können sie eine idyllische Kleinstadt und eine reizvolle Natur erleben - wenn sie Glück 
+haben, auch den Rest eines südnorwegischen Sommers. Hier werden verschiedene Ausflugsziele 
+präsentiert, die wir im Laufe dieser Jahre besucht haben, mit Fotos von sowohl Schülern als 
+Lehrern, von den Reisen der deutschen und der norwegischen Schüler.
+</font>
+</td>
+<td width="10">
+&nbsp;
+</td>
+<td valign="top">
+<table bgcolor="#99ccff" width=220 border=2 frame=lhs cellspacing=0 cellpadding=0>
+<tr>
+<td width=100% height=100% align=center valign=middle>
+<table width=100% height=100% border=0 cellspacing=0 cellpadding=0>
+<tr>
+<td height=3>
+</td>
+</tr>
+<tr>
+<td width=100% height=100%>
+<table width=100% height=50 cellspacing=0 cellpadding=0 bgcolor="#ccffcc"
+ style="border-top: solid; border-right: solid; border-bottom: solid; border-left:none; border-width: 1px; border-color: #666666">
+<tr>
+<td align="center" valign=middle>
+<a href="tysklant.html"><b><font color="#000000"><nobr>Besuch in der BRD, Belgien,<br><nobr>Holland und Luxemburg</font></b></a><br>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height=3>
+</td>
+</tr>
+<tr>
+<td width=100% height=100%>
+<table width=100% height=50 cellspacing=0 cellpadding=0 bgcolor="#ccffcc"
+ style="border-top: solid; border-right: solid; border-bottom: solid; border-left:none; border-width: 1px; border-color: #666666">
+<tr>
+<td align="center" valign=middle>
+<a href="skolet.html"><b><font color="#000000"><nobr>Besuch in<br><nobr>Norwegen</font></b></a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height=3>
+</td>
+</tr>
+<tr>
+<td width=100% height=100%>
+<table width=100% height=50 cellspacing=0 cellpadding=0 bgcolor="#ccffcc"
+ style="border-top: solid; border-right: solid; border-bottom: solid; border-left:none; border-width: 1px; border-color: #666666">
+<tr>
+<td align="center" valign=middle>
+<a href="http://www.marienschule.de"><b><font color="#000000">Bischöfliche<br>Marienschule</font></b></a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height=3>
+</td>
+</tr>
+<tr>
+<td width=100% height=100%>
+<table width=100% height=50 cellspacing=0 cellpadding=0 bgcolor="#ccffcc"
+ style="border-top: solid; border-right: solid; border-bottom: solid; border-left:none; border-width: 1px; border-color: #666666">
+<tr>
+<td align="center" valign=middle>
+<a href="tyskutv.html"><b><font color="#000000">Skoleutveksling</font></b><br>
+<img src="images\norg.gif" border="0" width="40" height="20"></a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height=3>
+</td>
+</tr>
+<tr>
+<td width=100% height=100%>
+<table width=100% height=50 cellspacing=0 cellpadding=0 bgcolor="#ccffcc"
+ style="border-top: solid; border-right: solid; border-bottom: solid; border-left:none; border-width: 1px; border-color: #666666">
+<tr>
+<td align="center" valign=middle>
+<a href="tysk\tysk.html"><b><font color="#000000">&Uumlbungen/<br>Deutsch</font></b><br>
+</a>
+</td>
+</tr>
+</table>
+</td>
+<tr>
+<td height=3>
+</td>
+</tr>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</BODY>
+</HTML>

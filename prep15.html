@@ -1,0 +1,452 @@
+<HTML>
+<HEAD>
+<TITLE>Preposisjonsbruk - oversettelse 1</TITLE>
+<script language="JavaScript">
+var aa
+var a
+var aaa
+var bb
+var b
+var bbb
+var cc
+var c
+var ccc
+var dd
+var d
+var ddd
+var ee
+var e
+var eee
+var ff
+var f
+var fff
+var gg
+var g
+var ggg
+var hh
+var h
+var hhh
+var ii
+var i
+var iii
+var jj
+var j
+var jjj
+var poeng=0;
+function svara(form) {
+if ((form.a.style.backgroundColor=="#99ff99")||(form.a.style.backgroundColor=="#ff9999")) {
+  alert("Nei, den går ikke!");
+  poeng = poeng+0;
+  } else {
+if ((form.a.value=="Köln und Bonn liegen am Rhein.")||(form.a.value=="Köln und Bonn liegen am Rhein")||(form.a.value=="Köln und Bonn liegen am Rhein. ")||(form.a.value=="Köln und Bonn liegen am Rhein ")||(form.a.value=="Köln und Bonn liegen an dem Rhein.")||(form.a.value=="Köln und Bonn liegen an dem Rhein")||(form.a.value=="Köln und Bonn liegen an dem Rhein. ")||(form.a.value=="Köln und Bonn liegen an dem Rhein ")) {
+  form.a.style.backgroundColor="#99ff99";
+  poeng = poeng+1;
+  form.aa.value="Ved elver brukes 'an', husk 'der Rhein'!";
+  form.aa.style.backgroundColor="#99ff99";
+  form.aaa.value=form.a.value;
+  form.aaa.style.backgroundColor="#99ff99";
+  form.poeng.value=poeng;
+  } else {
+  form.a.style.backgroundColor="#ff9999";
+  form.aa.value="Ved elver brukes 'an', husk 'der Rhein'!";
+  form.aa.style.backgroundColor="#99ff99";
+  form.aaa.value="Köln und Bonn liegen am Rhein.";
+  form.aaa.style.backgroundColor="#99ff99";
+  poeng = poeng+0;
+  form.poeng.value=poeng;
+    }
+  }
+}
+function svarb(form) {
+if ((form.b.style.backgroundColor=="#99ff99")||(form.b.style.backgroundColor=="#ff9999")) {
+  alert("Nei, den går ikke!");
+  poeng = poeng+0;
+  } else {
+if ((form.b.value=="Das Buch liegt auf dem Tisch am Fenster.")||(form.b.value=="Das Buch liegt auf dem Tisch an dem Fenster.")||(form.b.value=="Das Buch liegt auf dem Tisch am Fenster")||(form.b.value=="Das Buch liegt auf dem Tisch an dem Fenster")||
+    (form.b.value=="Das Buch liegt auf dem Tisch am Fenster. ")||(form.b.value=="Das Buch liegt auf dem Tisch an dem Fenster. ")||(form.b.value=="Das Buch liegt auf dem Tisch am Fenster ")||(form.b.value=="Das Buch liegt auf dem Tisch an dem Fenster ")) {
+  form.b.style.backgroundColor="#99ff99";
+  poeng = poeng+1;
+  form.bb.value="'auf':vannrett - an:loddrett";
+  form.bb.style.backgroundColor="#99ccff";
+  form.bbb.value=form.b.value;
+  form.bbb.style.backgroundColor="#99ccff";
+  form.poeng.value=poeng;
+  } else {
+  form.b.style.backgroundColor="#ff9999";
+  form.bb.value="'auf:vannrett - 'an':loddrett";
+  form.bb.style.backgroundColor="#99ccff";
+  form.bbb.value="Das Buch liegt auf dem Tisch am Fenster.";
+  form.bbb.style.backgroundColor="#99ccff";
+  poeng = poeng+0;
+  form.poeng.value=poeng;
+    }
+  }
+}
+function svarc(form) {
+if ((form.c.style.backgroundColor=="#99ff99")||(form.c.style.backgroundColor=="#ff9999")) {
+  alert("Nei, den går ikke!");
+  poeng = poeng+0;
+  } else {
+if ((form.c.value=="Er sitzt am Tisch in der Küche.")||(form.c.value=="Er sitzt am Tisch in der Küche")||(form.c.value=="Er sitzt am Tisch in der Küche. ")||(form.c.value=="Er sitzt am Tisch in der Küche ")||(form.c.value=="Er sitzt an dem Tisch in der Küche.")||(form.c.value=="Er sitzt an dem Tisch in der Küche")||(form.c.value=="Er sitzt an dem Tisch in der Küche. ")||(form.c.value=="Er sitzt an dem Tisch in der Küche ")) {
+  form.c.style.backgroundColor="#99ff99";
+  poeng = poeng+1;
+  form.cc.value="'an':loddrett - 'på' rom o.l.:'in'";
+  form.cc.style.backgroundColor="#99ff99";
+  form.ccc.value=form.c.value;
+  form.ccc.style.backgroundColor="#99ff99";
+  form.poeng.value=poeng;
+  } else {
+  form.c.style.backgroundColor="#ff9999";
+  form.cc.value="'an':loddrett - 'på' rom o.l.:'in'";
+  form.cc.style.backgroundColor="#99ff99";
+  form.ccc.value="Er sitzt am Tisch in der Küche.";
+  form.ccc.style.backgroundColor="#99ff99";
+  poeng = poeng+0;
+  form.poeng.value=poeng;
+    }
+  }
+}
+function svard(form) {
+if ((form.d.style.backgroundColor=="#99ff99")||(form.d.style.backgroundColor=="#ff9999")) {
+  alert("Nei, den går ikke!");
+  poeng = poeng+0;
+  } else {
+if ((form.d.value=="Mein Onkel aus der Schweiz kommt nach Oslo.")||(form.d.value=="Mein Onkel aus der Schweiz kommt nach Oslo")||(form.d.value=="Mein Onkel aus der Schweiz kommt nach Oslo. ")||(form.d.value=="Mein Onkel aus der Schweiz kommt nach Oslo ")) {
+  form.d.style.backgroundColor="#99ff99";
+  poeng = poeng+1;
+  form.dd.value="'aus':'fra' hjemsted - 'nach':'til'+bynavn";
+  form.dd.style.backgroundColor="#99ccff";
+  form.ddd.value=form.d.value;
+  form.ddd.style.backgroundColor="#99ccff";
+  form.poeng.value=poeng;
+  } else {
+  form.d.style.backgroundColor="#ff9999";
+  form.dd.value="'aus':'fra' hjemsted - 'nach':'til'+bynavn";
+  form.dd.style.backgroundColor="#99ccff";
+  form.ddd.value="Mein Onkel aus der Schweiz kommt nach Oslo.";
+  form.ddd.style.backgroundColor="#99ccff";
+  poeng = poeng+0;
+  form.poeng.value=poeng;
+    }
+  }
+}
+function svare(form) {
+if ((form.e.style.backgroundColor=="#99ff99")||(form.e.style.backgroundColor=="#ff9999")) {
+  alert("Nei, den går ikke!");
+  poeng = poeng+0;
+  } else {
+if ((form.e.value=="Ich erzählte von meiner Reise in die USA.")||(form.e.value=="Ich erzählte von meiner Reise in die USA")||(form.e.value=="Ich erzählte von meiner Reise in die USA. ")||(form.e.value=="Ich erzählte von meiner Reise in die USA ")||(form.e.value=="Ich erzählte über meine Reise in die USA.")||(form.e.value=="Ich erzählte über meine Reise in die USA")||(form.e.value=="Ich erzählte über meine Reise in die USA. ")||(form.e.value=="Ich erzählte über meine Reise in die USA ")) {
+  form.e.style.backgroundColor="#99ff99";
+  poeng = poeng+1;
+  form.ee.value="S/N----V----DO/A----på stedet/D-----alltid D";
+  form.ee.style.backgroundColor="#99ff99";
+  form.eee.value=form.e.value;
+  form.eee.style.backgroundColor="#99ff99";
+  form.poeng.value=poeng;
+  } else {
+  form.e.style.backgroundColor="#ff9999";
+  form.ee.value="S/N----V----DO/A----på stedet/D-----alltid D";
+  form.ee.style.backgroundColor="#99ff99";
+  form.eee.value="Ich erzählte von meiner Reise in die USA.";
+  form.eee.style.backgroundColor="#99ff99";
+  poeng = poeng+0;
+  form.poeng.value=poeng;
+    }
+  }
+}
+function svarf(form) {
+if ((form.f.style.backgroundColor=="#99ff99")||(form.f.style.backgroundColor=="#ff9999")) {
+  alert("Nei, den går ikke!");
+  poeng = poeng+0;
+  } else {
+if ((form.f.value=="Im Zug saß ein Freund von meinem Vater.")||(form.f.value=="Im Zug saß ein Freund von meinem Vater")||(form.f.value=="Im Zug saß ein Freund von meinem Vater. ")||(form.f.value=="Im Zug saß ein Freund von meinem Vater ")||(form.f.value=="In dem Zug saß ein Freund von meinem Vater.")||(form.f.value=="In dem Zug saß ein Freund von meinem Vater")||(form.f.value=="In dem Zug saß ein Freund von meinem Vater. ")||(form.f.value=="In dem Zug saß ein Freund von meinem Vater ")) {
+  form.f.style.backgroundColor="#99ff99";
+  poeng = poeng+1;
+  form.ff.value="'in':'på' tog o.l. - 'von':'av'(som oftest)";
+  form.ff.style.backgroundColor="#99ccff";
+  form.fff.value=form.f.value;
+  form.fff.style.backgroundColor="#99ccff";
+  form.poeng.value=poeng;
+  } else {
+  form.f.style.backgroundColor="#ff9999";
+  form.ff.value="'in':'på' tog o.l. - 'von':'av'(som oftest)";
+  form.ff.style.backgroundColor="#99ccff";
+  form.fff.value="Im Zug saß ein Freund von meinem Vater.";
+  form.fff.style.backgroundColor="#99ccff";
+  poeng = poeng+0;
+  form.poeng.value=poeng;
+    }
+  }
+}
+function svarg(form) {
+if ((form.g.style.backgroundColor=="#99ff99")||(form.g.style.backgroundColor=="#ff9999")) {
+  alert("Nei, den går ikke!");
+  poeng = poeng+0;
+  } else {
+if ((form.g.value=="Er sitzt im Park und wartet auf dich.")||(form.g.value=="Er sitzt im Park und wartet auf dich")||(form.g.value=="Er sitzt in dem Park und wartet auf dich.")||(form.g.value=="Er sitzt in dem Park und wartet auf dich")||
+    (form.g.value=="Er sitzt im Park und wartet auf dich. ")||(form.g.value=="Er sitzt im Park und wartet auf dich ")||(form.g.value=="Er sitzt in dem Park und wartet auf dich. ")||(form.g.value=="Er sitzt in dem Park und wartet auf dich ")) {
+  form.g.style.backgroundColor="#99ff99";
+  poeng = poeng+1;
+  form.gg.value="'i':'in' - 'warten auf'+A(fast uttrykk)";
+  form.gg.style.backgroundColor="#99ff99";
+  form.ggg.value=form.g.value;
+  form.ggg.style.backgroundColor="#99ff99";
+  form.poeng.value=poeng;
+  } else {
+  form.g.style.backgroundColor="#ff9999";
+  form.gg.value="'i':'in' - 'warten auf'+A(fast uttrykk)";
+  form.gg.style.backgroundColor="#99ff99";
+  form.ggg.value="Er sitzt im Park und wartet auf dich.";
+  form.ggg.style.backgroundColor="#99ff99";
+  poeng = poeng+0;
+  form.poeng.value=poeng;
+    }
+  }
+}
+function svarh(form) {
+if ((form.h.style.backgroundColor=="#99ff99")||(form.h.style.backgroundColor=="#ff9999")) {
+  alert("Nei, den går ikke!");
+  poeng = poeng+0;
+  } else {
+if ((form.h.value=="Ich denke an meinen Sohn in den USA.")||(form.h.value=="Ich denke an meinen Sohn in den USA")||(form.h.value=="Ich denke an meinen Sohn in den USA. ")||(form.h.value=="Ich denke an meinen Sohn in den USA ")) {
+  form.h.style.backgroundColor="#99ff99";
+  poeng = poeng+1;
+  form.hh.value="'tenke på':'denken an'+A(fast uttrykk) - 'in'+D(pl)";
+  form.hh.style.backgroundColor="#99ccff";
+  form.hhh.value=form.h.value;
+  form.hhh.style.backgroundColor="#99ccff";
+  form.poeng.value=poeng;
+  } else {
+  form.h.style.backgroundColor="#ff9999";
+  form.hh.value="'tenke på':'denken an'+A(fast uttrykk) - 'in'+D(pl)";
+  form.hh.style.backgroundColor="#99ccff";
+  form.hhh.value="Ich denke an meinen Sohn in den USA.";
+  form.hhh.style.backgroundColor="#99ccff";
+  poeng = poeng+0;
+  form.poeng.value=poeng;
+    }
+  }
+}
+function svari(form) {
+if ((form.i.style.backgroundColor=="#99ff99")||(form.i.style.backgroundColor=="#ff9999")) {
+  alert("Nei, den går ikke!");
+  poeng = poeng+0;
+  } else {
+if ((form.i.value=="Das hast du nicht von mir gehört.")||(form.i.value=="Das hast du nicht von mir gehört")||(form.i.value=="Das hast du nicht von mir gehört. ")||(form.i.value=="Das hast du nicht von mir gehört ")) {
+  form.i.style.backgroundColor="#99ff99";
+  poeng = poeng+1;
+  form.ii.value="'av':'von'(som oftest)";
+  form.ii.style.backgroundColor="#99ff99";
+  form.iii.value=form.i.value;
+  form.iii.style.backgroundColor="#99ff99";
+  form.poeng.value=poeng;
+  } else {
+  form.i.style.backgroundColor="#ff9999";
+  form.ii.value="'av':'von'(som oftest)";
+  form.ii.style.backgroundColor="#99ff99";
+  form.iii.value="Das hast du nicht von mir gehört.";
+  form.iii.style.backgroundColor="#99ff99";
+  poeng = poeng+0;
+  form.poeng.value=poeng;
+    }
+  }
+}
+function svarj(form) {
+if ((form.j.style.backgroundColor=="#99ff99")||(form.j.style.backgroundColor=="#ff9999")) {
+  alert("Nei, den går ikke!");
+  poeng = poeng+0;
+  } else {
+if ((form.j.value=="Ich bitte um Hilfe für meinen Freund.")||(form.j.value=="Ich bitte um Hilfe für meinen Freund")||(form.j.value=="Ich bitte um Hilfe für meinen Freund. ")||(form.j.value=="Ich bitte um Hilfe für meinen Freund ")) {
+  form.j.style.backgroundColor="#99ff99";
+  poeng = poeng+1;
+  form.jj.value="'be om':'bitten um' - 'til'(beste for):'für'";
+  form.jj.style.backgroundColor="#99ccff";
+  form.jjj.value=form.j.value;
+  form.jjj.style.backgroundColor="#99ccff";
+  form.poeng.value=poeng;
+  } else {
+  form.j.style.backgroundColor="#ff9999";
+  form.jj.value="'be om':'bitten um' - 'til'(beste for):'für'";
+  form.jj.style.backgroundColor="#99ccff";
+  form.jjj.value="Ich bitte um Hilfe für meinen Freund.";
+  form.jjj.style.backgroundColor="#99ccff";
+  poeng = poeng+0;
+  form.poeng.value=poeng;
+    }
+  }
+}
+function juks(form) {
+alert("Du prøver vel ikke å jukse med poeng?");
+poeng=poeng+0;
+form.poeng.value=poeng;
+}
+</script>
+</head>
+<body bgcolor="#99ccff">
+<h3 align="center">Preposisjonsbruk 3: oversettelse</h3>
+<p align="justify">
+Oversett til tysk. Her gjelder det &aring; v&aelig;re n&oslash;yaktig, for alt m&aring; stemme om svaret skal godtas. 
+<b>Skriv alltid i feltet til venstre</b> under setningen som skal oversettes fra norsk. 
+Fasitsvaret dukker opp til h&oslash;yre n&aring;r svaret er avgitt. 
+<form>
+<table bgcolor="#666666" width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td>
+<table bgcolor="#99ff99" width="100%">
+<tr>
+<td><nobr>
+K&ouml;ln og Bonn ligger ved Rhinen.
+</td>
+<td>
+<input type="text" name="aa" value="" size="44"></td>
+</tr>
+<tr>
+<td>
+<input type="text" name="a" value="" size="44" onChange="svara(this.form)">
+</td>
+<td>
+<input type="text" name="aaa" value="" size="44"></td>
+</tr>
+<tr>
+<td><nobr>
+Boka ligger p&aring; bordet ved vinduet.
+</td>
+<td>
+<input type="text" name="bb" value="" size="44"></td>
+</tr>
+<tr>
+<td>
+<input type="text" name="b" value="" size="44" onChange="svarb(this.form)">
+</td>
+<td>
+<input type="text" name="bbb" value="" size="44"></td>
+</tr>
+<tr>
+<td><nobr>
+Han sitter ved bordet p&aring; kj&oslash;kkenet.
+</td>
+<td>
+<input type="text" name="cc" value="" size="44"></td>
+</tr>
+<tr>
+<td>
+<input type="text" name="c" value="" size="44" onChange="svarc(this.form)">
+</td>
+<td>
+<input type="text" name="ccc" value="" size="44"></td>
+</tr>
+<tr>
+<td><nobr>
+Onkelen min fra Sveits kommer til Oslo.
+</td>
+<td>
+<input type="text" name="dd" value="" size="44"></td>
+</tr>
+<tr>
+<td>
+<input type="text" name="d" value="" size="44" onChange="svard(this.form)">
+</td>
+<td>
+<input type="text" name="ddd" value="" size="44"></td>
+</tr>
+<tr>
+<td><nobr>
+Jeg fortalte om min reise til USA.
+</td>
+<td>
+<input type="text" name="ee" value="" size="44"></td>
+</tr>
+<tr>
+<td>
+<input type="text" name="e" value="" size="44" onChange="svare(this.form)">
+</td>
+<td>
+<input type="text" name="eee" value="" size="44"></td>
+</tr>
+<tr>
+<td><nobr>
+P&aring; toget satt en venn av faren min.
+</td>
+<td>
+<input type="text" name="ff" value="" size="44"></td>
+</tr>
+<tr>
+<td>
+<input type="text" name="f" value="" size="44" onChange="svarf(this.form)">
+</td>
+<td>
+<input type="text" name="fff" value="" size="44"></td>
+</tr>
+<tr>
+<td><nobr>
+Han sitter i parken og venter p&aring; deg.
+</td>
+<td>
+<input type="text" name="gg" value="" size="44"></td>
+</tr>
+<tr>
+<td>
+<input type="text" name="g" value="" size="44" onChange="svarg(this.form)">
+</td>
+<td>
+<input type="text" name="ggg" value="" size="44"></td>
+</tr>
+<tr>
+<td><nobr>
+Jeg tenker p&aring; s&oslash;nnen min i USA.
+</td>
+<td>
+<input type="text" name="hh" value="" size="44"></td>
+</tr>
+<tr>
+<td>
+<input type="text" name="h" value="" size="44" onChange="svarh(this.form)">
+</td>
+<td>
+<input type="text" name="hhh" value="" size="44"></td>
+</tr>
+<tr>
+<td><nobr>
+Det har du ikke h&oslash;rt av meg.
+</td>
+<td>
+<input type="text" name="ii" value="" size="44"></td>
+</tr>
+<tr>
+<td>
+<input type="text" name="i" value="" size="44" onChange="svari(this.form)">
+</td>
+<td>
+<input type="text" name="iii" value="" size="44"></td>
+</tr>
+<tr>
+<td><nobr>
+Jeg ber om hjelp til vennen min.
+</td>
+<td>
+<input type="text" name="jj" value="" size="44"></td>
+</tr>
+<tr>
+<td>
+<input type="text" name="j" value="" size="44" onChange="svarj(this.form)">
+</td>
+<td>
+<input type="text" name="jjj" value="" size="44"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="100%">
+<tr>
+<td><b>Antall riktige setninger:</b>&nbsp;<input type="text" name="poeng" value="0" size=2 onChange="juks(this.form)"></td>
+<td><a href="prep.html#fire" target="blank"><font color="#000000"><b>Regler og b&oslash;yningsm&oslash;nster</b></font></a></td>
+</tr>
+<tr>
+<td><a href="prep.html"><font color="#000000"><b>Hovedside for preposisjoner</b></font></a></td>
+<td><a href="tygram.html"><font color="#000000"><b>Hovedside for tysk grammatikk</b></font></a></td>
+</tr>
+</table>
+</form>
+</body>
+</html>

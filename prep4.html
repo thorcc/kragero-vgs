@@ -1,0 +1,1340 @@
+<html>
+<head>
+<title>preposisjoner 4</title>
+<script language="JavaScript">
+var a
+var b
+var c
+var d
+var e
+var f
+var g
+var h
+var i
+var j
+var k
+var l
+var m
+var n
+var o
+var p
+var q
+var r
+var s
+var t
+var poeng=0;
+function svara(form) {
+if (form.a.style.backgroundColor=="#99ff99") {
+  alert("Nei,den går ikke!");
+  poeng = poeng+0;
+  } else {
+if (form.a.value=="ein") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Wald' er et hankjønnsord, mens 'ein' enten er nominativ hankjønn eller nominativ eller akkusativ intetkjønn. Prøv igjen!");
+  form.a.value="";
+  form.a.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.a.value=="einen") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Wald' er et hankjønnsord, mens 'einen' er akkusativ hankjønn. Prøv igjen!");
+  form.a.value="";
+  form.a.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.a.value=="eine") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Wald' er et hankjønnsord, mens 'eine' er hunkjønn, nominativ eller akkusativ. Prøv igjen!");
+  form.a.value="";
+  form.a.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.a.value=="einer") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Wald' er et hankjønnsord, mens 'einer' er hunkjønn dativ (eller genitiv). Prøv igjen!");
+  form.a.value="";
+  form.a.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.a.value=="eines") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Wald' er et hankjønnsord, mens 'eines' er genitiv, hankjønn eller intetkjønn. Prøv igjen!");
+  form.a.value="";
+  form.a.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.a.value=="einem") {
+  alert("Riktig! Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'einem' er dativ hankjønn!");
+  form.a.value="einem";
+  form.a.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+  } else {
+  alert("Her er det noe galt. Prøv igjen!");
+  form.a.value="";
+  form.a.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+function svarb(form) {
+if (form.b.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  poeng = poeng+0;
+  } else {
+if (form.b.value=="ein") {
+  alert("Denne preposisjonen styrer akkusativ ved bevegelse til stedet, og 'Diskothek' er et hunkjønnsord, mens 'ein' enten er nominativ hankjønn eller nominativ eller akkusativ intetkjønn. Prøv igjen!");
+  form.b.value="";
+  form.b.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.b.value=="einen") {
+  alert("Denne preposisjonen styrer akkusativ ved bevegelse til stedet, og 'Diskothek' er et hunkjønnsord, mens 'einen' er akkusativ hankjønn. Prøv igjen!");
+  form.b.value="";
+  form.b.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.b.value=="einem") {
+  alert("Denne preposisjonen styrer akkusativ ved bevegelse til stedet, og 'Diskothek' er et hunkjønnsord, mens 'einem' er dativ hankjønn eller intetkjønn. Prøv igjen!");
+  form.b.value="";
+  form.b.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.b.value=="einer") {
+  alert("Denne preposisjonen styrer akkusativ ved bevegelse til stedet, og 'Diskothek' er et hunkjønnsord, mens 'einer' er hunkjønn dativ (eller genitiv). Prøv igjen!");
+  form.b.value="";
+  form.b.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.b.value=="eines") {
+  alert("Denne preposisjonen styrer akkusativ ved bevegelse til stedet, og 'Diskothek' er et hunkjønnsord, mens 'eines' er genitiv, hankjønn eller intetkjønn. Prøv igjen!");
+  form.b.value="";
+  form.b.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.b.value=="eine") {
+  alert("Riktig! Denne preposisjonen styrer akkusativ ved bevegelse til stedet, og 'eine' er akkusativ hunkjønn!");
+  form.b.value="eine";
+  form.b.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+  } else {
+  alert("Her er det noe galt. Prøv igjen!");
+  form.b.value="";
+  form.b.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+function svarc(form) {
+if (form.c.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  poeng = poeng+0;
+  } else {
+if (form.c.value=="ein") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Sofa' er et intetkjønnsord, mens 'ein' enten er nominativ hankjønn eller nominativ eller akkusativ intetkjønn. Prøv igjen!");
+  form.c.value="";
+  form.c.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.c.value=="einen") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Sofa' er et intetkjønnsord, mens 'einen' er akkusativ hankjønn. Prøv igjen!");
+  form.c.value="";
+  form.c.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.c.value=="eine") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Sofa' er et intetkjønnsord, mens 'eine' er hunkjønn, nominativ eller akkusativ. Prøv igjen!");
+  form.c.value="";
+  form.c.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.c.value=="einer") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Sofa' er et intetkjønnsord, mens 'einer' er hunkjønn dativ (eller genitiv). Prøv igjen!");
+  form.c.value="";
+  form.c.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.c.value=="eines") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Sofa' er et intetkjønnsord, mens 'eines' er genitiv, hankjønn eller intetkjønn. Prøv igjen!");
+  form.c.value="";
+  form.c.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.c.value=="einem") {
+  alert("Riktig! Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'einem' er dativ intetkjønn!");
+  form.c.value="einem";
+  form.c.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+  } else {
+  alert("Her er det noe galt. Prøv igjen!");
+  form.c.value="";
+  form.c.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+function svard(form) {
+if (form.d.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  poeng = poeng+0;
+  } else {
+if (form.d.value=="ein") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Freundin' er et hunkjønnsord, mens 'ein' enten er nominativ hankjønn eller nominativ eller akkusativ intetkjønn. Prøv igjen!");
+  form.d.value="";
+  form.d.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.d.value=="einen") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Freundin' er et hunkjønnsord, mens 'einen' er akkusativ hankjønn. Prøv igjen!");
+  form.d.value="";
+  form.d.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.d.value=="einem") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Freundin' er et hunkjønnsord, mens 'einem' er dativ, hankjønn eller intetkjønn. Prøv igjen!");
+  form.d.value="";
+  form.d.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.d.value=="eine") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Freundin' er et hunkjønnsord, mens 'eine' er hunkjønn, nominativ eller akkusativ. Prøv igjen!");
+  form.d.value="";
+  form.d.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.d.value=="eines") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Freundin' er et hunkjønnsord, mens 'eines' er genitiv, hankjønn eller intetkjønn. Prøv igjen!");
+  form.d.value="";
+  form.d.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.d.value=="einer") {
+  alert("Riktig! Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'einer' er dativ hunkjønn!");
+  form.d.value="einer";
+  form.d.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+  } else {
+  alert("Her er det noe galt. Prøv igjen!");
+  form.d.value="";
+  form.d.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+function svare(form) {
+if (form.e.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  poeng = poeng+0;
+  } else {
+if (form.e.value=="ein") {
+  alert("Denne preposisjonen styrer akkusativ ved bevegelse til stedet, og 'Tisch' er et hankjønnsord, mens 'ein' enten er nominativ hankjønn eller nominativ eller akkusativ intetkjønn. Prøv igjen!");
+  form.e.value="";
+  form.e.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.e.value=="einem") {
+  alert("Denne preposisjonen styrer akkusativ ved bevegelse til stedet, og 'Tisch' er et hankjønnsord, mens 'einem' er dativ, hankjønn eller intetkjønn. Prøv igjen!");
+  form.e.value="";
+  form.e.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.e.value=="eine") {
+  alert("Denne preposisjonen styrer akkusativ ved bevegelse til stedet, og 'Tisch' er et hankjønnsord, mens 'eine' er hunkjønn, nominativ eller akkusativ. Prøv igjen!");
+  form.e.value="";
+  form.e.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.e.value=="einer") {
+  alert("Denne preposisjonen styrer akkusativ ved bevegelse til stedet, og 'Tisch' er et hankjønnsord, mens 'einer' er hunkjønn dativ (eller genitiv). Prøv igjen!");
+  form.e.value="";
+  form.e.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.e.value=="eines") {
+  alert("Denne preposisjonen styrer akkusativ ved bevegelse til stedet, og 'Tisch' er et hankjønnsord, mens 'eines' er genitiv, hankjønn eller intetkjønn. Prøv igjen!");
+  form.e.value="";
+  form.e.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.e.value=="einen") {
+  alert("Riktig! Denne preposisjonen styrer akkusativ ved bevegelse til stedet, og 'einen' er akkusativ hankjønn!");
+  form.e.value="einen";
+  form.e.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+  } else {
+  alert("Her er det noe galt. Prøv igjen!");
+  form.e.value="";
+  form.e.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+function svarf(form) {
+if (form.f.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  poeng = poeng+0;
+  } else {
+if (form.f.value=="ein") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Schranke' er et hunkjønnsord, mens 'ein' enten er nominativ hankjønn eller nominativ eller akkusativ intetkjønn. Prøv igjen!");
+  form.f.value="";
+  form.f.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.f.value=="einem") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Schranke' er et hunkjønnsord, mens 'einem' er dativ, hankjønn eller intetkjønn. Prøv igjen!");
+  form.f.value="";
+  form.f.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.f.value=="eine") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Schranke' er et hunkjønnsord, mens 'eine' er hunkjønn, nominativ eller akkusativ. Prøv igjen!");
+  form.f.value="";
+  form.f.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.f.value=="einen") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Schranke' er et hunkjønnsord, mens 'einen' er akkusativ hankjønn. Prøv igjen!");
+  form.f.value="";
+  form.f.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.f.value=="eines") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Schranke' er et hunkjønnsord, mens 'eines' er genitiv, hankjønn eller intetkjønn. Prøv igjen!");
+  form.f.value="";
+  form.f.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.f.value=="einer") {
+  alert("Riktig! Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Schranke' er et hunkjønnsord!");
+  form.f.value="einer";
+  form.f.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+  } else {
+  alert("Her er det noe galt. Prøv igjen!");
+  form.f.value="";
+  form.f.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+function svarg(form) {
+if (form.g.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  poeng = poeng+0;
+  } else {
+if (form.g.value=="ein") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Wagen' er et hankjønnsord, mens 'ein' enten er nominativ hankjønn eller nominativ eller akkusativ intetkjønn. Prøv igjen!");
+  form.g.value="";
+  form.g.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.g.value=="einen") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Wagen' er et hankjønnsord, mens 'einen' er akkusativ hankjønn. Prøv igjen!");
+  form.g.value="";
+  form.g.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.g.value=="eine") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Wagen' er et hankjønnsord, mens 'eine' er hunkjønn, nominativ eller akkusativ. Prøv igjen!");
+  form.g.value="";
+  form.g.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.g.value=="einer") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Wagen' er et hankjønnsord, mens 'einer' er hunkjønn dativ (eller genitiv). Prøv igjen!");
+  form.g.value="";
+  form.g.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.g.value=="eines") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Wagen' er et hankjønnsord, mens 'eines' er genitiv, hankjønn eller intetkjønn. Prøv igjen!");
+  form.g.value="";
+  form.g.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.g.value=="einem") {
+  alert("Riktig! Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'einem' er dativ hankjønn!");
+  form.g.value="einem";
+  form.g.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+  } else {
+  alert("Her er det noe galt. Prøv igjen!");
+  form.g.value="";
+  form.g.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+function svarh(form) {
+if (form.h.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  poeng = poeng+0;
+  } else {
+if (form.h.value=="ein") {
+  alert("Denne preposisjonen styrer akkusativ ved bevegelse til stedet, og 'Garten' er et hankjønnsord, mens 'ein' enten er nominativ hankjønn eller nominativ eller akkusativ intetkjønn. Prøv igjen!");
+  form.h.value="";
+  form.h.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.h.value=="einem") {
+  alert("Denne preposisjonen styrer akkusativ ved bevegelse til stedet, og 'Garten' er et hankjønnsord, mens 'einem' er dativ, hankjønn eller intetkjønn. Prøv igjen!");
+  form.h.value="";
+  form.h.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.h.value=="eine") {
+  alert("Denne preposisjonen styrer akkusativ ved bevegelse til stedet, og 'Garten' er et hankjønnsord, mens 'eine' er hunkjønn, nominativ eller akkusativ. Prøv igjen!");
+  form.h.value="";
+  form.h.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.h.value=="einer") {
+  alert("Denne preposisjonen styrer akkusativ ved bevegelse til stedet, og 'Garten' er et hankjønnsord, mens 'einer' er hunkjønn dativ (eller genitiv). Prøv igjen!");
+  form.h.value="";
+  form.h.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.h.value=="eines") {
+  alert("Denne preposisjonen styrer akkusativ ved bevegelse til stedet, og 'Garten' er et hunkjønnsord, mens 'eines' er genitiv, hankjønn eller intetkjønn. Prøv igjen!");
+  form.h.value="";
+  form.h.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.h.value=="einen") {
+  alert("Riktig! Denne preposisjonen styrer akkusativ ved bevegelse til stedet, og 'einen' er akkusativ hankjønn!");
+  form.h.value="einen";
+  form.h.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+  } else {
+  alert("Her er det noe galt. Prøv igjen!");
+  form.h.value="";
+  form.h.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+function svari(form) {
+if (form.i.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  poeng = poeng+0;
+  } else {
+if (form.i.value=="ein") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Mädchen' er et intetkjønnsord, mens 'ein' enten er nominativ hankjønn eller nominativ eller akkusativ intetkjønn. Prøv igjen!");
+  form.i.value="";
+  form.i.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.i.value=="einen") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Mädchen' er et intetkjønnsord, mens 'einen' er akkusativ hankjønn. Prøv igjen!");
+  form.i.value="";
+  form.i.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.i.value=="eine") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Mädchen' er et intetkjønnsord, mens 'eine' er hunkjønn, nominativ eller akkusativ. Prøv igjen!");
+  form.i.value="";
+  form.i.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.i.value=="eines") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Mädchen' er et intetkjønnsord, mens 'eines' er genitiv, hankjønn eller intetkjønn. Prøv igjen!");
+  form.i.value="";
+  form.i.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.i.value=="ein") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Mädchen' er et intetkjønnsord, mens 'ein' er intetkjønn, nominativ eller akkusativ. Prøv igjen!");
+  form.i.value="";
+  form.i.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.i.value=="einem") {
+  alert("Riktig! Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'einem' er dativ intetkjønn!");
+  form.i.value="einem";
+  form.i.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+  } else {
+  alert("Her er det noe galt. Prøv igjen!");
+  form.i.value="";
+  form.i.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+function svarj(form) {
+if (form.j.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  poeng = poeng+0;
+  } else {
+if (form.j.value=="ein") {
+  alert("Denne preposisjonen styrer akkusativ ved bevegelse til stedet, og 'Baum' er et hankjønnsord, mens 'ein' enten er nominativ hankjønn eller nominativ eller akkusativ intetkjønn. Prøv igjen!");
+  form.j.value="";
+  form.j.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.j.value=="einem") {
+  alert("Denne preposisjonen styrer akkusativ ved bevegelse til stedet, og 'Baum' er et hankjønnsord, mens 'einem' er dativ, hankjønn eller intetkjønn. Prøv igjen!");
+  form.j.value="";
+  form.j.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.j.value=="eine") {
+  alert("Denne preposisjonen styrer akkusativ ved bevegelse til stedet, og 'Baum' er et hankjønnsord, mens 'eine' er hunkjønn, nominativ eller akkusativ. Prøv igjen!");
+  form.j.value="";
+  form.j.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.j.value=="einer") {
+  alert("Denne preposisjonen styrer akkusativ ved bevegelse til stedet, og 'Baum' er et hankjønnsord, mens 'einer' er hunkjønn dativ (eller genitiv). Prøv igjen!");
+  form.j.value="";
+  form.j.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.j.value=="eines") {
+  alert("Denne preposisjonen styrer akkusativ ved bevegelse til stedet, og 'Baum' er et hankjønnsord, mens 'eines' er genitiv, hankjønn eller intetkjønn. Prøv igjen!");
+  form.j.value="";
+  form.j.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.j.value=="einen") {
+  alert("Riktig! Denne preposisjonen styrer akkusativ ved bevegelse til stedet, og 'einen' er akkusativ hankjønn!");
+  form.j.value="einen";
+  form.j.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+  } else {
+  alert("Her er det noe galt. Prøv igjen!");
+  form.j.value="";
+  form.j.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+function svark(form) {
+if (form.k.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  poeng = poeng+0;
+  } else {
+if (form.k.value=="einen") {
+  alert("Denne preposisjonen styrer akkusativ ved bevegelse til stedet, og 'Restaurant' er et intetkjønnsord, mens 'einen' er akkusativ hankjønn. Prøv igjen!");
+  form.k.value="";
+  form.k.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.k.value=="einem") {
+  alert("Denne preposisjonen styrer akkusativ ved bevegelse til stedet, og 'Restaurant' er et intetkjønnsord, mens 'einem' er dativ, hankjønn eller intetkjønn. Prøv igjen!");
+  form.k.value="";
+  form.k.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.k.value=="eine") {
+  alert("Denne preposisjonen styrer akkusativ ved bevegelse til stedet, og 'Restaurant' er et intetkjønnsord, mens 'eine' er hunkjønn, nominativ eller akkusativ. Prøv igjen!");
+  form.k.value="";
+  form.k.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.k.value=="einer") {
+  alert("Denne preposisjonen styrer akkusativ ved bevegelse til stedet, og 'Restaurant' er et intetkjønnsord, mens 'einer' er hunkjønn dativ (eller genitiv). Prøv igjen!");
+  form.k.value="";
+  form.k.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.k.value=="eines") {
+  alert("Denne preposisjonen styrer akkusativ ved bevegelse til stedet, og 'Restaurant' er et intetkjønnsord, mens 'eines' er genitiv, hankjønn eller intetkjønn. Prøv igjen!");
+  form.k.value="";
+  form.k.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.k.value=="ein") {
+  alert("Riktig! Denne preposisjonen styrer akkusativ ved bevegelse til stedet, og 'ein' er akkusativ intetkjønn!");
+  form.k.value="ein";
+  form.k.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+  } else {
+  alert("Her er det noe galt. Prøv igjen!");
+  form.k.value="";
+  form.k.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+function svarl(form) {
+if (form.l.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  poeng = poeng+0;
+  } else {
+if (form.l.value=="ein") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Auto' er et intkjønnsord, mens 'ein' enten er nominativ hankjønn eller nominativ eller akkusativ intetkjønn. Prøv igjen!");
+  form.l.value="";
+  form.l.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.l.value=="einen") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Auto' er et intekjønnsord, mens 'einen' er akkusativ hankjønn. Prøv igjen!");
+  form.l.value="";
+  form.l.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.l.value=="eine") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Auto' er et intekjønnsord, mens 'eine' er hunkjønn, nominativ eller akkusativ. Prøv igjen!");
+  form.l.value="";
+  form.l.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.l.value=="einer") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Auto' er et intekjønnsord, mens 'einer' er hunkjønn dativ (eller genitiv). Prøv igjen!");
+  form.l.value="";
+  form.l.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.l.value=="eines") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Auto' er et intekjønnsord, mens 'eines' er genitiv, hankjønn eller intetkjønn. Prøv igjen!");
+  form.l.value="";
+  form.l.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.l.value=="einem") {
+  alert("Riktig! Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'einem' er dativ intetkjønn!");
+  form.l.value="einem";
+  form.l.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+  } else {
+  alert("Her er det noe galt. Prøv igjen!");
+  form.l.value="";
+  form.l.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+function svarm(form) {
+if (form.m.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  poeng = poeng+0;
+  } else {
+if (form.m.value=="ein") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Fluss' er et hankjønnsord, mens 'ein' enten er nominativ hankjønn eller nominativ eller akkusativ intetkjønn. Prøv igjen!");
+  form.m.value="";
+  form.m.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.m.value=="einen") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Fluss' er et hankjønnsord, mens 'einen' er akkusativ hankjønn. Prøv igjen!");
+  form.m.value="";
+  form.m.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.m.value=="eine") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Fluss' er et hankjønnsord, mens 'eine' er hunkjønn, nominativ eller akkusativ. Prøv igjen!");
+  form.m.value="";
+  form.m.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.m.value=="einer") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Fluss' er et hankjønnsord, mens 'einer' er hunkjønn dativ (eller genitiv). Prøv igjen!");
+  form.m.value="";
+  form.m.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.m.value=="eines") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Fluss' er et hankjønnsord, mens 'eines' er genitiv, hankjønn eller intetkjønn. Prøv igjen!");
+  form.m.value="";
+  form.m.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.m.value=="einem") {
+  alert("Riktig! Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'einem' er dativ hankjønn!");
+  form.m.value="einem";
+  form.m.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+  } else {
+  alert("Her er det noe galt. Prøv igjen!");
+  form.m.value="";
+  form.m.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+function svarn(form) {
+if (form.n.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  poeng = poeng+0;
+  } else {
+if (form.n.value=="einen") {
+  alert("Denne preposisjonen styrer akkusativ ved bevegelse til stedet, og 'Zimmer' er et intetkjønnsord, mens 'einen' er akkusativ hankjønn. Prøv igjen!");
+  form.n.value="";
+  form.n.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.n.value=="einem") {
+  alert("Denne preposisjonen styrer akkusativ ved bevegelse til stedet, og 'Zimmer' er et intetkjønnsord, mens 'einem' er dativ, hankjønn eller intetkjønn. Prøv igjen!");
+  form.n.value="";
+  form.n.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.n.value=="eine") {
+  alert("Denne preposisjonen styrer akkusativ ved bevegelse til stedet, og 'Zimmer' er et intetkjønnsord, mens 'eine' er hunkjønn, nominativ eller akkusativ. Prøv igjen!");
+  form.n.value="";
+  form.n.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.n.value=="einer") {
+  alert("Denne preposisjonen styrer akkusativ ved bevegelse til stedet, og 'Zimmer' er et intetkjønnsord, mens 'einer' er hunkjønn dativ (eller genitiv). Prøv igjen!");
+  form.n.value="";
+  form.n.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.n.value=="eines") {
+  alert("Denne preposisjonen styrer akkusativ ved bevegelse til stedet, og 'Zimmer' er et intetkjønnsord, mens 'eines' er genitiv, hankjønn eller intetkjønn. Prøv igjen!");
+  form.n.value="";
+  form.n.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.n.value=="ein") {
+  alert("Riktig! Denne preposisjonen styrer akkusativ ved bevegelse til stedet, og 'ein' er akkusativ intetkjønn!");
+  form.n.value="ein";
+  form.n.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+  } else {
+  alert("Her er det noe galt. Prøv igjen!");
+  form.n.value="";
+  form.n.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+function svaro(form) {
+if (form.o.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  poeng = poeng+0;
+  } else {
+if (form.o.value=="ein") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Bank' er et hunkjønnsord, mens 'ein' enten er nominativ hankjønn eller nominativ eller akkusativ intetkjønn. Prøv igjen!");
+  form.o.value="";
+  form.o.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.o.value=="einen") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Bank' er et hunkjønnsord, mens 'einen' er akkusativ hankjønn. Prøv igjen!");
+  form.o.value="";
+  form.o.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.o.value=="einem") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Bank' er et hunkjønnsord, mens 'einem' er dativ, hankjønn eller intetkjønn. Prøv igjen!");
+  form.o.value="";
+  form.o.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.o.value=="eine") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Bank' er et hunkjønnsord, mens 'eine' er hunkjønn, nominativ eller akkusativ. Prøv igjen!");
+  form.o.value="";
+  form.o.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.o.value=="eines") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Bank' er et hunkjønnsord, mens 'eines' er genitiv, hankjønn eller intetkjønn. Prøv igjen!");
+  form.o.value="";
+  form.o.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.o.value=="einer") {
+  alert("Riktig! Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'einer' er dativ hunkjønn!");
+  form.o.value="einer";
+  form.o.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+  } else {
+  alert("Her er det noe galt. Prøv igjen!");
+  form.o.value="";
+  form.o.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+function svarp(form) {
+if (form.p.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  poeng = poeng+0;
+  } else {
+if (form.p.value=="ein") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Stuhl' er et hankjønnsord, mens 'ein' enten er nominativ hankjønn eller nominativ eller akkusativ intetkjønn. Prøv igjen!");
+  form.p.value="";
+  form.p.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.p.value=="einen") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Stuhl' er et hankjønnsord, mens 'einen' er akkusativ hankjønn. Prøv igjen!");
+  form.p.value="";
+  form.p.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.p.value=="eine") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Stuhl' er et hankjønnsord, mens 'eine' er hunkjønn, nominativ eller akkusativ. Prøv igjen!");
+  form.p.value="";
+  form.p.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.p.value=="einer") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Stuhl' er et hankjønnsord, mens 'einer' er hunkjønn dativ (eller genitiv). Prøv igjen!");
+  form.p.value="";
+  form.p.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.p.value=="eines") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Stuhl' er et hankjønnsord, mens 'eines' er genitiv, hankjønn eller intetkjønn. Prøv igjen!");
+  form.p.value="";
+  form.p.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.p.value=="einem") {
+  alert("Riktig! Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'einem' er dativ hankjønn!");
+  form.p.value="einem";
+  form.p.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+  } else {
+  alert("Her er det noe galt. Prøv igjen!");
+  form.p.value="";
+  form.p.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+function svarq(form) {
+if (form.q.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  poeng = poeng+0;
+  } else {
+if (form.q.value=="ein") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Dorf' er et intetkjønnsord, mens 'ein' enten er nominativ hankjønn eller nominativ eller akkusativ intetkjønn. Prøv igjen!");
+  form.q.value="";
+  form.q.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.q.value=="einen") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Dorf' er et intetkjønnsord, mens 'einen' er akkusativ hankjønn. Prøv igjen!");
+  form.q.value="";
+  form.q.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.q.value=="eine") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Dorf' er et intetkjønnsord, mens 'eine' er hunkjønn, nominativ eller akkusativ. Prøv igjen!");
+  form.q.value="";
+  form.q.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.q.value=="einer") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Dorf' er et intetkjønnsord, mens 'einer' er hunkjønn dativ (eller genitiv). Prøv igjen!");
+  form.q.value="";
+  form.q.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.q.value=="eines") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Dorf' er et intetkjønnsord, mens 'eines' er genitiv, hankjønn eller intetkjønn. Prøv igjen!");
+  form.q.value="";
+  form.q.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.q.value=="einem") {
+  alert("Riktig! Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'einem' er dativ intetkjønn!");
+  form.q.value="einem";
+  form.q.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+  } else {
+  alert("Her er det noe galt. Prøv igjen!");
+  form.q.value="";
+  form.q.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+function svarr(form) {
+if (form.r.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  poeng = poeng+0;
+  } else {
+if (form.r.value=="einen") {
+  alert("Denne preposisjonen styrer akkusativ ved bevegelse til stedet, og 'Haus' er et intetkjønnsord, mens 'einen' er akkusativ hankjønn. Prøv igjen!");
+  form.r.value="";
+  form.r.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.r.value=="einem") {
+  alert("Denne preposisjonen styrer akkusativ ved bevegelse til stedet, og 'Haus' er et intetkjønnsord, mens 'einem' er dativ, hankjønn eller intetkjønn. Prøv igjen!");
+  form.r.value="";
+  form.r.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.r.value=="eine") {
+  alert("Denne preposisjonen styrer akkusativ ved bevegelse til stedet, og 'Haus' er et intetkjønnsord, mens 'eine' er hunkjønn, nominativ eller akkustiv. Prøv igjen!");
+  form.r.value="";
+  form.r.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.r.value=="einer") {
+  alert("Denne preposisjonen styrer akkusativ ved bevegelse til stedet, og 'Haus' er et intetkjønnsord, mens 'einer' er hunkjønn dativ (eller genitiv). Prøv igjen!");
+  form.r.value="";
+  form.r.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.r.value=="eines") {
+  alert("Denne preposisjonen styrer akkusativ ved bevegelse til stedet, og 'Haus' er et intetkjønnsord, mens 'eines' er genitiv, hankjønn eller intetkjønn. Prøv igjen!");
+  form.r.value="";
+  form.r.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.r.value=="ein") {
+  alert("Riktig! Denne preposisjonen styrer akkusativ ved bevegelse til stedet, og 'ein' er akkusativ intetkjønn!");
+  form.r.value="ein";
+  form.r.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+  } else {
+  alert("Her er det noe galt. Prøv igjen!");
+  form.r.value="";
+  form.r.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+function svars(form) {
+if (form.s.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  poeng = poeng+0;
+  } else {
+if (form.s.value=="ein") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Stadt' er et hunkjønnsord, mens 'ein' enten er nominativ hankjønn eller nominativ eller akkusativ intetkjønn. Prøv igjen!");
+  form.s.value="";
+  form.s.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.s.value=="einen") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Stadt' er et hunkjønnsord, 'mens 'einen' er akkusativ hankjønn. Prøv igjen!");
+  form.s.value="";
+  form.s.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.s.value=="einem") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Stadt' er et hunkjønnsord, mens 'einem' er dativ, hankjønn eller intetkjønn. Prøv igjen!");
+  form.s.value="";
+  form.s.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.s.value=="eine") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Stadt' er et hunkjønnsord, 'mens 'eine' er hunkjønn, nominativ eller akkusativ. Prøv igjen!");
+  form.s.value="";
+  form.s.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.s.value=="eines") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Stadt' er et hunkjønnsord, mens 'eines' er genitiv, hankjønn eller intetkjønn. Prøv igjen!");
+  form.s.value="";
+  form.s.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.s.value=="einer") {
+  alert("Riktig! Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'einer' er dativ hunkjønn!");
+  form.s.value="einer";
+  form.s.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+  } else {
+  alert("Her er det noe galt. Prøv igjen!");
+  form.s.value="";
+  form.s.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+function svart(form) {
+if (form.t.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  poeng = poeng+0;
+  } else {
+if (form.t.value=="ein") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Freund' er et hankjønnsord, mens 'ein' enten er nominativ hankjønn eller nominativ eller akkusativ intetkjønn. Prøv igjen!");
+  form.t.value="";
+  form.t.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.t.value=="einen") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Freund' er et hankjønnsord, mens 'einen' er akkusativ hankjønn. Prøv igjen!");
+  form.t.value="";
+  form.t.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.t.value=="eine") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Freund' er et hankjønnsord, mens 'eine' er hunkjønn, nominativ eller akkusativ. Prøv igjen!");
+  form.t.value="";
+  form.t.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.t.value=="einer") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Freund' er et hankjønnsord, mens 'einer' er hunkjønn dativ (eller genitiv). Prøv igjen!");
+  form.t.value="";
+  form.t.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.t.value=="eines") {
+  alert("Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'Freund' er et hankjønnsord, mens 'eines' er genitiv, hankjønn eller intetkjønn. Prøv igjen!");
+  form.t.value="";
+  form.t.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+if (form.t.value=="einem") {
+  alert("Riktig! Denne preposisjonen styrer dativ hvis noe befinner seg på stedet, og 'einem' er dativ hankjønn!");
+  form.t.value="einem";
+  form.t.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+  } else {
+  alert("Her er det noe galt. Prøv igjen!");
+  form.t.value="";
+  form.t.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+function juks(form) {
+alert("Du prøver vel ikke å jukse med poeng?");
+poeng=poeng+0;
+form.poeng.value=poeng;
+}
+</script>
+</head>
+<body bgcolor="#99ccff">
+<h3 align="center">Ubestemt artikkel/vekselspreposisjoner (+ A/D)</h3>
+<p align="justify">
+Sett inn rett form av <b>den <i>u</i>bestemte artikkelen</b>. Bruk <b>små bokstaver.</b> 
+Er svaret  galt, kan du fortsette til du har klart det. Du får ett minuspoeng for hvert 
+mislykte forsøk i feltet nederst, mens det er to plusspoeng for riktig svar.
+<form>
+<table bgcolor="#666666" width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td>
+<table bgcolor="#99ff99" width="100%">
+<tr>
+<td><nobr>
+Wir wandern den ganzen Tag in <input type="text" name="a" value="" size=5 onChange="svara(this.form)"> Wald.
+</td>
+<td><nobr>
+Gestern Abend ging er in <input type="text" name="b" value="" size=5 onChange="svarb(this.form)"> Diskothek.
+</td>
+</tr>
+<tr>
+<td><nobr>
+Sie sitzen auf <input type="text" name="c" value="" size=5 onChange="svarc(this.form)"> Sofa im Wohnzimmer.
+</td>
+<td><nobr>
+Petra sitzt neben <input type="text" name="d" value="" size=5 onChange="svard(this.form)"> Freundin.
+</td>
+</tr>
+<tr>
+<td><nobr>
+Der Hund setzt sich unter <input type="text" name="e" value="" size=5 onChange="svare(this.form)"> Tisch.
+</td>
+<td><nobr>
+Wir mussten vor <input type="text" name="f" value="" size=5 onChange="svarf(this.form)"> Schranke warten.
+</td>
+</tr>
+<tr>
+<td><nobr>
+Meine Freunde saßen schon in <input type="text" name="g" value="" size=5 onChange="svarg(this.form)"> Wagen.
+</td>
+<td><nobr>
+Ich ging in <input type="text" name="h" value="" size=5 onChange="svarh(this.form)"> großen Garten ein.
+</td>
+</tr>
+<tr>
+<td><nobr>
+Er saß neben <input type="text" name="i" value="" size=5 onChange="svari(this.form)"> kleinen Mädchen.
+</td>
+<td><nobr>
+Wir stellten uns vor <input type="text" name="j" value="" size=5 onChange="svarj(this.form)"> Baum.
+</td>
+</tr>
+<tr>
+<td><nobr>
+Wir gingen in <input type="text" name="k" value="" size=5 onChange="svark(this.form)"> gemütliches Restaurant!
+</td>
+<td><nobr>
+Er steht vor <input type="text" name="l" value="" size=5 onChange="svarl(this.form)"> kleinen, roten Auto.
+</td>
+</tr>
+<tr>
+<td><nobr>
+Das Dorf liegt an <input type="text" name="m" value="" size=5 onChange="svarm(this.form)"> kleinen Fluss.
+</td>
+<td><nobr>
+Wir kamen in <input type="text" name="n" value="" size=5 onChange="svarn(this.form)"> großes Zimmer.
+</td>
+</tr>
+<tr>
+<td><nobr>
+Ich saß auf <input type="text" name="o" value="" size=5 onChange="svaro(this.form)"> Bank im Garten.
+</td>
+<td><nobr>
+Das Kind sitzt ruhig auf <input type="text" name="p" value="" size=5 onChange="svarp(this.form)"> Stuhl.
+</td>
+</tr>
+<tr>
+<td><nobr>
+Wir haben in <input type="text" name="q" value="" size=5 onChange="svarq(this.form)"> kleinen Dorf eingekauft.
+</td>
+<td><nobr>
+Ich ging hinter <input type="text" name="r" value="" size=5 onChange="svarr(this.form)"> kleines Haus!
+</td>
+</tr>
+<tr>
+<td><nobr>
+Die Kinder wohnen in <input type="text" name="s" value="" size=5 onChange="svars(this.form)"> anderen Stadt.
+</td>
+<td><nobr>
+Dieter sitzt neben <input type="text" name="t" value="" size=5 onChange="svart(this.form)"> alten Freund.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="100%">
+<tr>
+<td><b>Antall poeng:</b>&nbsp;<input type="text" name="poeng" value="0" size=3 onChange="juks(this.form)"></td>
+<td><a href="prep.html#to" target="blank"><font color="#000000"><b>Regler og bøyningsmønster</b></font></a></td>
+</tr>
+<tr>
+<td><a href="prep.html"><font color="#000000"><b>Hovedside for preposisjoner</b></font></a></td>
+<td><a href="tygram.html"><font color="#000000"><b>Hovedside for tysk grammatikk</b></font></a></td>
+</tr>
+</table>
+</form>
+</body>
+</html>

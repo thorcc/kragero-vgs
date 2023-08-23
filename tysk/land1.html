@@ -1,0 +1,529 @@
+<html>
+
+<head>
+
+<title>Landeskunde 1</title>
+
+<script language="JavaScript">
+
+function fasit(form) {
+
+var a
+
+var b
+
+var c
+
+var d
+
+var e
+
+var f
+
+var g
+
+var h
+
+var i
+
+var j
+
+var poeng = 0;
+
+if ((form.a.value != "0")
+
+ && (form.b.value != "0")
+
+ && (form.c.value != "0")
+
+ && (form.d.value != "0")
+
+ && (form.e.value != "0")
+
+ && (form.f.value != "0")
+
+ && (form.g.value != "0")
+
+ && (form.h.value != "0")
+
+ && (form.i.value != "0")
+
+ && (form.j.value != "0"))
+
+  {
+
+if (form.a.value == "2") {
+
+poeng = poeng + 1;
+
+  }
+
+else
+
+  {
+
+poeng = poeng + 0;
+
+  }
+
+if (form.b.value == "5") {
+
+poeng = poeng + 1;
+
+  }
+
+else
+
+  {
+
+poeng = poeng + 0;
+
+  }
+
+if (form.c.value == "3") {
+
+poeng = poeng + 1;
+
+  }
+
+else
+
+  {
+
+poeng = poeng + 0;
+
+  }
+
+if (form.d.value == "6") {
+
+poeng = poeng + 1;
+
+  }
+
+else
+
+  {
+
+poeng = poeng + 0;
+
+  }
+
+if (form.e.value == "6") {
+
+poeng = poeng + 1;
+
+  }
+
+else
+
+  {
+
+poeng = poeng + 0;
+
+  }
+
+if (form.f.value == "6") {
+
+poeng = poeng + 1;
+
+  }
+
+else
+
+  {
+
+poeng = poeng + 0;
+
+  }
+
+if (form.g.value == "1") {
+
+poeng = poeng + 1;
+
+  }
+
+else
+
+  {
+
+poeng = poeng + 0;
+
+  }
+
+if (form.h.value == "4") {
+
+poeng = poeng + 1;
+
+  }
+
+else
+
+  {
+
+poeng = poeng + 0;
+
+  }
+
+if (form.i.value == "5") {
+
+poeng = poeng + 1;
+
+  }
+
+else
+
+  {
+
+poeng = poeng + 0;
+
+  }
+
+if (form.j.value == "2") {
+
+poeng = poeng + 1;
+
+  }
+
+else
+
+  {
+
+poeng = poeng + 0;
+
+    }
+
+form.resultat.value=poeng
+
+if (poeng == 10) {
+
+alert ("Herzlichen Glückwunsch!");
+
+    }
+
+  }
+
+}
+
+</script>
+
+<meta http-equiv="Expires" Content="0">
+<meta http-equiv="Pragma" Content="no-cache">
+<style type="text/css">
+a {font-family: Arial; font-size: 11pt; font-weight: bold; color: #000000; text-decoration: none;}
+</style>
+</HEAD>
+<BODY BGCOLOR="#99ccff" LINK="#000000" ALINK="#000000" VLINK="#000000">
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td width="100%">
+<table width="100%" border="2" frame="above" cellspacing="1" cellpadding="1">
+<tr>
+          <TD align="center" bgcolor="#ccffcc" height="20"> <nobr>&nbsp;<a href="tysk.html">Tilbake</a>&nbsp; 
+          </TD>
+          <TD align="center" bgcolor="#ccffcc" height="20"> <nobr><a href="tygram.html">Grammatikk</a> 
+          </TD>
+          <td align="center" bgcolor="#ccffcc" height="20"> <nobr><a href="Animasjon.exe">Animasjon</a> 
+          </td>
+          <td align="center" bgcolor="#ccffcc" height="20"> <nobr><a href="glose.html">Glose&oslash;velser</a> 
+          </td>
+          <td align="center" bgcolor="#000000" height="20"> <nobr>&nbsp;<a href="quiz.html"><font color="#ccffcc">Quiz</font></a>&nbsp; 
+          </td>
+          <td align="center" bgcolor="#ccffcc" height="20"> <nobr><a href="..\tyskutvt.html">Sch&uuml;leraustausch</a> 
+          </td>
+          <td align="center" bgcolor="#ccffcc" height="20"> <nobr>&nbsp;<a href="..\medier.html">Medier</a>&nbsp; 
+          </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<p>
+
+<form method="post" action="enctype.html">
+
+<table border="0" cellspacing="0" cellpadding="0" bgcolor="#99CCFF" width="640">
+
+<tr>
+
+<td bgcolor="#99ccff" VALIGN="TOP" width="200"> 
+
+<table border="12" bgcolor="#999999" cellspacing="0" cellpadding="6" width="100%">
+
+<tr>
+
+<td bgcolor="#990000"><b>
+
+<font face="Arial" color="#ff6666" size="5">
+
+Landeskunde<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1
+
+</font>
+
+<p align="justify">
+
+<font face="Arial" color="#ffffff" size="2">
+
+Beantworten Sie zuerst alle Fragen! Sie erfahren die Zahl der richtigen Antworten - nicht was richtig oder falsch ist.
+
+</font></p><font face="Arial" color="#ffffff" size="2">
+
+Ergebnis&nbsp;:&nbsp;&nbsp;<input type="text" name="resultat" size="1" value="">
+
+</font></b>
+
+</td>
+
+</tr>
+
+</TABLE>
+
+<table border="1" cellspacing="0" cellpadding="10" bgcolor="#999999" width="100%">
+
+<tr>
+
+<td align="center">
+
+<input type="button" value="Überprüfen" onClick="fasit(this.form)">
+
+<br><input type="reset" value="Zurücksetzen">
+
+</td>
+
+</tr>
+
+</table>
+
+</td>
+
+<td bgcolor="#99ccff" VALIGN="TOP" HEIGHT="100%" width="440" align="left">
+
+<table border="1" cellspacing="0" cellpadding="2" bgcolor="#ffffff" width="100%" HEIGHT="100%" align="left">
+
+<tr>
+
+<td align="left" bgcolor="#ffffff" height="100%">
+
+<table border="0" cellspacing="0" cellpadding="2" bgcolor="#ffffff" HEIGHT="100%" align="left">
+<tr>
+<td>
+<select name="a">
+  <option value="0">Viele Bundesländer</option>
+  <option value="1">15 Bundesländer</option>
+  <option value="2">16 Bundesländer</option>
+  <option value="3">17 Bundesländer</option>
+  <option value="4">18 Bundesländer</option>
+  <option value="5">19 Bundesländer</option>
+  <option value="6">20 Bundesländer</option>
+</select>
+</td>
+<td>
+  <nobr>hat die Bundesrepublik Deutschland.
+</td>
+</tr>
+<tr>
+<td>
+<select name="b">
+  <option value="0">Viele Bundesländer</option>
+  <option value="1">5 Bundesländer</option>
+  <option value="2">6 Bundesländer</option>
+  <option value="3">7 Bundesländer</option>
+  <option value="4">8 Bundesländer</option>
+  <option value="5">9 Bundesländer</option>
+  <option value="6">10 Bundesländer</option>
+</select>
+</td>
+<td>
+  <nobr>hat die Bundesrepublik Österreich.
+</td>
+</tr>
+<tr>
+<td>
+<select name="c">
+  <option value="0">Viele Bundesländer</option>
+  <option value="1">24 Bundesländer</option>
+  <option value="2">25 Bundesländer</option>
+  <option value="3">26 Bundesländer</option>
+  <option value="4">27 Bundesländer</option>
+  <option value="5">28 Bundesländer</option>
+  <option value="6">29 Bundesländer</option>
+</select>
+</td>
+<td>
+  <nobr>(Kantonen) hat die Schweiz.
+</td>
+</tr>
+<tr>
+<td>
+<select name="d">
+  <option value="0">Diese Stadt ist die &nbsp;&nbsp;</option>
+  <option value="1">Basel ist die</option>
+  <option value="2">Bern ist die</option>
+  <option value="3">Genf ist die</option>
+  <option value="4">Lausanne ist die</option>
+  <option value="5">St. Gallen ist die</option>
+  <option value="6">Zürich ist die</option>
+</select></td>
+                  <td> <nobr>gr&ouml;&szlig;te Stadt in der Schweiz. </td>
+</tr>
+<tr>
+<td>
+<select name="e">
+  <option value="0">Diese Stadt ist die &nbsp;&nbsp;</option>
+  <option value="1">Innsbruck ist die</option>
+  <option value="2">Salzburg ist die</option>
+  <option value="3">Linz ist die</option>
+  <option value="4">Klagenfurt ist die</option>
+  <option value="5">St. Pölten ist die</option>
+  <option value="6">Graz ist die</option>
+</select></td>
+                  <td> <nobr>zweitgr&ouml;&szlig;te Stadt in &Ouml;sterreich. 
+                  </td>
+</tr>
+<tr>
+<td>
+<select name="f">
+  <option value="0">An dem Fluss liegt &nbsp;&nbsp;</option>
+  <option value="1">Am Rhein liegt</option>
+  <option value="2">An der Elbe liegt</option>
+  <option value="3">Am der Ems liegt</option>
+  <option value="4">An der Havel liegt</option>
+  <option value="5">An der Spree liegt</option>
+  <option value="6">An der Weser liegt</option>
+</select>
+</td>
+<td>
+  <nobr>Bremen.
+</td>
+</tr>
+<tr>
+<td>
+<select name="g">
+  <option value="0">Diese Stadt ist die &nbsp;&nbsp;</option>
+  <option value="1">Wiesbaden ist die</option>
+  <option value="2">Darmstadt ist die</option>
+  <option value="3">Fulda ist die</option>
+  <option value="4">Frankfurt ist die</option>
+  <option value="5">Kassel ist die</option>
+  <option value="6">Offenbach ist die</option>
+</select></td>
+<td>
+  <nobr>Hauptstadt von Hessen.
+</td>
+</tr>
+<tr>
+<td>
+<select name="h">
+  <option value="0">Diese Stadt ist die &nbsp;&nbsp;</option>
+  <option value="1">Wismar ist die</option>
+  <option value="2">Rostock ist die</option>
+  <option value="3">Stralsund ist die</option>
+  <option value="4">Schwerin ist die</option>
+  <option value="5">Warnemünde ist die</option>
+  <option value="6">Saßnitz ist die</option>
+</select></td>
+<td>
+  <nobr>Hauptstadt von Mecklenburg-Vorpommern.
+</td>
+</tr>
+<tr>
+<td>
+<select name="i">
+  <option value="0">Diese Stadt ist die &nbsp;&nbsp;</option>
+  <option value="1">Gera ist die</option>
+  <option value="2">Jena ist die</option>
+  <option value="3">Weimar ist die</option>
+  <option value="4">Eisenach ist die</option>
+  <option value="5">Erfurt ist die</option>
+  <option value="6">Suhl ist die</option>
+</select></td>
+<td>
+  <nobr>Hauptstadt von Thüringen.
+</td>
+</tr>
+<td>
+<select name="j">
+  <option value="0">An dem Fluss liegt &nbsp;&nbsp;</option>
+  <option value="1">An der Oder liegt</option>
+  <option value="2">An der Elbe liegt</option>
+  <option value="3">Am der Ems liegt</option>
+  <option value="4">An der Havel liegt</option>
+  <option value="5">An der Spree liegt</option>
+  <option value="6">An der Weser liegt</option>
+</select>
+</td>
+<td>
+  <nobr>Magdeburg.
+</td>
+</tr>
+</table>
+
+</td>
+
+</tr>
+
+</table>
+</td>
+</tr>
+</table>
+<p>
+<table BORDER="1" CELLSPACING="0" CELLPADDING="5" BGCOLOR="#ffffff">
+<tr>
+<td width="140" bgcolor="#ff6666" align="center">
+<nobr><a href="land1.html"><FONT FACE="Arial" SIZE="2" COLOR="#000000"><b>Landeskunde 1</b></FONT></a>
+</td width="140">
+<td width="140" bgcolor="#ff9933" align="center">
+<nobr><a href="land2.html"><FONT FACE="Arial" SIZE="2" COLOR="#000000"><b>Landeskunde 2</b></FONT></a>
+</td width="140">
+<td width="140" bgcolor="#ffcc33" align="center">
+<nobr><a href="land3.html"><FONT FACE="Arial" SIZE="2" COLOR="#000000"><b>Landeskunde 3</b></FONT></a>
+</td width="140">
+<td width="140" bgcolor="#ffff66" align="center">
+<nobr><a href="land4.html"><FONT FACE="Arial" SIZE="2" COLOR="#000000"><b>Landeskunde 4</b></FONT></a>
+</td width="140">
+</tr>
+<tr>
+<td width="140" bgcolor="#ff9999" align="center">
+<nobr><a href="hist1.html"><FONT FACE="Arial" SIZE="2" COLOR="#000000"><b>Geschichte 1</b></FONT></a>
+</td width="140">
+<td width="140" bgcolor="#cc9999" align="center">
+<nobr><a href="hist2.html"><FONT FACE="Arial" SIZE="2" COLOR="#000000"><b>Geschichte 2</b></FONT></a>
+</td width="140">
+<td width="140" bgcolor="#cccc99" align="center">
+<nobr><a href="hist3.html"><FONT FACE="Arial" SIZE="2" COLOR="#000000"><b>Geschichte 3</b></FONT></a>
+</td width="140">
+<td width="140" bgcolor="#ccff66" align="center">
+<nobr><a href="politik.html"><FONT FACE="Arial" SIZE="2" COLOR="#000000"><b>Politik & Wirtschaft</b></FONT></a>
+</td width="140">
+</tr>
+<tr>
+<td width="140" bgcolor="#ff66ff" align="center">
+<nobr><a href="literatur1.html"><FONT FACE="Arial" SIZE="2" COLOR="#000000"><b>Literatur 1</b></FONT></a>
+</td width="140">
+<td width="140" bgcolor="#cc66ff" align="center">
+<nobr><a href="literatur2.html"><FONT FACE="Arial" SIZE="2" COLOR="#000000"><b>Literatur 2</b></FONT></a>
+</td width="140">
+<td width="140" bgcolor="#cccccc" align="center">
+<nobr><a href="film.html"><FONT FACE="Arial" SIZE="2" COLOR="#000000"><b>Medien</b></FONT></a>
+</td width="140">
+<td width="140" bgcolor="#99ff99" align="center">
+<nobr><a href="musik.html"><FONT FACE="Arial" SIZE="2" COLOR="#000000"><b>Musik</b></FONT></a>
+</td width="140">
+</tr>
+<tr>
+<td width="140" bgcolor="#9999cc" align="center">
+<nobr><a href="kultur.html"><FONT FACE="Arial" SIZE="2" COLOR="#000000"><b>Kunst & Kultur</b></FONT></a>
+</td width="140">
+<td width="140" bgcolor="#6699ff" align="center">
+<nobr><a href="winter.html"><FONT FACE="Arial" SIZE="2" COLOR="#000000"><b>Wintersport</b></FONT></a>
+</td width="140">
+<td width="140" bgcolor="#99cccc" align="center">
+<nobr><a href="fussball.html"><FONT FACE="Arial" SIZE="2" COLOR="#000000"><b>Fu&szlig;ball</b></FONT></a>
+</td width="140">
+<td width="140" bgcolor="#99ffff" align="center">
+<nobr><a href="sport.html"><FONT FACE="Arial" SIZE="2" COLOR="#000000"><b>Andere Sportarten</b></FONT></a>
+</td width="140">
+</tr>
+</table>
+</form></body>
+
+</html>

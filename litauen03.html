@@ -1,0 +1,232 @@
+<HTML>
+<HEAD>
+<TITLE>litauenutveksling 2003</TITLE>
+<SCRIPT LANGUAGE = "JavaScript">
+   var whichImage = true;
+
+   function blend() 
+   {
+      if ( whichImage ) {
+         image1.filters( "blendTrans" ).apply();
+         image1.style.visibility = "hidden";
+         image1.filters( "blendTrans" ).play();
+      }
+      else {
+         image2.filters( "blendTrans" ).apply();
+         image2.style.visibility = "hidden";
+         image2.filters( "blendTrans" ).play();
+      } 
+   }
+
+   function reBlend ( fromImage ) 
+   {
+      if ( fromImage ) {
+         image1.style.zIndex -= 2;
+         image1.style.visibility = "visible";
+      }
+      else {
+         image1.style.zIndex += 2;
+         image2.style.visibility = "visible";
+      }
+   
+      whichImage = !whichImage;
+      blend();
+   }
+</SCRIPT>
+<style type="text/css">
+a {font-family: Arial; font-size: 11pt; font-weight: bold; color: #000066; text-decoration: none;}
+img {border-color: #666666}
+</style>
+</HEAD>
+
+<BODY ONLOAD = "blend()" bgcolor="#99ccff">
+<table bgcolor="#99ccff" align=center border=2 cellspacing=0 cellpadding=0 frame=above width=100%>
+<tr>
+<td width=100%>
+<table width=100% border=0 cellpadding=0 cellspacing=0>
+<tr>
+<td align=center>
+<table width=100% align=center cellspacing=0 cellpadding=1 height=21 style="border-top: none; border-right: solid; border-bottom: solid; border-left: solid; border-width: 1px; border-color: #666666">
+<tr>
+<td bgcolor="#ffffff" align=center>
+<a href="tyskutv.html" target="innmat"><nobr>Tyskland/BeNeLux
+</a></td>
+</tr>
+</table>
+</td>
+<td width=2 border=0 cellspacing=0 cellpadding=0>
+</td>
+<td align=center>
+<table width=100% align=center cellspacing=0 cellpadding=1 height=21 style="border-top: none; border-right: solid; border-bottom: solid; border-left: solid; border-width: 1px; border-color: #666666">
+<tr>
+<td background="fylkesbg.jpg" align=center>
+<a href="pasvalys.html" target="innmat"><nobr><font color="#ffffff">Litauen</font>
+</a></td>
+</tr>
+</table>
+</td>
+<td width=2 border=0 cellspacing=0 cellpadding=0>
+</td>
+<td align=center>
+<table width=100% align=center cellspacing=0 cellpadding=1 height=21 style="border-top: none; border-right: solid; border-bottom: solid; border-left: solid; border-width: 1px; border-color: #666666">
+<tr>
+<td bgcolor="#ffffff" align=center>
+<a href="polen.html" target="innmat"><nobr>Polen
+</a></td>
+</tr>
+</table>
+</td>
+<td width=2 border=0 cellspacing=0 cellpadding=0>
+</td>
+<td align=center>
+<table width=100% align=center cellspacing=0 cellpadding=1 height=21 style="border-top: none; border-right: solid; border-bottom: solid; border-left: solid; border-width: 1px; border-color: #666666">
+<tr>
+<td bgcolor="#ffffff" align=center>
+<a href="frankrike03.html" target="innmat"><nobr>Frankrike
+</a></td>
+</tr>
+</table>
+</td>
+<td width=2 border=0 cellspacing=0 cellpadding=0>
+</td>
+<td align=center>
+<table width=100% align=center cellspacing=0 cellpadding=1 height=21 style="border-top: none; border-right: solid; border-bottom: solid; border-left: solid; border-width: 1px; border-color: #666666">
+<tr>
+<td bgcolor="#ffffff" align=center>
+<a href="belgia03.html" target="innmat"><nobr>Belgia
+</a></td>
+</tr>
+</table>
+</td>
+<td width=2 border=0 cellspacing=0 cellpadding=0>
+</td>
+<td align=center>
+<table width=100% align=center cellspacing=0 cellpadding=1 height=21 style="border-top: none; border-right: solid; border-bottom: solid; border-left: solid; border-width: 1px; border-color: #666666">
+<tr>
+<td bgcolor="#ffffff" align=center>
+<a href="hellas.html" target="innmat"><nobr>Hellas
+</a></td>
+</tr>
+</table>
+</td>
+<td width=2 border=0 cellspacing=0 cellpadding=0>
+</td>
+<td align=center>
+<table width=100% align=center cellspacing=0 cellpadding=1 height=21 style="border-top: none; border-right: solid; border-bottom: solid; border-left: solid; border-width: 1px; border-color: #666666">
+<tr>
+<td bgcolor="#ffffff" align=center>
+<a href="england.html" target="innmat"><nobr>London
+</a></td>
+</tr>
+</table>
+</td>
+<td width=2 border=0 cellspacing=0 cellpadding=0>
+</td>
+<td bgcolor="#ffffff" align=center>
+<table width=100% align=center cellspacing=0 cellpadding=1 height=21 style="border-top: none; border-right: solid; border-bottom: solid; border-left: solid; border-width: 1px; border-color: #666666">
+<tr>
+<td bgcolor="ffffff" align=center>
+<a href="skottland06b.html" target="innmat"><nobr>Skottland
+</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="1" width="580">
+<tr>
+<td>
+<img src="images\utveksling.gif" STYLE = "position: absolute; left: 50; top: 60;" width="200" height="50">
+</td>
+<td>
+<IMG ID = "image2" SRC = "images\Graphic2.gif"
+   ONFILTERCHANGE = "reBlend(false )" 
+   STYLE = "position: absolute; left: 350; top: 60;
+   filter: blendTrans( duration = 6 ); z-index: 1" width="200" height="50">
+
+<IMG ID = "image1" SRC = "images\Graphic4.gif"
+   ONFILTERCHANGE = "reBlend( true )" 
+   STYLE = "position: absolute; left: 350; top: 60;
+   filter: blendTrans( duration = 6 ); z-index: 2" width="200" height="50">
+</td>
+</tr>
+</table>
+<table border="0" bgcolor="#666666" cellspacing="1" cellpadding="7" width="580" STYLE = "position: absolute; top: 120;">
+<tr>
+<td bgcolor="#99ccff" valign="top" align="center">
+<img src="images\litauen03c.jpg" border="1" width="280" height="210">
+      <p align="justify"> <font face="Arial" size="2" color="#000066"> I uke 14 (2003) var en 
+        gruppe fra Krager&oslash; videreg&aring;ende skole for tredje gang p&aring; 
+        bes&oslash;k i Pasvalys. Her er gruppa fotografet i hovedstaden Vilnius: 
+        Anne-Kristine Aas (l&aelig;rer), Magnhild Wastøl (3HJ), Stine Johannesson 
+        (3AFa), Tanja Radosavljevic (3HJ), Janne Haugland (2HJ), Guro Hagen (3AFa) 
+        og Inger Aakre (3AFa).</font> 
+    </td>
+<td bgcolor="#99ccff" valign="top" align="center">
+<img src="images\litauen03b.jpg" border="1" width="280" height="210">
+<p align="justify">
+<font face="Arial" size="2" color="#000066"> 
+Ikke langt fra Pasvalys, n&aelig;r grensa mot Latvia i nord, ligger Korsh&oslash;yden med over 100000 
+kors av forskjellige slag. Fra ca. 1400 har folk reist kors her til minne om sine d&oslash;de p&aring;r&oslash;rende, 
+og etter hvert fikk h&oslash;yden en viktig symbolsk betydning i kampen mot det russiske tsarveldet og 
+det kommunistiske Sovjet, som prøvde &aring; fjerne h&oslash;yden.</font>
+</td>
+</tr>
+<tr>
+<td bgcolor="#99ccff" valign="top" align="center">
+<img src="images\litauen03a.jpg" border="1" width="280" height="210">
+      <p align="justify"> <font face="Arial" size="2" color="#000066"> Her er gruppa i samtale  
+        med ordf&oslash;reren i Pasvalys. Ogs&aring; skolesjefen er til stede.</font>
+    </td>
+<td bgcolor="#99ccff" valign="top" align="center">
+<img src="images\litauen03k.jpg" border="1" width="280" height="210">
+      <p align="justify"> <font face="Arial" size="2" color="#000066"> Lengst bak skimtes gruppa fra 
+        KVS p&aring; bes&oslash;k i en vanlig skoletime i Pasvalys.</font>
+    </td>
+</tr>
+<tr>
+<td bgcolor="#99ccff" valign="top" align="center">
+<img src="images\litauen03i.jpg" border="1" width="280" height="210">
+      <p align="justify"> <font face="Arial" size="2" color="#000066"> Elevene bes&oslash;kte flere 
+        sosiale institusjoner. Magnhild og Tanja er her sammen med noen av beboerne 
+        ved et aldershjem</font> 
+    </td>
+<td bgcolor="#99ccff" valign="top" align="center">
+<img src="images\litauen03g.jpg" border="1" width="280" height="210">
+      <p align="justify"> <font face="Arial" size="2" color="#000066"> L&aelig;rer Ingeborg Goplen 
+        er her p&aring; bes&oslash;k p&aring; et barnehjem. </font> 
+    </td>
+</tr>
+<tr>
+<td bgcolor="#99ccff" valign="top" align="center">
+<img src="images\litauen03f.jpg" border="1" width="280" height="210">
+<p align="justify">
+<font face="Arial" size="2" color="#000066">
+Elevene fra Krager&oslash; videreg&aring;ende skole fortoner seg unektelig 
+temmelig sm&aring; foran denne store statuen av Vilnius' grunnlegger!</font>
+</td>
+<td bgcolor="#99ccff" valign="top" align="center">
+<img src="images\litauen03e.jpg" border="1" width="280" height="210">
+<p align="justify">
+<font face="Arial" size="2" color="#000066"> 
+Denne byporten fra det 16. &aring;rhundre er den eneste som er intakt av opprinnelig 
+ni porter i bymuren. I porten er det et kapell, som er et pilgrimssted for katolikker 
+i hele &Oslash;st-Europa, pga. et stort Maria-ikon i gull.</font>
+</td>
+</tr>
+<tr>
+<td bgcolor="#99ccff" valign="top" colspan="2">
+<b><font face="Arial" size="2" color="#000066">
+...Og her er inntrykk fra 
+<a href="pasvalys.html"><font color="#000066" size="2"><b><u>
+HS-elevenes bes&oslash;k v&aring;ren 2001</b></u></font></a> og 
+<a href="litauen.html"><font color="#000066" size="2"><b><u>AF-elevenes bes&oslash;k h&oslash;sten 2001</u></b>
+</font></a>.</font></b>
+</td>
+</tr>
+</table>
+</BODY>
+</HTML>

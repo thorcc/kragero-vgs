@@ -1,0 +1,241 @@
+<HTML>
+<HEAD>
+<TITLE>litauenutveksling</TITLE>
+<SCRIPT LANGUAGE = "JavaScript">
+   var whichImage = true;
+
+   function blend()
+   {
+      if ( whichImage ) {
+         image1.filters( "blendTrans" ).apply();
+         image1.style.visibility = "hidden";
+         image1.filters( "blendTrans" ).play();
+      }
+      else {
+         image2.filters( "blendTrans" ).apply();
+         image2.style.visibility = "hidden";
+         image2.filters( "blendTrans" ).play();
+      }
+   }
+
+   function reBlend ( fromImage )
+   {
+      if ( fromImage ) {
+         image1.style.zIndex -= 2;
+         image1.style.visibility = "visible";
+      }
+      else {
+         image1.style.zIndex += 2;
+         image2.style.visibility = "visible";
+      }
+
+      whichImage = !whichImage;
+      blend();
+   }
+</SCRIPT>
+<style type="text/css">
+a {font-family: Arial; font-size: 11pt; font-weight: bold; color: #000066; text-decoration: none;}
+img {border-color: #666666}
+</style>
+</HEAD>
+<BODY ONLOAD = "blend()" bgcolor="#99ccff">
+<table bgcolor="#99ccff" align=center border=2 cellspacing=0 cellpadding=0 frame=above width=100%>
+<tr>
+<td width=100%>
+<table width=100% border=0 cellpadding=0 cellspacing=0>
+<tr>
+<td align=center>
+<table width=100% align=center cellspacing=0 cellpadding=1 height=21 style="border-top: none; border-right: solid; border-bottom: solid; border-left: solid; border-width: 1px; border-color: #666666">
+<tr>
+<td bgcolor="#ffffff" align=center>
+<a href="tyskutv.html" target="innmat"><nobr>Tyskland/BeNeLux
+</a></td>
+</tr>
+</table>
+</td>
+<td width=2 border=0 cellspacing=0 cellpadding=0>
+</td>
+<td align=center>
+<table width=100% align=center cellspacing=0 cellpadding=1 height=21 style="border-top: none; border-right: solid; border-bottom: solid; border-left: solid; border-width: 1px; border-color: #666666">
+<tr>
+<td background="fylkesbg.jpg" align=center>
+<a href="pasvalys.html" target="innmat"><nobr><font color="#ffffff">Litauen</font>
+</a></td>
+</tr>
+</table>
+</td>
+<td width=2 border=0 cellspacing=0 cellpadding=0>
+</td>
+<td align=center>
+<table width=100% align=center cellspacing=0 cellpadding=1 height=21 style="border-top: none; border-right: solid; border-bottom: solid; border-left: solid; border-width: 1px; border-color: #666666">
+<tr>
+<td bgcolor="#ffffff" align=center>
+<a href="polen.html" target="innmat"><nobr>Polen
+</a></td>
+</tr>
+</table>
+</td>
+<td width=2 border=0 cellspacing=0 cellpadding=0>
+</td>
+<td align=center>
+<table width=100% align=center cellspacing=0 cellpadding=1 height=21 style="border-top: none; border-right: solid; border-bottom: solid; border-left: solid; border-width: 1px; border-color: #666666">
+<tr>
+<td bgcolor="#ffffff" align=center>
+<a href="frankrike04.html" target="innmat"><nobr>Frankrike
+</a></td>
+</tr>
+</table>
+</td>
+<td width=2 border=0 cellspacing=0 cellpadding=0>
+</td>
+<td align=center>
+<table width=100% align=center cellspacing=0 cellpadding=1 height=21 style="border-top: none; border-right: solid; border-bottom: solid; border-left: solid; border-width: 1px; border-color: #666666">
+<tr>
+<td bgcolor="#ffffff" align=center>
+<a href="belgia04.html" target="innmat"><nobr>Belgia
+</a></td>
+</tr>
+</table>
+</td>
+<td width=2 border=0 cellspacing=0 cellpadding=0>
+</td>
+<td align=center>
+<table width=100% align=center cellspacing=0 cellpadding=1 height=21 style="border-top: none; border-right: solid; border-bottom: solid; border-left: solid; border-width: 1px; border-color: #666666">
+<tr>
+<td bgcolor="#ffffff" align=center>
+<a href="hellas.html" target="innmat"><nobr>Hellas
+</a></td>
+</tr>
+</table>
+</td>
+<td width=2 border=0 cellspacing=0 cellpadding=0>
+</td>
+<td align=center>
+<table width=100% align=center cellspacing=0 cellpadding=1 height=21 style="border-top: none; border-right: solid; border-bottom: solid; border-left: solid; border-width: 1px; border-color: #666666">
+<tr>
+<td bgcolor="#ffffff" align=center>
+<a href="england.html" target="innmat"><nobr>London
+</a></td>
+</tr>
+</table>
+</td>
+<td width=2 border=0 cellspacing=0 cellpadding=0>
+</td>
+<td bgcolor="#ffffff" align=center>
+<table width=100% align=center cellspacing=0 cellpadding=1 height=21 style="border-top: none; border-right: solid; border-bottom: solid; border-left: solid; border-width: 1px; border-color: #666666">
+<tr>
+<td bgcolor="ffffff" align=center>
+<a href="skottland06b.html" target="innmat"><nobr>Skottland
+</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<p>
+<table border="0" cellspacing="0" cellpadding="3" width="580">
+<tr>
+<td>
+<img src="images\utveksling.gif" STYLE = "position: absolute; left: 50; top: 60;" width="200" height="50">
+</td>
+<td>
+<IMG ID = "image2" SRC = "images\Graphic2.gif"
+   ONFILTERCHANGE = "reBlend(false )"
+   STYLE = "position: absolute; left: 350; top: 60;
+   filter: blendTrans( duration = 6 ); z-index: 1" width="200" height="50">
+
+<IMG ID = "image1" SRC = "images\Graphic4.gif"
+   ONFILTERCHANGE = "reBlend( true )"
+   STYLE = "position: absolute; left: 350; top: 60;
+   filter: blendTrans( duration = 6 ); z-index: 2" width="200" height="50">
+</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="3" width="580" STYLE = "position: absolute; top: 120;">
+<tr>
+<td valign="top">
+<img src="images\europa.gif" border="0" width="280" height="368" >
+<p>
+<img src="images\pasvalys2.jpg" border="1" width="300" height="204">
+<p>
+<img src="images\pasvalys1.jpg" border="1" width="300" height="206">
+</td>
+<td valign="top">
+<font face="Arial" size="2" color="#000066" color="#000000">
+<p align="justify">
+V&aring;ren 2001 var seks elever fra annen- og tredjeklasse hjelpepleier p&aring;
+utveksling i Pasvalys i Litauen i to uker sammen med to lærere, mens to l&aelig;rere fra
+Pasvalys tilbrakte en uke ved KVS. Etter at de baltiske statene br&oslash;t med
+Sovjetunionen i 1991, har de pr&oslash;vd å bygge opp forbindelser med Vest-Europa,
+bl.a. ved hjelp av vennskapskommuner i de nordiske landene, og disse har v&aelig;rt
+behjelpelige i oppbygging av en hjemmetjeneste i kommunene. Fattigdom, lav levealder,
+alkoholisme og arbeidsledighet var problemer som gjorde inntrykk. Folk hadde stort
+sett ikke innlagt vann, og toalettet var gjerne en potte under senga. En gang hadde
+jentene med seg en plate sjokolade, til en verdi av to-tre kroner omregnet til norsk
+valuta, til en eldre dame, som ikke hadde opplevd noe slikt p&aring; lang tid.
+I Norge er Drangedal er Pasvalys' vennskapskommune, og det gjennom nabokommunen
+at KVS f&aring;tt kontakten. Turen til Lituaen ble st&oslash;ttet &oslash;konomisk
+av Drangedal kommune og Telemark fylke. Gruppa bodde i leiligheter to og to p&aring;
+rommet, og prisniv&aring;et var behagelig: 600 kroner for middag inkludert drikke for 14 personer!
+<p align="justify">
+Her er gruppa avbildet utenfor r&aring;dhuset i Pasvalys, en
+landkommune med 37000 innbyggere og med et sentralt tettsted omtrent
+p&aring; st&oslash;rrelse med Krager&oslash;. Fra venstre ser vi Solveig
+Tveit, Caja Rognli, Siv Hellermyr, Trine-Lise Åsulfsen, Stine Johansen,
+Kristin Skotmyr og May Elin Voje. Som fotograf var ogs&aring; Marit Haug
+til stede da bildet ble tatt. En tur til Litauens hovedstad Vilnius
+avsl&oslash;rte stor forskjell p&aring; by og land, bl.a. n&aring;r
+det gjelder engelskkunnskaper, og Latvias hovedstad Riga viste seg
+p&aring; mange m&aring;ter som en vestlig by med h&oslash;yt prisniv&aring;.
+Her er kommunens overjordmor fotografert sammen med fire av jentene fra KVS.
+Utdannelsen av helsepersonell er p&aring; mange m&aring;ter ulik den vi
+kjenner fra Norge. Sykepleierne minner mer om legeassistenter med en heller
+akademisk utdannelse, mens kategorien hjelpepleier ikke fins. Da det ogs&aring;
+var spr&aring;kbarrierer pga. andre tradisjoner mht. til fremmedspr&aring;k,
+var ikke elevutveksling i tradisjonell forstand naturlig, men gruppa bes&oslash;kte
+et gymnas.
+</font>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<table width="580" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td>
+<img src="images\pasvalys5.jpg" border="1" width="177" height="135">
+</td>
+<td>
+<img src="images\pasvalys3.jpg" border="1" width="190" height="135">
+</td>
+<td>
+<img src="images\pasvalys4.jpg" border="1" width="190" height="135">
+</td>
+</tr>
+<tr>
+<td colspan="3">
+<font face="Arial" size="2" color="#000066" bgcolor="#000000">
+<p align="justify">
+Her er jentene på bes&oslash;k på sykehus og sykehjem, der det imidlertid
+heller ikke ble praksis pga. spr&aring;kproblemene. Siden har det v&aelig;rt flere bes&oslash;k:
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td align="left">
+<a href="litauen.html"><nobr><font color="#000066" size="2"><u>AF-elevenes bes&oslash;k h&oslash;sten 2001</u></font></a>
+<br>&nbsp;
+</td>
+<td align="right">
+<a href="litauen03.html"><nobr><font color="#000066" size="2"><u>AF- og HS-elevenes bes&oslash;k v&aring;ren 2003</u></font></a>
+<br>&nbsp;
+</td>
+</tr>
+</table>
+</BODY>
+</HTML>

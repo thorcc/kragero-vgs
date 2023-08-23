@@ -1,0 +1,468 @@
+<HTML>
+<HEAD>
+<TITLE>Påpekende pronomen</TITLE>
+<script language="JavaScript">
+var aa
+var a
+var aaa
+var bb
+var b
+var bbb
+var cc
+var c
+var ccc
+var dd
+var d
+var ddd
+var ee
+var e
+var eee
+var ff
+var f
+var fff
+var gg
+var g
+var ggg
+var hh
+var h
+var hhh
+var ii
+var i
+var iii
+var jj
+var j
+var jjj
+var poeng=0;
+function svara(form) {
+if ((form.a.style.backgroundColor=="#99ff99")||(form.a.style.backgroundColor=="#ff9999")) {
+  alert("Nei, den går ikke!");
+  form.aaa.value="Dieser Junge spielt Gitarre.";
+  poeng = poeng+0;
+  } else {
+if ((form.a.value=="Dieser Junge spielt Gitarre.")||(form.a.value=="Dieser Junge spielt Gitarre")||(form.a.value=="Dieser Junge spielt Gitarre. ")||(form.a.value=="Dieser Junge spielt Gitarre ")) {
+  form.a.style.backgroundColor="#99ff99";
+  poeng = poeng+1;
+  form.aa.value="'dieser': S/N(hankjønn)";
+  form.aa.style.backgroundColor="#ccff66";
+  form.aaa.value=form.a.value;
+  form.aaa.style.backgroundColor="#ccff66";
+  form.poeng.value=poeng;
+  } else {
+  form.a.style.backgroundColor="#ff9999";
+  form.aa.value="'dieser': S/N(hankjønn)";
+  form.aa.style.backgroundColor="#ccff66";
+  form.aaa.value="Dieser Junge spielt Gitarre.";
+  form.aaa.style.backgroundColor="#ccff66";
+  poeng = poeng+0;
+  form.poeng.value=poeng;
+    }
+  }
+}
+function svarb(form) {
+if ((form.b.style.backgroundColor=="#99ff99")||(form.b.style.backgroundColor=="#ff9999")) {
+  alert("Nei, den går ikke!");
+  form.bbb.value="Diesen Mann kenne ich nicht.";
+  poeng = poeng+0;
+  } else {
+if ((form.b.value=="Diesen Mann kenne ich nicht.")||(form.b.value=="Diesen Mann kenne ich nicht")||(form.b.value=="Diesen Mann kenne ich nicht. ")||(form.b.value=="Diesen Mann kenne ich nicht ")) {
+  form.b.style.backgroundColor="#99ff99";
+  poeng = poeng+1;
+  form.bb.value="'diesen': DO/A(hankjønn)";
+  form.bb.style.backgroundColor="#99ccff";
+  form.bbb.value=form.b.value;
+  form.bbb.style.backgroundColor="#99ccff";
+  form.poeng.value=poeng;
+  } else {
+  form.b.style.backgroundColor="#ff9999";
+  form.bb.value="'diesen': DO/A(hankjønn)";
+  form.bb.style.backgroundColor="#99ccff";
+  form.bbb.value="Diesen Mann kenne ich nicht.";
+  form.bbb.style.backgroundColor="#99ccff";
+  poeng = poeng+0;
+  form.poeng.value=poeng;
+    }
+  }
+}
+function svarc(form) {
+if ((form.c.style.backgroundColor=="#99ff99")||(form.c.style.backgroundColor=="#ff9999")) {
+  alert("Nei, den går ikke!");
+  form.ccc.value="Diese Frau will etwas sagen.";
+  poeng = poeng+0;
+  } else {
+if ((form.c.value=="Diese Frau will etwas sagen.")||(form.c.value=="Diese Frau will etwas sagen")||(form.c.value=="Diese Frau möchte etwas sagen.")||(form.c.value=="Diese Frau möchte etwas sagen")||
+    (form.c.value=="Diese Frau will etwas sagen. ")||(form.c.value=="Diese Frau will etwas sagen ")||(form.c.value=="Diese Frau möchte etwas sagen. ")||(form.c.value=="Diese Frau möchte etwas sagen ")||
+    (form.c.value=="Diese Dame will etwas sagen.")||(form.c.value=="Diese Dame will etwas sagen")||(form.c.value=="Diese Dame möchte etwas sagen.")||(form.c.value=="Diese Dame möchte etwas sagen")||
+    (form.c.value=="Diese Dame will etwas sagen. ")||(form.c.value=="Diese Dame will etwas sagen ")||(form.c.value=="Diese Dame möchte etwas sagen. ")||(form.c.value=="Diese Dame möchte etwas sagen ")) {
+  form.c.style.backgroundColor="#99ff99";
+  poeng = poeng+1;
+  form.cc.value="'Diese': S/N(hunkjønn)";
+  form.cc.style.backgroundColor="#ccff66";
+  form.ccc.value=form.c.value;
+  form.ccc.style.backgroundColor="#ccff66";
+  form.poeng.value=poeng;
+  } else {
+  form.c.style.backgroundColor="#ff9999";
+  form.cc.value="'Diese': S/N(hunkjønn)";
+  form.cc.style.backgroundColor="#ccff66";
+  form.ccc.value="Diese Frau will etwas sagen.";
+  form.ccc.style.backgroundColor="#ccff66";
+  poeng = poeng+0;
+  form.poeng.value=poeng;
+    }
+  }
+}
+function svard(form) {
+if ((form.d.style.backgroundColor=="#99ff99")||(form.d.style.backgroundColor=="#ff9999")) {
+  alert("Nei, den går ikke!");
+  form.ddd.value="Mit diesem Mann habe ich nicht gesprochen.";
+  poeng = poeng+0;
+  } else {
+if ((form.d.value=="Mit diesem Mann habe ich nicht gesprochen.")||(form.d.value=="Mit diesem Mann habe ich nicht gesprochen")||(form.d.value=="Mit diesem Mann habe ich nicht gesprochen. ")||(form.d.value=="Mit diesem Mann habe ich nicht gesprochen ")) {
+  form.d.style.backgroundColor="#99ff99";
+  poeng = poeng+1;
+  form.dd.value="'diesem': PU+D(hankjønn)";
+  form.dd.style.backgroundColor="#99ccff";
+  form.ddd.value=form.d.value;
+  form.ddd.style.backgroundColor="#99ccff";
+  form.poeng.value=poeng;
+  } else {
+  form.d.style.backgroundColor="#ff9999";
+  form.dd.value="'diesem': PU+D(hankjønn)";
+  form.dd.style.backgroundColor="#99ccff";
+  form.ddd.value="Mit diesem Mann habe ich nicht gesprochen.";
+  form.ddd.style.backgroundColor="#99ccff";
+  poeng = poeng+0;
+  form.poeng.value=poeng;
+    }
+  }
+}
+function svare(form) {
+if ((form.e.style.backgroundColor=="#99ff99")||(form.e.style.backgroundColor=="#ff9999")) {
+  alert("Nei, den går ikke!");
+  form.eee.value="Kennst du diese Frau?";
+  poeng = poeng+0;
+  } else {
+if ((form.e.value=="Kennst du diese Frau?")||(form.e.value=="Kennst du diese Frau")||(form.e.value=="Kennst du diese Frau.")||
+    (form.e.value=="Kennst du diese Frau? ")||(form.e.value=="Kennst du diese Frau ")||(form.e.value=="Kennst du diese Frau. ")||
+    (form.e.value=="Kennst du diese Dame?")||(form.e.value=="Kennst du diese Dame")||(form.e.value=="Kennst du diese Dame.")||
+    (form.e.value=="Kennst du diese Dame? ")||(form.e.value=="Kennst du diese Dame ")||(form.e.value=="Kennst du diese Dame. ")) {
+  form.e.style.backgroundColor="#99ff99";
+  poeng = poeng+1;
+  form.ee.value="'diese': DO/A(hunkjønn)";
+  form.ee.style.backgroundColor="#ccff66";
+  form.eee.value=form.e.value;
+  form.eee.style.backgroundColor="#ccff66";
+  form.poeng.value=poeng;
+  } else {
+  form.e.style.backgroundColor="#ff9999";
+  form.ee.value="'diese': DO/A(hunkjønn)";
+  form.ee.style.backgroundColor="#ccff66";
+  form.eee.value="Kennst du diese Frau?";
+  form.eee.style.backgroundColor="#ccff66";
+  poeng = poeng+0;
+  form.poeng.value=poeng;
+    }
+  }
+}
+function svarf(form) {
+if ((form.f.style.backgroundColor=="#99ff99")||(form.f.style.backgroundColor=="#ff9999")) {
+  alert("Nei, den går ikke!");
+  form.fff.value="Diese Kinder spielen oft in diesem Park.";
+  poeng = poeng+0;
+  } else {
+if ((form.f.value=="Diese Kinder spielen oft in diesem Park.")||(form.f.value=="Diese Kinder spielen oft in diesem Park")||(form.f.value=="Diese Kinder spielen oft in diesem Park. ")||(form.f.value=="Diese Kinder spielen oft in diesem Park ")) {
+  form.f.style.backgroundColor="#99ff99";
+  poeng = poeng+1;
+  form.ff.value="'diese': S/N(flertall) - 'diesem': PU+D(intetkjønn)";
+  form.ff.style.backgroundColor="#99ccff";
+  form.fff.value=form.f.value;
+  form.fff.style.backgroundColor="#99ccff";
+  form.poeng.value=poeng;
+  } else {
+  form.f.style.backgroundColor="#ff9999";
+  form.ff.value="'diese': S/N(flertall) - 'diesem': PU+D(intetkjønn)";
+  form.ff.style.backgroundColor="#99ccff";
+  form.fff.value="Diese Kinder spielen oft in diesem Park.";
+  form.fff.style.backgroundColor="#99ccff";
+  poeng = poeng+0;
+  form.poeng.value=poeng;
+    }
+  }
+}
+function svarg(form) {
+if ((form.g.style.backgroundColor=="#99ff99")||(form.g.style.backgroundColor=="#ff9999")) {
+  alert("Nei, den går ikke!");
+  form.ggg.value="Dieses Mädchen ist sehr freundlich.";
+  poeng = poeng+0;
+  } else {
+if ((form.g.value=="Dieses Mädchen ist sehr freundlich.")||(form.g.value=="Dieses Mädchen ist sehr freundlich")||(form.g.value=="Dieses Mädchen ist sehr freundlich. ")||(form.g.value=="Dieses Mädchen ist sehr freundlich ")||
+    (form.g.value=="Dies Mädchen ist sehr freundlich.")||(form.g.value=="Dies Mädchen ist sehr freundlich")||(form.g.value=="Dies Mädchen ist sehr freundlich. ")||(form.g.value=="Dies Mädchen ist sehr freundlich ")) {
+  form.g.style.backgroundColor="#99ff99";
+  poeng = poeng+1;
+  form.gg.value="'dieses'/'dies': S/N(intetkjønn)";
+  form.gg.style.backgroundColor="#ccff66";
+  form.ggg.value=form.g.value;
+  form.ggg.style.backgroundColor="#ccff66";
+  form.poeng.value=poeng;
+  } else {
+  form.g.style.backgroundColor="#ff9999";
+  form.gg.value="'dieses'/'dies': S/N(intetkjønn)";
+  form.gg.style.backgroundColor="#ccff66";
+  form.ggg.value="Dieses Mädchen ist sehr freundlich.";
+  form.ggg.style.backgroundColor="#ccff66";
+  poeng = poeng+0;
+  form.poeng.value=poeng;
+    }
+  }
+}
+function svarh(form) {
+if ((form.h.style.backgroundColor=="#99ff99")||(form.h.style.backgroundColor=="#ff9999")) {
+  alert("Nei, den går ikke!");
+  form.hhh.value="Er hat bei dieser Freundin in Oslo gewohnt.";
+  poeng = poeng+0;
+  } else {
+if ((form.h.value=="Er hat bei dieser Freundin in Oslo gewohnt.")||(form.h.value=="Er hat bei dieser Freundin in Oslo gewohnt")||(form.h.value=="Er hat bei dieser Freundin in Oslo gewohnt. ")||(form.h.value=="Er hat bei dieser Freundin in Oslo gewohnt ")) {
+  form.h.style.backgroundColor="#99ff99";
+  poeng = poeng+1;
+  form.hh.value="'dieser': PU+D(hunkjønn)";
+  form.hh.style.backgroundColor="#99ccff";
+  form.hhh.value=form.h.value;
+  form.hhh.style.backgroundColor="#99ccff";
+  form.poeng.value=poeng;
+  } else {
+  form.h.style.backgroundColor="#ff9999";
+  form.hh.value="'dieser': PU+D(hunkjønn)";
+  form.hh.style.backgroundColor="#99ccff";
+  form.hhh.value="Er hat bei dieser Freundin in Oslo gewohnt.";
+  form.hhh.style.backgroundColor="#99ccff";
+  poeng = poeng+0;
+  form.poeng.value=poeng;
+    }
+  }
+}
+function svari(form) {
+if ((form.i.style.backgroundColor=="#99ff99")||(form.i.style.backgroundColor=="#ff9999")) {
+  alert("Nei, den går ikke!");
+  form.iii.value="Er saß zwischen diesen Männern.";
+  poeng = poeng+0;
+  } else {
+if ((form.i.value=="Er saß zwischen diesen Männern.")||(form.i.value=="Er saß zwischen diesen Männern")||(form.i.value=="Er saß zwischen diesen Männern. ")||(form.i.value=="Er saß zwischen diesen Männern ")) {
+  form.i.style.backgroundColor="#99ff99";
+  poeng = poeng+1;
+  form.ii.value="'diesen': PU+D(flertall) + -'n'!";
+  form.ii.style.backgroundColor="#ccff66";
+  form.iii.value=form.i.value;
+  form.iii.style.backgroundColor="#ccff66";
+  form.poeng.value=poeng;
+  } else {
+  form.i.style.backgroundColor="#ff9999";
+  form.ii.value="'diesen': PU+D(flertall) + -'n'!";
+  form.ii.style.backgroundColor="#ccff66";
+  form.iii.value="Er saß zwischen diesen Männern.";
+  form.iii.style.backgroundColor="#ccff66";
+  poeng = poeng+0;
+  form.poeng.value=poeng;
+    }
+  }
+}
+function svarj(form) {
+if ((form.j.style.backgroundColor=="#99ff99")||(form.j.style.backgroundColor=="#ff9999")) {
+  alert("Nei, den går ikke!");
+  form.jjj.value="Diese Jungen wohnen in dieser Wohnung.";
+  poeng = poeng+0;
+  } else {
+if ((form.j.value=="Diese Jungen wohnen in dieser Wohnung.")||(form.j.value=="Diese Jungen wohnen in dieser Wohnung")||(form.j.value=="Diese Jungen wohnen in dieser Wohnung. ")||(form.j.value=="Diese Jungen wohnen in dieser Wohnung ")) {
+  form.j.style.backgroundColor="#99ff99";
+  poeng = poeng+1;
+  form.jj.value="'diese': S/N(flertall) - 'dieser': PU+D(hunkjønn)";
+  form.jj.style.backgroundColor="#99ccff";
+  form.jjj.value=form.j.value;
+  form.jjj.style.backgroundColor="#99ccff";
+  form.poeng.value=poeng;
+  } else {
+  form.j.style.backgroundColor="#ff9999";
+  form.jj.value="'diese': S/N(flertall) - 'dieser': PU+D(hunkjønn)";
+  form.jj.style.backgroundColor="#99ccff";
+  form.jjj.value="Diese Jungen wohnen in dieser Wohnung.";
+  form.jjj.style.backgroundColor="#99ccff";
+  poeng = poeng+0;
+  form.poeng.value=poeng;
+    }
+  }
+}
+function juks(form) {
+alert("Du prøver vel ikke å jukse med poeng?");
+poeng=poeng+0;
+form.poeng.value=poeng;
+}
+</script>
+</head>
+<body bgcolor="#99ccff">
+<h3 align="center">P&aring;pekende pronomen</h3>
+<p align="justify">
+Oversett til tysk. Her gjelder det &aring; v&aelig;re n&oslash;yaktig, for alt m&aring; stemme 
+om svaret skal godtas. <b>Skriv alltid i feltet til venstre</b> under 
+setningen som skal oversettes fra norsk. Fasitsvaret dukker opp til h&oslash;yre n&aring;r 
+svaret er avgitt. 
+<form>
+<table bgcolor="#666666" width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td>
+<table bgcolor="#ccff66" width="100%">
+<tr>
+<td><nobr>
+Denne gutten spiller gitar.
+</td>
+<td>
+<input type="text" name="aa" value="" size="43"></td>
+</tr>
+<tr>
+<td>
+<input type="text" name="a" value="" size="43" onChange="svara(this.form)">
+</td>
+<td>
+<input type="text" name="aaa" value="" size="43"></td>
+</tr>
+<tr>
+<td><nobr>
+Denne mannen kjenner jeg ikke.
+</td>
+<td>
+<input type="text" name="bb" value="" size="43"></td>
+</tr>
+<tr>
+<td>
+<input type="text" name="b" value="" size="43" onChange="svarb(this.form)">
+</td>
+<td>
+<input type="text" name="bbb" value="" size="43"></td>
+</tr>
+<tr>
+<td><nobr>
+Denne kvinnen vil si noe.
+</td>
+<td>
+<input type="text" name="cc" value="" size="43"></td>
+</tr>
+<tr>
+<td>
+<input type="text" name="c" value="" size="43" onChange="svarc(this.form)">
+</td>
+<td>
+<input type="text" name="ccc" value="" size="43"></td>
+</tr>
+<tr>
+<td><nobr>
+Med denne mannen har jeg ikke snakket.
+</td>
+<td>
+<input type="text" name="dd" value="" size="43"></td>
+</tr>
+<tr>
+<td>
+<input type="text" name="d" value="" size="43" onChange="svard(this.form)">
+</td>
+<td>
+<input type="text" name="ddd" value="" size="43"></td>
+</tr>
+<tr>
+<td><nobr>
+Kjenner du denne kvinnen?
+</td>
+<td>
+<input type="text" name="ee" value="" size="43"></td>
+</tr>
+<tr>
+<td>
+<input type="text" name="e" value="" size="43" onChange="svare(this.form)">
+</td>
+<td>
+<input type="text" name="eee" value="" size="43"></td>
+</tr>
+<tr>
+<td><nobr>
+Disse barna leker ofte i denne parken.
+</td>
+<td>
+<input type="text" name="ff" value="" size="43"></td>
+</tr>
+<tr>
+<td>
+<input type="text" name="f" value="" size="43" onChange="svarf(this.form)">
+</td>
+<td>
+<input type="text" name="fff" value="" size="43"></td>
+</tr>
+<tr>
+<td><nobr>
+Denne jenta er sv&aelig;rt vennlig.
+</td>
+<td>
+<input type="text" name="gg" value="" size="43"></td>
+</tr>
+<tr>
+<td>
+<input type="text" name="g" value="" size="43" onChange="svarg(this.form)">
+</td>
+<td>
+<input type="text" name="ggg" value="" size="43"></td>
+</tr>
+<tr>
+<td><nobr>
+Han har bodd hos denne venninna i Oslo.
+</td>
+<td>
+<input type="text" name="hh" value="" size="43"></td>
+</tr>
+<tr>
+<td>
+<input type="text" name="h" value="" size="43" onChange="svarh(this.form)">
+</td>
+<td>
+<input type="text" name="hhh" value="" size="43"></td>
+</tr>
+<tr>
+<td><nobr>
+Han satt mellom disse mennene.
+</td>
+<td>
+<input type="text" name="ii" value="" size="43"></td>
+</tr>
+<tr>
+<td>
+<input type="text" name="i" value="" size="43" onChange="svari(this.form)">
+</td>
+<td>
+<input type="text" name="iii" value="" size="43"></td>
+</tr>
+<tr>
+<td><nobr>
+Disse guttene bor i denne leiligheten.
+</td>
+<td>
+<input type="text" name="jj" value="" size="43"></td>
+</tr>
+<tr>
+<td>
+<input type="text" name="j" value="" size="43" onChange="svarj(this.form)">
+</td>
+<td>
+<input type="text" name="jjj" value="" size="43"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="100%">
+<tr>
+<td><b>Antall riktige setninger:</b>&nbsp;<input type="text" name="poeng" value="0" size=2 onChange="juks(this.form)"></td>
+<td><a href="pron.html#fire" target="blank"><font color="#000000"><b>Regler og b&oslash;yningsm&oslash;nster</b></font></a></td>
+</tr>
+<tr>
+<td><a href="pron.html"><font color="#000000"><b>Hovedside for pronomen</b></font></a></td>
+<td><a href="tygram.html"><font color="#000000"><b>Hovedside for tysk grammatikk</b></font></a></td>
+</tr>
+</table>
+</form>
+</body>
+</html>

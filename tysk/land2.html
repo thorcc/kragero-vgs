@@ -1,0 +1,533 @@
+<html>
+
+<head>
+
+<title>Landeskunde 2</title>
+
+<script language="JavaScript">
+
+function fasit(form) {
+
+var a
+
+var b
+
+var c
+
+var d
+
+var e
+
+var f
+
+var g
+
+var h
+
+var i
+
+var j
+
+var poeng = 0;
+
+if ((form.a.value != "0")
+
+ && (form.b.value != "0")
+
+ && (form.c.value != "0")
+
+ && (form.d.value != "0")
+
+ && (form.e.value != "0")
+
+ && (form.f.value != "0")
+
+ && (form.g.value != "0")
+
+ && (form.h.value != "0")
+
+ && (form.i.value != "0")
+
+ && (form.j.value != "0"))
+
+  {
+
+if (form.a.value == "4") {
+
+poeng = poeng + 1;
+
+  }
+
+else
+
+  {
+
+poeng = poeng + 0;
+
+  }
+
+if (form.b.value == "3") {
+
+poeng = poeng + 1;
+
+  }
+
+else
+
+  {
+
+poeng = poeng + 0;
+
+  }
+
+if (form.c.value == "1") {
+
+poeng = poeng + 1;
+
+  }
+
+else
+
+  {
+
+poeng = poeng + 0;
+
+  }
+
+if (form.d.value == "4") {
+
+poeng = poeng + 1;
+
+  }
+
+else
+
+  {
+
+poeng = poeng + 0;
+
+  }
+
+if (form.e.value == "5") {
+
+poeng = poeng + 1;
+
+  }
+
+else
+
+  {
+
+poeng = poeng + 0;
+
+  }
+
+if (form.f.value == "2") {
+
+poeng = poeng + 1;
+
+  }
+
+else
+
+  {
+
+poeng = poeng + 0;
+
+  }
+
+if (form.g.value == "1") {
+
+poeng = poeng + 1;
+
+  }
+
+else
+
+  {
+
+poeng = poeng + 0;
+
+  }
+
+if (form.h.value == "6") {
+
+poeng = poeng + 1;
+
+  }
+
+else
+
+  {
+
+poeng = poeng + 0;
+
+  }
+
+if (form.i.value == "3") {
+
+poeng = poeng + 1;
+
+  }
+
+else
+
+  {
+
+poeng = poeng + 0;
+
+  }
+
+if (form.j.value == "5") {
+
+poeng = poeng + 1;
+
+  }
+
+else
+
+  {
+
+poeng = poeng + 0;
+
+    }
+
+form.resultat.value=poeng
+
+if (poeng == 10) {
+
+alert ("Herzlichen Glückwunsch!");
+
+    }
+
+  }
+
+}
+
+</script>
+
+<meta http-equiv="Expires" Content="0">
+<meta http-equiv="Pragma" Content="no-cache">
+<style type="text/css">
+a {font-family: Arial; font-size: 11pt; font-weight: bold; color: #000000; text-decoration: none;}
+</style>
+</HEAD>
+<BODY BGCOLOR="#99ccff" LINK="#000000" ALINK="#000000" VLINK="#000000">
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td width="100%">
+<table width="100%" border="2" frame="above" cellspacing="1" cellpadding="1">
+<tr>
+          <TD align="center" bgcolor="#ccffcc" height="20"> <nobr>&nbsp;<a href="tysk.html">Tilbake</a>&nbsp; 
+          </TD>
+          <TD align="center" bgcolor="#ccffcc" height="20"> <nobr><a href="tygram.html">Grammatikk</a> 
+          </TD>
+          <td align="center" bgcolor="#ccffcc" height="20"> <nobr><a href="Animasjon.exe">Animasjon</a> 
+          </td>
+          <td align="center" bgcolor="#ccffcc" height="20"> <nobr><a href="glose.html">Glose&oslash;velser</a> 
+          </td>
+          <td align="center" bgcolor="#000000" height="20"> <nobr>&nbsp;<a href="quiz.html"><font color="#ccffcc">Quiz</font></a>&nbsp; 
+          </td>
+          <td align="center" bgcolor="#ccffcc" height="20"> <nobr><a href="..\tyskutvt.html">Sch&uuml;leraustausch</a> 
+          </td>
+          <td align="center" bgcolor="#ccffcc" height="20"> <nobr>&nbsp;<a href="..\medier.html">Medier</a>&nbsp; 
+          </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<p>
+
+<form method="post" action="enctype.html">
+
+<table border="0" cellspacing="0" cellpadding="0" bgcolor="#99CCFF" width="620">
+
+<tr>
+
+<td bgcolor="#99ccff" VALIGN="TOP" width="200"> 
+
+<table border="12" bgcolor="#999999" cellspacing="0" cellpadding="6" width="100%">
+
+<tr>
+
+<td bgcolor="#990000"><b>
+
+<font face="Arial" color="#ff9933" size="5">
+
+Landeskunde<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2
+
+</font>
+
+<p align="justify">
+
+<font face="Arial" color="#ffffff" size="2">
+
+Beantworten Sie zuerst alle Fragen! Sie erfahren die Zahl der richtigen Antworten - nicht was richtig oder falsch ist.
+
+</font></p><font face="Arial" color="#ffffff" size="2">
+
+Ergebnis&nbsp;:&nbsp;&nbsp;<input type="text" name="resultat" size="1" value="">
+
+</font></b>
+
+</td>
+
+</tr>
+
+</TABLE>
+
+<table border="1" cellspacing="0" cellpadding="10" bgcolor="#999999" width="100%">
+
+<tr>
+
+<td align="center">
+
+<input type="button" value="Überprüfen" onClick="fasit(this.form)">
+
+<br><input type="reset" value="Zurücksetzen">
+
+</td>
+
+</tr>
+
+</table>
+
+</td>
+
+<td bgcolor="#99ccff" VALIGN="TOP" HEIGHT="100%" align="left" width="420">
+
+<table border="1" cellspacing="0" cellpadding="2" bgcolor="#ffffff" width="100%" HEIGHT="100%" align="left">
+
+<tr>
+
+<td align="left" bgcolor="#ffffff" height="100%">
+
+<table border="0" cellspacing="0" cellpadding="2" bgcolor="#ffffff" HEIGHT="100%" align="left">
+<tr>
+<td>
+<select name="a">
+  <option value="0">Diese Stadt ist die &nbsp;&nbsp;</option>
+  <option value="1">Flensburg ist die</option>
+  <option value="2">Schleswig ist die</option>
+  <option value="3">Husum ist die</option>
+  <option value="4">Kiel ist die</option>
+  <option value="5">Neumünster ist</option>
+  <option value="6">Lübeck ist die</option>
+</select>
+</td>
+<td>
+  <nobr>Hauptstadt von Schleswig-Holstein.
+</td>
+</tr>
+<tr>
+<td>
+<select name="b">
+  <option value="0">In dieser Stadt sind &nbsp;</option>
+  <option value="1">In Hamburg sind</option>
+  <option value="2">In Osnabrück sind</option>
+  <option value="3">In Bremen sind</option>
+  <option value="4">In Hannover sind</option>
+  <option value="5">In Hameln sind</option>
+  <option value="6">In Münster</option>
+</select>
+</td>
+<td>
+  <nobr>vier "Stadtmusikanten" das Wahrzeichen.
+</td>
+</tr>
+<tr>
+<td>
+<select name="c">
+  <option value="0">In dieser Stadt fährt &nbsp;</option>
+  <option value="1">In Wuppertal fährt</option>
+  <option value="2">In Solingen fährt</option>
+  <option value="3">In Hagen fährt</option>
+  <option value="4">In Oberhausen fährt</option>
+  <option value="5">In Bochum fährt</option>
+  <option value="6">In Dortmund fährt</option>
+</select></td>
+<td>
+  <nobr>die berühmte Schwebebahn.
+</td>
+</tr>
+<tr>
+<td>
+<select name="d">
+  <option value="0">Diese Stadt ist die &nbsp;&nbsp;</option>
+  <option value="1">Essen ist die</option>
+  <option value="2">Dortmund ist die </option>
+  <option value="3">Köln ist die</option>
+  <option value="4">Düsseldorf ist die</option>
+  <option value="5">Duisburg ist die</option>
+  <option value="6">Bonn ist die</option>
+</select></td>
+<td>
+  <nobr>Hauptstadt von Nordrhein-Westfalen.
+</td>
+</tr>
+<tr>
+<td>
+<select name="e">
+  <option value="0">Bei der Stadt fließt&nbsp;&nbsp;</option>
+  <option value="1">Bei Trier fließt</option>
+  <option value="2">Bei Mainz fließt</option>
+  <option value="3">Bei Essen fließt</option>
+  <option value="4">Bei Duisburg fließt</option>
+  <option value="5">Bei Koblenz fließt</option>
+  <option value="6">Bei Mannheim fließt</option>
+</select>
+</td>
+<td>
+  <nobr>die Mosel in den Rhein.
+</td>
+</tr>
+<tr>
+<td>
+<select name="f">
+  <option value="0">An dem Fluss liegt &nbsp;&nbsp;</option>
+  <option value="1">Am Rhein liegt</option>
+  <option value="2">Am Neckar liegt</option>
+  <option value="3">Am Main liegt</option>
+  <option value="4">An der Mosel liegt</option>
+  <option value="5">An der Weser liegt</option>
+  <option value="6">An der Donau liegt</option>
+</select>
+</td>
+<td>
+  <nobr>Stuttgart.
+</td>
+</tr>
+<tr>
+<td>
+<select name="g">
+  <option value="0">Diese Stadt ist die &nbsp;&nbsp;</option>
+  <option value="1">Dresden ist die</option>
+  <option value="2">Weimar ist die</option>
+  <option value="3">Leipzig ist die</option>
+  <option value="4">Chemnitz ist die</option>
+  <option value="5">Halle ist die</option>
+  <option value="6">Zwickau ist die</option>
+</select></td>
+<td>
+  <nobr>Hauptstadt von Sachsen.
+</td>
+</tr>
+<tr>
+<td>
+<select name="h">
+  <option value="0">Diese Insel ist die &nbsp;&nbsp;&nbsp;</option>
+  <option value="1">Fehmarn ist die</option>
+  <option value="2">Sylt ist die</option>
+  <option value="3">Helgoland ist die</option>
+  <option value="4">Amrum ist die</option>
+  <option value="5">Föhr ist die</option>
+  <option value="6">Rügen ist die</option>
+</select></td>
+<td>
+  <nobr>größte Insel in Deutschland.
+</td>
+</tr>
+<tr>
+<td>
+<select name="i">
+  <option value="0">Dieser Berg ist der &nbsp;</option>
+  <option value="1">Brocken ist der</option>
+  <option value="2">Erzgebirge ist der</option>
+  <option value="3">Zugspitze ist der</option>
+  <option value="4">Watzmann ist der</option>
+  <option value="5">Hochwanner ist der</option>
+  <option value="6">Plattspitze ist der</option>
+</select></td>
+<td>
+  <nobr>höchste Gipfel in Deutschland.
+</td>
+</tr>
+<tr>
+<td>
+<select name="j">
+  <option value="0">Dieses Bundesland</option>
+  <option value="1">Thüringen</option>
+  <option value="2">Sachsen</option>
+  <option value="3">Hessen</option>
+  <option value="4">Rheinland-Pfalz</option>
+  <option value="5">Bayern</option>
+  <option value="6">Niedersachsen</option>
+</select>
+</td>
+<td>
+  <nobr>hat den gr&ouml;&szlig;ten Fl&auml;cheninhalt.
+</td>
+</tr>
+</table>
+
+</td>
+
+</tr>
+
+</table>
+</td>
+</tr>
+</table>
+<p>
+<table BORDER="1" CELLSPACING="0" CELLPADDING="5" BGCOLOR="#ffffff">
+<tr>
+<td width="140" bgcolor="#ff6666" align="center">
+<nobr><a href="land1.html"><FONT FACE="Arial" SIZE="2" COLOR="#000000"><b>Landeskunde 1</b></FONT></a>
+</td width="140">
+<td width="140" bgcolor="#ff9933" align="center">
+<nobr><a href="land2.html"><FONT FACE="Arial" SIZE="2" COLOR="#000000"><b>Landeskunde 2</b></FONT></a>
+</td width="140">
+<td width="140" bgcolor="#ffcc33" align="center">
+<nobr><a href="land3.html"><FONT FACE="Arial" SIZE="2" COLOR="#000000"><b>Landeskunde 3</b></FONT></a>
+</td width="140">
+<td width="140" bgcolor="#ffff66" align="center">
+<nobr><a href="land4.html"><FONT FACE="Arial" SIZE="2" COLOR="#000000"><b>Landeskunde 4</b></FONT></a>
+</td width="140">
+</tr>
+<tr>
+<td width="140" bgcolor="#ff9999" align="center">
+<nobr><a href="hist1.html"><FONT FACE="Arial" SIZE="2" COLOR="#000000"><b>Geschichte 1</b></FONT></a>
+</td width="140">
+<td width="140" bgcolor="#cc9999" align="center">
+<nobr><a href="hist2.html"><FONT FACE="Arial" SIZE="2" COLOR="#000000"><b>Geschichte 2</b></FONT></a>
+</td width="140">
+<td width="140" bgcolor="#cccc99" align="center">
+<nobr><a href="hist3.html"><FONT FACE="Arial" SIZE="2" COLOR="#000000"><b>Geschichte 3</b></FONT></a>
+</td width="140">
+<td width="140" bgcolor="#ccff66" align="center">
+<nobr><a href="politik.html"><FONT FACE="Arial" SIZE="2" COLOR="#000000"><b>Politik & Wirtschaft</b></FONT></a>
+</td width="140">
+</tr>
+<tr>
+<td width="140" bgcolor="#ff66ff" align="center">
+<nobr><a href="literatur1.html"><FONT FACE="Arial" SIZE="2" COLOR="#000000"><b>Literatur 1</b></FONT></a>
+</td width="140">
+<td width="140" bgcolor="#cc66ff" align="center">
+<nobr><a href="literatur2.html"><FONT FACE="Arial" SIZE="2" COLOR="#000000"><b>Literatur 2</b></FONT></a>
+</td width="140">
+<td width="140" bgcolor="#cccccc" align="center">
+<nobr><a href="film.html"><FONT FACE="Arial" SIZE="2" COLOR="#000000"><b>Medien</b></FONT></a>
+</td width="140">
+<td width="140" bgcolor="#99ff99" align="center">
+<nobr><a href="musik.html"><FONT FACE="Arial" SIZE="2" COLOR="#000000"><b>Musik</b></FONT></a>
+</td width="140">
+</tr>
+<tr>
+<td width="140" bgcolor="#9999cc" align="center">
+<nobr><a href="kultur.html"><FONT FACE="Arial" SIZE="2" COLOR="#000000"><b>Kunst & Kultur</b></FONT></a>
+</td width="140">
+<td width="140" bgcolor="#6699ff" align="center">
+<nobr><a href="winter.html"><FONT FACE="Arial" SIZE="2" COLOR="#000000"><b>Wintersport</b></FONT></a>
+</td width="140">
+<td width="140" bgcolor="#99cccc" align="center">
+<nobr><a href="fussball.html"><FONT FACE="Arial" SIZE="2" COLOR="#000000"><b>Fu&szlig;ball</b></FONT></a>
+</td width="140">
+<td width="140" bgcolor="#99ffff" align="center">
+<nobr><a href="sport.html"><FONT FACE="Arial" SIZE="2" COLOR="#000000"><b>Andere Sportarten</b></FONT></a>
+</td width="140">
+</tr>
+</table>
+</form></body>
+
+</html>

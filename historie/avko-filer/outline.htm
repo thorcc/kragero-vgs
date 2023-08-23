@@ -1,0 +1,1232 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=PowerPoint.Slide>
+<meta name=Generator content="Microsoft PowerPoint 9">
+<link id=Main-File rel=Main-File href="..\avko.html">
+<link rel=Preview href=preview.wmf>
+<meta name=Robots content=NoIndex>
+<script src=script.js></script><script><!--
+
+if( !(IsWin("PPTOtl")||IsWin("PPTNav")||IsWin("PPTOtlNav")) )
+{
+	obj = document.all.item("Main-File")
+	parent.location.href=obj.href
+}
+
+var gOtlHiliteClr="#FFFFFF",gOtlNormalClr="#000000",gOtlActiveClr="#FFFF00",gSelected="",gTxtState=false,gChildEntryTable=new Array()
+
+function Load()
+{
+	if( IsWin("PPTOtl" ) ){ LoadOtl(); parent.gOtlLoaded=true; return }
+	if( IsWin("PPTNav" ) ){ LoadNav("NavObj",UpdNav); parent.gNavLoaded=true; return }
+	if( IsWin("PPTOtlNav" ) ){ LoadNav("OtlNavObj",UpdOtlNav); parent.gOtlNavLoaded=true; return }
+}
+function Upd(){ if( IsWin("PPTNav") ) LoadNav("NavObj",UpdNav) }
+function LoadNav( oId,UpdFunc )
+{
+	document.ondragstart=CancelDrag
+	document.onselectstart=CancelDrag
+	document.body.style.margin=2
+	UpdFunc()
+	obj=document.all.item(oId)
+	obj.style.display="block"
+	obj.style.visibility="visible"
+	document.bgColor="threedface"
+}
+function LoadOtl()
+{
+	document.ondragstart=CancelDrag
+	document.onselectstart=CancelDrag
+	OtlObj.style.display="block"
+	OtlObj.style.visibility="visible"
+	if( gOtlActiveClr == "" ) gOtlActiveClr=document.linkColor
+	if( gOtlHiliteClr == "" ) gOtlHiliteClr=document.fgColor
+	if( gOtlNormalClr == "" )
+		gOtlNormalClr=document.bgColor
+	else
+		document.bgColor=gOtlNormalClr  
+
+	InitArray()
+
+	if( ObjExists( parent.gCurSld ) ) {
+		ChangeState( parent.gCurSld,gOtlNormalClr,gOtlHiliteClr )
+		gSelected=parent.gCurSld
+	}
+	else gSelected = -1
+
+	UpdOtl()
+}
+function UpdOtl(){ UpdIdx(parent.gCurSld) }
+function UpdIdx( idx )
+{
+	if( gSelected != idx ) {
+		if( gSelected > 0 )
+			ChangeState( gSelected,gOtlHiliteClr,gOtlNormalClr )
+
+		if( ObjExists( idx ) ) {
+			gSelected = idx
+			ChangeState( gSelected,gOtlNormalClr,gOtlHiliteClr )
+		}
+		else gSelected = -1
+	}
+
+	if( gTxtState != parent.gOtlTxtExp ) {
+		state = "block"
+		if( !parent.gOtlTxtExp )
+			state="none"
+
+		for(ii=0; ii<gChildEntryTable.length; ii++) {
+			obj=gChildEntryTable[ii];
+			if( obj.id == null ) continue;
+
+			if( obj.id.indexOf("PPTC") >= 0 )
+				obj.style.display=state;
+		} 
+		gTxtState=parent.gOtlTxtExp
+		if( ObjExists( gSelected ) )
+			ChangeState( gSelected,gOtlNormalClr,gOtlHiliteClr )
+	}
+}
+function InitArray()
+{
+	count=0
+	for(ii=0; ii<document.all.tags("DIV").length; ii++) {
+		obj=document.all.tags("DIV").item(ii)
+		if( obj.id == null ) continue
+
+		if( obj.id.indexOf("PPTC") >= 0 ) {   
+			gChildEntryTable[count++]=obj
+			obj.children.tags("TABLE").item(0).style.borderColor=gOtlNormalClr
+		}
+	}
+}
+function ChangeState( idx,fgColor,bgColor )
+{
+	obj=document.all.item("PPTL"+idx)
+	obj.style.color=fgColor
+
+	obj=document.all.item("PPTP"+idx)
+	obj.style.backgroundColor=bgColor
+
+	obj=document.all.item("PPTB"+idx)
+	if( obj )
+		obj.style.borderLeftColor=obj.style.borderBottomColor=bgColor
+}
+function ChgClr( o,clr ){ if( o.id != "PPTL"+gSelected ) o.style.color=clr }
+function Over( obj ){ ChgClr(obj,gOtlActiveClr) }
+function Out( obj ){ ChgClr(obj,gOtlHiliteClr) }
+function ObjExists( ii ) { obj=document.all("PPTP"+ii ); return( obj ) }
+function GoToSld( href ){ UpdIdx(parent.GetSldNum(href)); parent.GoToSld( href ) }
+function CancelDrag(){ window.event.cancelBubble=true;window.event.returnValue=false}
+
+function UpdNav()
+{
+	txt = "<center>";
+	if( parent.GetHrefObj( parent.gCurSld ).mOrigVis == 1 )
+		txt += "Lysbilde " + parent.GetCurSldNum() + " av " + parent.GetNumSlds()
+	else
+		txt += "Skjult lysbilde"
+	txt += "</center>";
+	nav_text.innerHTML = txt;
+
+	if( !parent.HasPrevSld() )
+		gBtnArr["nb_prev"].Enabled(0)
+	else
+		gBtnArr["nb_prev"].Enabled(1)
+
+	if( !parent.HasNextSld() )
+		gBtnArr["nb_next"].Enabled(0)
+	else
+		gBtnArr["nb_next"].Enabled(1)
+	gBtnArr["nb_nts"].SetEnabled()
+	gBtnArr["nb_nts"].SetFlag( parent.gHasNts )
+
+	gBtnArr["nb_sldshw"].Enabled(1)
+	gBtnArr["nb_voice"].Enabled(1)
+}
+
+function UpdOtlNav()
+{
+	gBtnArr["nb_otl"].SetEnabled();
+
+	if( parent.gOtlOpen )
+		gBtnArr["nb_otlTxt"].Enabled( true );
+	else
+		document.all.item("nb_otlTxtBorder").style.visibility = "hidden";
+}
+
+
+
+//-->
+</script>
+<style>
+<!--.PTxt
+	{position:relative;
+	width:100%;
+	margin-top:5px;
+	padding-left:5px;
+	font-weight:bold;}
+.CTxt
+	{position:relative;
+	width:100%;
+	padding-left:10px;}
+.CBorder
+	{position:relative;
+	width:100%;
+	border-style:solid;
+	border-width:1px;
+	border-color:black;
+	padding-bottom:5px;}
+a
+	{color:white;
+	text-decoration:none;}
+.button
+	{position:absolute;
+	width:32px;
+	height:20px;
+	border-style:solid;
+	border-width:1px;
+	border-color:threedface;}
+-->
+</style>
+</head>
+
+<body onload="Load()">
+
+<div id=NavObj onload="Load()" onmouseover="BtnOnOver().html"
+onmousedown="BtnOnDown()" onmouseout="BtnOnOut()" onmouseup="BtnOnUp()"
+onkeypress="_KPH()" style='display:none;visibility:hidden'>
+
+<table style='position:absolute;width:70px;visibility:hidden' align=left
+ cellpadding=0 cellspacing=0>
+ <td nowrap>
+ <div id="nb_ntsElem" align=center style='position:relative;padding:3px;
+ font-family:Arial;color:buttontext;font-size:9pt'><img src="notes_flag.gif"
+ border=0 id="notes_flag" style='display:none'><span style="mso-spacerun:
+ yes">  </span>Notater</div>
+ <div title="Vis/skjul notater" id="nb_nts" style='position:absolute;
+ top:0%;left:0%;width:100%;height:100%'></div>
+ </td>
+</table>
+
+<table style='position:relative' align=right cellpadding=0 cellspacing=0>
+ <td>
+ <div id="nb_sldshwBorder" style='position:absolute;left:-20px;width:20px;
+ height:20px'>
+ <div style='position:absolute;clip:rect(0px, 18px, 18px, 0px)'><img
+ src=buttons.gif id="nb_sldshw" title="Lysbildefremvisning i fullt skjermvindu"
+ style='position:relative;left:-254px' width="344" height="18"></div>
+ </div>
+ </td>
+ <td>
+ <div id="nb_voiceBorder" style='display:none;position:absolute;left:-40px;
+ width:20px;height:20px'>
+ <div style='position:absolute;clip:rect(0px, 18px, 18px, 0px)'><img
+ src=buttons.gif id="nb_voice" title="Stans / spill av lydkommentar"
+ style='position:relative;left:-290px' width="344" height="18"></div>
+ </div>
+ </td>
+</table>
+
+<table style='position:relative' align=center cellpadding=0 cellspacing=0>
+ <td nowrap>
+ <div id="nb_prevBorder" class=button style='left:-30px'>
+ <div style='position:absolute;clip:rect(0px, 30px, 18px, 0px)'><img
+ src=buttons.gif id="nb_prev" title="Forrige lysbilde" style='position:relative;
+ left:0px' width="344" height="18"></div>
+ </div>
+ <span id="nav_text" style='position:relative;top:3px;width:100px;font-family:
+ Arial;color:buttontext;font-size:9pt'></span>
+ <div id="nb_nextBorder" class=button>
+ <div style='position:absolute;clip:rect(0px, 30px, 18px, 0px)'><img
+ src=buttons.gif id="nb_next" title="Neste lysbilde" style='position:relative;
+ left:-90px' width="344" height="18"></div>
+ </div>
+ </td>
+</table>
+
+</div>
+
+<div id=OtlNavObj onload="Load()" onmouseover="BtnOnOver().html"
+onmousedown="BtnOnDown()" onmouseout="BtnOnOut()" onmouseup="BtnOnUp()"
+onkeypress="_KPH()" style='display:none;visibility:hidden'>
+
+<table style='position:relative;width:70px' align=left cellpadding=0
+ cellspacing=0>
+ <td nowrap>
+ <div id="nb_otlElem" align=center style='position:relative;padding:3px;
+ font-family:Arial;color:buttontext;font-size:9pt'>Disposisjon</div>
+ <div title="Vis/skjul disposisjon" id="nb_otl" style='position:absolute;
+ top:0%;left:0%;width:100%;height:100%'></div>
+ </td>
+</table>
+
+<table style='position:relative' align=center cellpadding=0 cellspacing=0>
+ <td>
+ <div style='position:absolute;left:-18px;width:24px;height:20px;border-style:
+ solid;border-width:1px;border-color:threedface' id="nb_otlTxtBorder">
+ <div style='position:absolute;clip:rect(0px, 22px, 18px, 0px)'><img
+ src=buttons.gif id="nb_otlTxt" title="Vis/skjul disposisjon" style='position:
+ relative;left:-157px' width="344" height="18"></div>
+ </div>
+ </td>
+</table>
+
+</div>
+
+<div id=OtlObj style='display:none;visibility:hidden'>
+
+<table width="100%" style='font-family:Arial;font-size:9pt'>
+ <tr>
+  <td>
+  <div id=PPTP1 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0128.htm');" onmouseover="Over(this).html"
+  id=PPTL1 onmouseout="Out(this)">Lysbilde 1</a></font></div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP2 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0124.htm');" onmouseover="Over(this).html"
+  id=PPTL2 onmouseout="Out(this)">Afrika: Årsaker til avkolonisering</a></font></div>
+  <div id=PPTC2 class=CTxt style='display:none'>
+  <table style='color:white' id=PPTB2 class=CBorder>
+   <tr>
+    <td width=5 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width="100%"></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Kolonimaktene kom svekket ut av andre
+    verdenskrig selv om de tilhørte vinnerne.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Koloniene var kostbare for kolonimaktene, særlig
+    når det trengtes penger til gjenreising etter krigen.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>De nye supermaktene, USA og Sovjet, motarbeidet
+    det gamle kolonisystemet.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Større forståelse i Europa for krav om frihet
+    pga. nazismen.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Kolonisystemet i strid med FNs
+    menneskerettighetserklæring.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Det vokste fram nasjonale frigjøringsbevegelser
+    i koloniene, delvis inspirert av nasjonal tradisjon, men også av europeisk
+    nasjonalisme, demokratiske tradisjoner og marxisme.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Lederne i frigjøringskampen var ofte utdannet i
+    Europa.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>De alliansefrie statene ble en pådriver for
+    avkolonisering.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=2></td>
+   </tr>
+   <tr>
+    <td colspan=1></td>
+    <td colspan=3></td>
+   </tr>
+  </table>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP3 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0125.htm');" onmouseover="Over(this).html"
+  id=PPTL3 onmouseout="Out(this)">Sør-Afrika</a></font></div>
+  <div id=PPTC3 class=CTxt style='display:none'>
+  <table style='color:white' id=PPTB3 class=CBorder>
+   <tr>
+    <td width=5 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width="100%"></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Britene hadde sikret seg kontrollen etter
+    boerkrigen 1899-1902 mot nederlandskættede settlere (boere).</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Landet fikk som ”hvit stat” selvstyre innenfor
+    Det britiske samveldet i 1910.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>ANC ble stiftet i 1912 med Gandhi som forbilde.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Full selvstendighet fra 1930-åra for det hvite
+    mindretallet.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Boernes nasjonalistparti vant valget i 1948 og
+    innførte en ekstrem raseskillepolitikk (apartheid).</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Fra 1960 gikk ANC med Nelson Mandela som en av
+    lederne inn for væpnet motstand mot apartheidregimet bl.a. som en følge av
+    at politiet drepte folk som demonstrerte mot passlovene.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Kulturelle og økonomiske sanksjoner mot
+    Sør-Afrika forsterkes.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>1990: Mandela frigitt -&gt;1994: President etter
+    valg</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1></td>
+   </tr>
+  </table>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP4 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0126.htm');" onmouseover="Over(this).html"
+  id=PPTL4 onmouseout="Out(this)">Hovedproblemer i Afrika</a></font></div>
+  <div id=PPTC4 class=CTxt style='display:none'>
+  <table style='color:white' id=PPTB4 class=CBorder>
+   <tr>
+    <td width=5 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width="100%"></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=2><font size=2>Etniske motsetninger - ofte som et resultat av
+    kolonimaktenes vilkårlige grenser: hutuene og tutsiene i Rwanda, Burundi og
+    Kongo</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=2><font size=2>Stort antall flyktninger</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=2><font size=2>Økonomiske problemer</font></td>
+   </tr>
+   <tr>
+    <td colspan=4></td>
+    <td colspan=1><font size=2>Urettferdig handelsmønster</font></td>
+   </tr>
+   <tr>
+    <td colspan=4></td>
+    <td colspan=1><font size=2>Stor vekt på råvareproduksjon</font></td>
+   </tr>
+   <tr>
+    <td colspan=4></td>
+    <td colspan=1><font size=2>Ensidig næringsliv, få eksportartikler</font></td>
+   </tr>
+   <tr>
+    <td colspan=4></td>
+    <td colspan=1><font size=2>Gjeldskrise</font></td>
+   </tr>
+   <tr>
+    <td colspan=4></td>
+    <td colspan=1><font size=2>Betingelsene fra Verdensbanken og det
+    internasjonale pengefondet</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=2><font size=2>Befolkningsøkningen</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=2><font size=2>Økologiske katastrofer (ørkenspredning f.eks.)</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=2><font size=2>Sultkatastrofer, sykdommer (malaria, aids)</font></td>
+   </tr>
+   <tr>
+    <td colspan=1></td>
+    <td colspan=4></td>
+   </tr>
+  </table>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP5 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0129.htm');" onmouseover="Over(this).html"
+  id=PPTL5 onmouseout="Out(this)">Japan og de andre økonomiske tigrene</a></font></div>
+  <div id=PPTC5 class=CTxt style='display:none'>
+  <table style='color:white' id=PPTB5 class=CBorder>
+   <tr>
+    <td width=5 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width="100%"></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>USA dikterte ny grunnlov i Japan med mer moderne
+    samfunns- og utdanningssystem.</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>Staten samarbeidet med bank-<span
+    style="mso-spacerun: yes">  </span>vesen og industri gjennom det
+    liberaldemokratiske partiet.</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>USA ville bygge opp landet til en sterk og
+    pålitelig alliert i Asia under den kalde krigen.</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>Japan høstet fordeler av Korea- krigen og
+    Vietnamkrigen.</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>Først kopi av vestlige produkter.</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>Korte ferier og gruppeånd.</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1></td>
+   </tr>
+  </table>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP6 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0110.htm');" onmouseover="Over(this).html"
+  id=PPTL6 onmouseout="Out(this)">Kina før kommunistenes revolusjon</a></font></div>
+  <div id=PPTC6 class=CTxt style='display:none'>
+  <table style='color:white' id=PPTB6 class=CBorder>
+   <tr>
+    <td width=5 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width="100%"></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Kina var inndelt i ”interessesfærer” i den<span
+    style="mso-spacerun: yes">  </span>imperialistiske perioden.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Guomindang, nasjonalistene, fjernet keiseren i
+    1911.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Oppgjøret etter første verdenskrig ble en
+    skuffelse da Japan fikk overta tyskernes interessesfære.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Kommunistpartiet ble stiftet i 1921, men Stalin
+    mente at de måtte samarbeide med Guomindang.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>I 1927 lot Guomindangs nye leder, Chiang
+    Kai-shek, kommunister bli massakrert, og borgerkrigen startet.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Japan tok hele Mandsjuria tidlig på 30-tallet.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>I 1934 la kommunistene ut på ”den lange
+    marsjen”.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>I 1937-45 var borgerkrigen avbrutt pga. Japans
+    angrep.</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=2></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=2></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=2></td>
+   </tr>
+  </table>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP7 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0111.htm');" onmouseover="Over(this).html"
+  id=PPTL7 onmouseout="Out(this)">Kina under Mao</a></font></div>
+  <div id=PPTC7 class=CTxt style='display:none'>
+  <table style='color:white' id=PPTB7 class=CBorder>
+   <tr>
+    <td width=5 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width="100%"></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>1949: Kommunistene seiret i borgerkrigen da
+    Chiang Kai-sheks korrupte styre brøt sammen, og Chiang flyktet til Formosa.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>1949-52: Godseiernes jord delt ut til bøndene i
+    blodig reform.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>1950-53: Koreakrigen førte til krig med USA - og
+    samarbeid med Sovjet. (Stalin hadde motarbeidet Maos revolusjon.)</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Mao gjennomførte kollektivisering etter
+    sovjetisk mønster, men delte så bondebefolkningen inn i 24 000
+    desentraliserte, selv-forsynte folkekommuner, et brudd med sovjetisk
+    modell.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Med ”det store spranget” fra 1958 skulle Kina ta
+    igjen Vesten i industriproduksjon ved å mobilisere massene/folkekommunene,
+    en menneskelig, økonomisk og økologisk katastrofe.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Fra 1966 skulle ”kulturrevolusjonen” styrke Mao
+    og ”den evige revolusjonen” mot byråkrater og ”kjettere” i partiet.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1></td>
+   </tr>
+  </table>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP8 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0112.htm');" onmouseover="Over(this).html"
+  id=PPTL8 onmouseout="Out(this)">Kina etter Mao</a></font></div>
+  <div id=PPTC8 class=CTxt style='display:none'>
+  <table style='color:white' id=PPTB8 class=CBorder>
+   <tr>
+    <td width=5 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width="100%"></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Slutten av 60-tallet: Kulturrevolusjonen førte
+    til kaos, og hæren måtte settes inn mot rødegardistene.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Motsetningene til Sovjet ble stadig tydeligere,
+    og i 1969 oppstod det kamper pga. av en gammel grensekonflikt.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Kina inviterte Nixon til Kina, og USA lot Kina
+    få Taiwans plass i Sikkerhetsrådet i FN.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Mao døde i 1976, og Deng Xiaoping stod fram som
+    Kinas sterke mann, med en politikk som gikk inn for å gjøre Kina til en
+    moderne industristat med kapitalistiske eksperimenter og for oppløsning av
+    folkekommunene, mens ”firerbanden”, som representerte ”arven fra Mao”, ble
+    arrestert.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Demonstrasjoner ble brutalt slått ned i 89.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1></td>
+   </tr>
+  </table>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP9 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0130.htm');" onmouseover="Over(this).html"
+  id=PPTL9 onmouseout="Out(this)">Indokina</a></font></div>
+  <div id=PPTC9 class=CTxt style='display:none'>
+  <table style='color:white' id=PPTB9 class=CBorder>
+   <tr>
+    <td width=5 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width="100%"></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>De franske koloniene var okkupert <br>
+    av Japan under andre verdenskrig.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Frankrike ble involvert i kolonikrig.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Genèvekonferansen delte Vietnam i en
+    kommunistisk nordlig og en ikke-kommunistisk sørlig del, som under
+    innflytelse av USA fikk et antikommunistisk styre og saboterte avtalt valg.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Kollektivisering etter sovjetisk modell
+    gjennomført i nord.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Kommunister og andre opposisjonelle dannet FNL i
+    sør. Under Johnson ble USA involvert i en omfattende krig.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Sovjet og Kina støttet Nord-Vietnam med våpen og
+    rådgivere.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Nixon trakk ut store styrker etter internasjonal
+    fordømmelse.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>1975: Nord-Vietnam og FNL seiret og gjenforente
+    nord og sør.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>1975: Røde Khmer innførte terrorvelde i
+    Kambodsja.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1></td>
+   </tr>
+  </table>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP10 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0114.htm');" onmouseover="Over(this).html"
+  id=PPTL10 onmouseout="Out(this)"><span style="mso-spacerun: yes">         
+  </span>India og Pakistan</a></font></div>
+  <div id=PPTC10 class=CTxt style='display:none'>
+  <table style='color:white' id=PPTB10 class=CBorder>
+   <tr>
+    <td width=5 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width="100%"></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Kongresspartiet dominert av en elite av
+    intellektuelle hinduer fra byene gikk inn for en fri stat etter vestlig
+    mønster.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Muslimene, 1/4 av befolkningen, dannet Den
+    muslimske liga.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Mahatma Gandhi gikk inn for en ikke-voldslinje
+    med boikott av britiske varer - uavhengig av religiøse motsetninger.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Britene kunne ikke holde på India som koloni
+    etter krigen. India og Pakistan, som opprinnelig var todelt, ble opprettet
+    i 1947. Religiøse motsetninger og Kashmir-konflikten har ført til uro og
+    kriger mellom statene. Bangladesh brøt med Vest-Pakistan i 1971 etter ny
+    krig mellom India og Pakistan.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Indisk politikk har blitt dominert av
+    Kongresspartiet og Nehru/Gandhi-familien; pakistansk politikk av militære,
+    islamister og til dels korrupte sivile politikere.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1></td>
+   </tr>
+  </table>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP11 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0115.htm');" onmouseover="Over(this).html"
+  id=PPTL11 onmouseout="Out(this)">Midtøsten: bakgrunn</a></font></div>
+  <div id=PPTC11 class=CTxt style='display:none'>
+  <table style='color:white' id=PPTB11 class=CBorder>
+   <tr>
+    <td width=5 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width="100%"></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>En del av tyrkernes rike fra 1500-tallet</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>Britisk kontroll over Egypt og Suez fra 1880-åra</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>Midtøsten viktigere etter oljefunn</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>Araberne til kamp mot tyrkerne under første
+    verdens-krig pga. britenes og franskmennenes løfter</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>Britiske løfter (Balfour) om et hjemland for
+    jødene</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>Områdene delt mellom Storbritannia (Palestina
+    bl.a.) og Frankrike under Versailleskonferansen</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>Oppsving for sionismen (politisk bevegelse for
+    et hjemland for jødene i Palestina) pga. jødehatet</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>Økt innvandring av jøder til Palestina i 30-åra.</font></td>
+   </tr>
+  </table>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP12 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0116.htm');" onmouseover="Over(this).html"
+  id=PPTL12 onmouseout="Out(this)">Opprettelsen av staten Israel</a></font></div>
+  <div id=PPTC12 class=CTxt style='display:none'>
+  <table style='color:white' id=PPTB12 class=CBorder>
+   <tr>
+    <td width=5 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width="100%"></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=2><font size=2>Stor sympati for jødenes sak etter andre
+    verdenskrig</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=2><font size=2>Britiske forsøk på å begrense innvandringen av
+    jøder i et et forsøk på å balansere mellom jøder og arabere</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=2><font size=2>Sionister til væpnet kamp mot britene</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=2><font size=2>Palestina-spørsmålet overlatt til FN</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=2><font size=2>FN-vedtak om deling av Palestina og opprettelse
+    av staten Israel fikk bl.a. støtte av Sovjet og USA (48):</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Jødene: 40 % av befolkningen - 56 % av landet.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Araberne (palestinerne): 60 % av befolkningen -
+    44 %</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Jerusalem som hellig by for tre religioner under
+    FN</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=2><font size=2>Jøder fordrev arabere/Araberstater angrep Israel</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=2></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1></td>
+   </tr>
+   <tr>
+    <td colspan=1></td>
+    <td colspan=3></td>
+   </tr>
+  </table>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP13 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0117.htm');" onmouseover="Over(this).html"
+  id=PPTL13 onmouseout="Out(this)">Kriger mellom Israel og araberstatene</a></font></div>
+  <div id=PPTC13 class=CTxt style='display:none'>
+  <table style='color:white' id=PPTB13 class=CBorder>
+   <tr>
+    <td width=5 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width="100%"></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=2><font size=2>1948-49: Israel ble angrepet av nabostatene.</font></td>
+   </tr>
+   <tr>
+    <td colspan=4></td>
+    <td colspan=1><font size=2>Det palestinske flyktningeproblemet ble skapt.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=2><font size=2>1956: Storbritannia, Frankrike og Israel angrep
+    Egypt, etter at Nasser hadde nasjonalisert Suez-kanalen.</font></td>
+   </tr>
+   <tr>
+    <td colspan=4></td>
+    <td colspan=1><font size=2>Sterk internasjonal fordømmelse og press fra USA
+    førte til tilbaketrekning og utplassering av FN-styrker.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=2><font size=2>1967: Israel angrep Egypt, Jordan og Syria fordi
+    Egypt stengte innseilingen til Rødehavet og forlangte FN-troppene fjernet.</font></td>
+   </tr>
+   <tr>
+    <td colspan=4></td>
+    <td colspan=1><font size=2>Enorme israelske framganger førte til okkupasjon
+    av store områder.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=2><font size=2>1973: Egypt angrep Israel over Suez-kanalen i
+    oktoberkrigen.</font></td>
+   </tr>
+   <tr>
+    <td colspan=4></td>
+    <td colspan=1><font size=2>Israel seiret til slutt, men Egypt fikk
+    gjenåpnet Suezkanalen.</font></td>
+   </tr>
+   <tr>
+    <td colspan=4></td>
+    <td colspan=1><font size=2>Araberne brukte oljevåpenet mot Vesten.</font></td>
+   </tr>
+   <tr>
+    <td colspan=4></td>
+    <td colspan=1><font size=2>Camp David-avtalen i 1978 gav Sinai tilbake
+    tilbake til Egypt.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=2><font size=2>1978/82: Israel invaderte Libanon pga.
+    palestinerne.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=2></td>
+   </tr>
+   <tr>
+    <td colspan=4></td>
+    <td colspan=1></td>
+   </tr>
+  </table>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP14 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0118.htm');" onmouseover="Over(this).html"
+  id=PPTL14 onmouseout="Out(this)">Islamisme</a></font></div>
+  <div id=PPTC14 class=CTxt style='display:none'>
+  <table style='color:white' id=PPTB14 class=CBorder>
+   <tr>
+    <td width=5 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width="100%"></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=2><font size=2>Islamisme har blitt en slags opprørsideologi mot
+    Israel, hjemlige ledere som samarbeider med Vesten og vestlig innflytelse:</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>kampen mot staten Israel, særlig etter
+    seksdagers-krigen i 1967</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>ujevn fordeling av oljeinntektene</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Samtidig skapte oljeinntektene bevissthet om
+    egen styrke: oljeboikotten i 1973/74.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>reaksjon på USAs rolle i Iran og samarbeidet med
+    sjahen</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Motsetninger mellom muslimske land utnyttes på
+    begge sider som i krigen mellom Iran og Irak 1980-88.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1></td>
+   </tr>
+  </table>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP15 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0119.htm');" onmouseover="Over(this).html"
+  id=PPTL15 onmouseout="Out(this)">Golfkrigen 90-91</a></font></div>
+  <div id=PPTC15 class=CTxt style='display:none'>
+  <table style='color:white' id=PPTB15 class=CBorder>
+   <tr>
+    <td width=5 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width="100%"></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=2><font size=2>Irak invaderte Kuwait i 1990:</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>økonomiske problemer etter krigen<br>
+    1980-88</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>påstander om at det var gammelt <br>
+    irakisk land</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=2><font size=2>USA fikk FNs støtte for å bygge opp en
+    flernasjonal styrke for å gjenerobre Kuwait:</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Den kalde krigen var over, Sovjet var svekket og
+    godtok dette mot økonomiske løfter.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Den rike verden var avhengig av oljeressursene.</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=2><font size=2>Irak ble slått vinteren 91, men Saddam Husseins
+    regime fikk overleve - av strategiske årsaker?</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=2></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=2></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=2></td>
+   </tr>
+  </table>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP16 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0120.htm');" onmouseover="Over(this).html"
+  id=PPTL16 onmouseout="Out(this)">Osloavtalen</a></font></div>
+  <div id=PPTC16 class=CTxt style='display:none'>
+  <table style='color:white' id=PPTB16 class=CBorder>
+   <tr>
+    <td width=5 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width="100%"></td>
+   </tr>
+   <tr>
+    <td colspan=1></td>
+    <td colspan=2><font size=2>Bakgrunn for selvstyreavtalen:</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>Gradvis større sympati for<br>
+    palestinerne i verdensopinionen</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>Den ubevæpnede motstanden mot<br>
+    den israelske okkupasjonen (intifadaen) fra 1987</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>Etter den kalde krigen kunne ikke aktørene i
+    Midtøsten spille USA og Sovjet ut mot hverandre.</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>USA la sterkere press på Israel for å slippe en
+    ny stans av oljeleveransene fra Midtøsten.</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>PLO svekket av støtten til Saddam Hussein</font></td>
+   </tr>
+  </table>
+  </div>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+</body>
+
+</html>

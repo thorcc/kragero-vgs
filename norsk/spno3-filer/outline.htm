@@ -1,0 +1,898 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=PowerPoint.Slide>
+<meta name=Generator content="Microsoft PowerPoint 9">
+<link id=Main-File rel=Main-File href="..\spno3.html">
+<link rel=Preview href=preview.wmf>
+<meta name=Robots content=NoIndex>
+<script src=script.js></script><script><!--
+
+if( !(IsWin("PPTOtl")||IsWin("PPTNav")||IsWin("PPTOtlNav")) )
+{
+	obj = document.all.item("Main-File")
+	parent.location.href=obj.href
+}
+
+var gOtlHiliteClr="#000000",gOtlNormalClr="#FFFFFF",gOtlActiveClr="#0000FF",gSelected="",gTxtState=false,gChildEntryTable=new Array()
+
+function Load()
+{
+	if( IsWin("PPTOtl" ) ){ LoadOtl(); parent.gOtlLoaded=true; return }
+	if( IsWin("PPTNav" ) ){ LoadNav("NavObj",UpdNav); parent.gNavLoaded=true; return }
+	if( IsWin("PPTOtlNav" ) ){ LoadNav("OtlNavObj",UpdOtlNav); parent.gOtlNavLoaded=true; return }
+}
+function Upd(){ if( IsWin("PPTNav") ) LoadNav("NavObj",UpdNav) }
+function LoadNav( oId,UpdFunc )
+{
+	document.ondragstart=CancelDrag
+	document.onselectstart=CancelDrag
+	document.body.style.margin=2
+	UpdFunc()
+	obj=document.all.item(oId)
+	obj.style.display="block"
+	obj.style.visibility="visible"
+	document.bgColor="threedface"
+}
+function LoadOtl()
+{
+	document.ondragstart=CancelDrag
+	document.onselectstart=CancelDrag
+	OtlObj.style.display="block"
+	OtlObj.style.visibility="visible"
+	if( gOtlActiveClr == "" ) gOtlActiveClr=document.linkColor
+	if( gOtlHiliteClr == "" ) gOtlHiliteClr=document.fgColor
+	if( gOtlNormalClr == "" )
+		gOtlNormalClr=document.bgColor
+	else
+		document.bgColor=gOtlNormalClr  
+
+	InitArray()
+
+	if( ObjExists( parent.gCurSld ) ) {
+		ChangeState( parent.gCurSld,gOtlNormalClr,gOtlHiliteClr )
+		gSelected=parent.gCurSld
+	}
+	else gSelected = -1
+
+	UpdOtl()
+}
+function UpdOtl(){ UpdIdx(parent.gCurSld) }
+function UpdIdx( idx )
+{
+	if( gSelected != idx ) {
+		if( gSelected > 0 )
+			ChangeState( gSelected,gOtlHiliteClr,gOtlNormalClr )
+
+		if( ObjExists( idx ) ) {
+			gSelected = idx
+			ChangeState( gSelected,gOtlNormalClr,gOtlHiliteClr )
+		}
+		else gSelected = -1
+	}
+
+	if( gTxtState != parent.gOtlTxtExp ) {
+		state = "block"
+		if( !parent.gOtlTxtExp )
+			state="none"
+
+		for(ii=0; ii<gChildEntryTable.length; ii++) {
+			obj=gChildEntryTable[ii];
+			if( obj.id == null ) continue;
+
+			if( obj.id.indexOf("PPTC") >= 0 )
+				obj.style.display=state;
+		} 
+		gTxtState=parent.gOtlTxtExp
+		if( ObjExists( gSelected ) )
+			ChangeState( gSelected,gOtlNormalClr,gOtlHiliteClr )
+	}
+}
+function InitArray()
+{
+	count=0
+	for(ii=0; ii<document.all.tags("DIV").length; ii++) {
+		obj=document.all.tags("DIV").item(ii)
+		if( obj.id == null ) continue
+
+		if( obj.id.indexOf("PPTC") >= 0 ) {   
+			gChildEntryTable[count++]=obj
+			obj.children.tags("TABLE").item(0).style.borderColor=gOtlNormalClr
+		}
+	}
+}
+function ChangeState( idx,fgColor,bgColor )
+{
+	obj=document.all.item("PPTL"+idx)
+	obj.style.color=fgColor
+
+	obj=document.all.item("PPTP"+idx)
+	obj.style.backgroundColor=bgColor
+
+	obj=document.all.item("PPTB"+idx)
+	if( obj )
+		obj.style.borderLeftColor=obj.style.borderBottomColor=bgColor
+}
+function ChgClr( o,clr ){ if( o.id != "PPTL"+gSelected ) o.style.color=clr }
+function Over( obj ){ ChgClr(obj,gOtlActiveClr) }
+function Out( obj ){ ChgClr(obj,gOtlHiliteClr) }
+function ObjExists( ii ) { obj=document.all("PPTP"+ii ); return( obj ) }
+function GoToSld( href ){ UpdIdx(parent.GetSldNum(href)); parent.GoToSld( href ) }
+function CancelDrag(){ window.event.cancelBubble=true;window.event.returnValue=false}
+
+function UpdNav()
+{
+	txt = "<center>";
+	if( parent.GetHrefObj( parent.gCurSld ).mOrigVis == 1 )
+		txt += "Lysbilde " + parent.GetCurSldNum() + " av " + parent.GetNumSlds()
+	else
+		txt += "Skjult lysbilde"
+	txt += "</center>";
+	nav_text.innerHTML = txt;
+
+	if( !parent.HasPrevSld() )
+		gBtnArr["nb_prev"].Enabled(0)
+	else
+		gBtnArr["nb_prev"].Enabled(1)
+
+	if( !parent.HasNextSld() )
+		gBtnArr["nb_next"].Enabled(0)
+	else
+		gBtnArr["nb_next"].Enabled(1)
+	gBtnArr["nb_nts"].SetEnabled()
+	gBtnArr["nb_nts"].SetFlag( parent.gHasNts )
+
+	gBtnArr["nb_sldshw"].Enabled(1)
+	gBtnArr["nb_voice"].Enabled(1)
+}
+
+function UpdOtlNav()
+{
+	gBtnArr["nb_otl"].SetEnabled();
+
+	if( parent.gOtlOpen )
+		gBtnArr["nb_otlTxt"].Enabled( true );
+	else
+		document.all.item("nb_otlTxtBorder").style.visibility = "hidden";
+}
+
+
+
+//-->
+</script>
+<style>
+<!--.PTxt
+	{position:relative;
+	width:100%;
+	margin-top:5px;
+	padding-left:5px;
+	font-weight:bold;}
+.CTxt
+	{position:relative;
+	width:100%;
+	padding-left:10px;}
+.CBorder
+	{position:relative;
+	width:100%;
+	border-style:solid;
+	border-width:1px;
+	border-color:white;
+	padding-bottom:5px;}
+a
+	{color:black;
+	text-decoration:none;}
+.button
+	{position:absolute;
+	width:32px;
+	height:20px;
+	border-style:solid;
+	border-width:1px;
+	border-color:threedface;}
+-->
+</style>
+</head>
+
+<body onload="Load()">
+
+<div id=NavObj onload="Load()" onmouseover="BtnOnOver().html"
+onmousedown="BtnOnDown()" onmouseout="BtnOnOut()" onmouseup="BtnOnUp()"
+onkeypress="_KPH()" style='display:none;visibility:hidden'>
+
+<table style='position:absolute;width:70px;visibility:hidden' align=left
+ cellpadding=0 cellspacing=0>
+ <td nowrap>
+ <div id="nb_ntsElem" align=center style='position:relative;padding:3px;
+ font-family:Arial;color:buttontext;font-size:9pt'><img src="notes_flag.gif"
+ border=0 id="notes_flag" style='display:none'><span style="mso-spacerun:
+ yes">  </span>Notater</div>
+ <div title="Vis/skjul notater" id="nb_nts" style='position:absolute;
+ top:0%;left:0%;width:100%;height:100%'></div>
+ </td>
+</table>
+
+<table style='position:relative' align=right cellpadding=0 cellspacing=0>
+ <td>
+ <div id="nb_sldshwBorder" style='position:absolute;left:-20px;width:20px;
+ height:20px'>
+ <div style='position:absolute;clip:rect(0px, 18px, 18px, 0px)'><img
+ src=buttons.gif id="nb_sldshw" title="Lysbildefremvisning i fullt skjermvindu"
+ style='position:relative;left:-254px' width="344" height="18"></div>
+ </div>
+ </td>
+ <td>
+ <div id="nb_voiceBorder" style='display:none;position:absolute;left:-40px;
+ width:20px;height:20px'>
+ <div style='position:absolute;clip:rect(0px, 18px, 18px, 0px)'><img
+ src=buttons.gif id="nb_voice" title="Stans / spill av lydkommentar"
+ style='position:relative;left:-290px' width="344" height="18"></div>
+ </div>
+ </td>
+</table>
+
+<table style='position:relative' align=center cellpadding=0 cellspacing=0>
+ <td nowrap>
+ <div id="nb_prevBorder" class=button style='left:-30px'>
+ <div style='position:absolute;clip:rect(0px, 30px, 18px, 0px)'><img
+ src=buttons.gif id="nb_prev" title="Forrige lysbilde" style='position:relative;
+ left:0px' width="344" height="18"></div>
+ </div>
+ <span id="nav_text" style='position:relative;top:3px;width:100px;font-family:
+ Arial;color:buttontext;font-size:9pt'></span>
+ <div id="nb_nextBorder" class=button>
+ <div style='position:absolute;clip:rect(0px, 30px, 18px, 0px)'><img
+ src=buttons.gif id="nb_next" title="Neste lysbilde" style='position:relative;
+ left:-90px' width="344" height="18"></div>
+ </div>
+ </td>
+</table>
+
+</div>
+
+<div id=OtlNavObj onload="Load()" onmouseover="BtnOnOver().html"
+onmousedown="BtnOnDown()" onmouseout="BtnOnOut()" onmouseup="BtnOnUp()"
+onkeypress="_KPH()" style='display:none;visibility:hidden'>
+
+<table style='position:relative;width:70px' align=left cellpadding=0
+ cellspacing=0>
+ <td nowrap>
+ <div id="nb_otlElem" align=center style='position:relative;padding:3px;
+ font-family:Arial;color:buttontext;font-size:9pt'>Disposisjon</div>
+ <div title="Vis/skjul disposisjon" id="nb_otl" style='position:absolute;
+ top:0%;left:0%;width:100%;height:100%'></div>
+ </td>
+</table>
+
+<table style='position:relative' align=center cellpadding=0 cellspacing=0>
+ <td>
+ <div style='position:absolute;left:-18px;width:24px;height:20px;border-style:
+ solid;border-width:1px;border-color:threedface' id="nb_otlTxtBorder">
+ <div style='position:absolute;clip:rect(0px, 22px, 18px, 0px)'><img
+ src=buttons.gif id="nb_otlTxt" title="Vis/skjul disposisjon" style='position:
+ relative;left:-157px' width="344" height="18"></div>
+ </div>
+ </td>
+</table>
+
+</div>
+
+<div id=OtlObj style='display:none;visibility:hidden'>
+
+<table width="100%" style='font-family:Arial;font-size:9pt'>
+ <tr>
+  <td>
+  <div id=PPTP1 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0018.htm');" onmouseover="Over(this).html"
+  id=PPTL1 onmouseout="Out(this)">”Språklige slektninger”</a></font></div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP2 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0019.htm');" onmouseover="Over(this).html"
+  id=PPTL2 onmouseout="Out(this)">Nordiske språk</a></font></div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP3 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0002.htm');" onmouseover="Over(this).html"
+  id=PPTL3 onmouseout="Out(this)">Lysbilde 3</a></font></div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP4 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0017.htm');" onmouseover="Over(this).html"
+  id=PPTL4 onmouseout="Out(this)">Samfunnsutvikling og språkutvikling</a></font></div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP5 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0001.htm');" onmouseover="Over(this).html"
+  id=PPTL5 onmouseout="Out(this)">Framvekst av norrøn litteratur</a></font></div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP6 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0004.htm');" onmouseover="Over(this).html"
+  id=PPTL6 onmouseout="Out(this)">Fra norrønt til dansk I</a></font></div>
+  <div id=PPTC6 class=CTxt style='display:none'>
+  <table style='color:black' id=PPTB6 class=CBorder>
+   <tr>
+    <td width=5 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width="100%"></td>
+   </tr>
+   <tr>
+    <td colspan=1></td>
+    <td colspan=2><font size=2>Politisk utvikling</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>union med Sverige, 1319</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>union med Danmark, 1380</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>De tyske hanseatene i Bergen hadde stor
+    innflytelse - også over unionskonger</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>Særlig dansker kom etter hvert stadig oftere i
+    nøkkelposisjoner.</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>Det norske riksrådet og erkebiskopen ble avsatt
+    i 1536/37 etter opprøret mot<span style="mso-spacerun: yes"> 
+    </span>reformasjonen.</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1></td>
+   </tr>
+   <tr>
+    <td colspan=1></td>
+    <td colspan=2><font size=2>Sosial/økonomisk utvikling</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>trangt om plassen pga. befolkningsvekst og
+    dårligere vilkår enn i Danmark og Sverige</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>dårligere klima enn før</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>Svartedauden 1349/50</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>færre skattebetalere</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>generelle nedgangstider</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>svekket norsk adel - standen som skulle forsvare
+    landet -</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>og som gjerne måtte finne ”standsmessige”
+    partnere i Sverige og Danmark</font></td>
+   </tr>
+  </table>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP7 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0003.htm');" onmouseover="Over(this).html"
+  id=PPTL7 onmouseout="Out(this)">Fra norrønt til dansk II</a></font></div>
+  <div id=PPTC7 class=CTxt style='display:none'>
+  <table style='color:black' id=PPTB7 class=CBorder>
+   <tr>
+    <td width=5 nowrap></td>
+    <td width="100%"></td>
+   </tr>
+   <tr>
+    <td colspan=1></td>
+    <td colspan=1><font size=2>1349/50: Svartedauden: geistlige = skrivekyndige
+    = ”sosialarbeidere”: Kunnskapen om norrønt skriftmål dør med disse, bl.a.
+    fordi talespråket har fjernet seg/<br>
+    er i ferd med å fjerne seg(?) fra norrønt talemål.</font></td>
+   </tr>
+   <tr>
+    <td colspan=1></td>
+    <td colspan=1><font size=2>Med dansker i viktige stillinger får dansk
+    skriftspråk<span style="mso-spacerun: yes">  </span>gradvis fotfeste, i
+    konkurranse med mellomnorsk skriftspråk, som hadde erstattet norrønt
+    skriftspråk.</font></td>
+   </tr>
+   <tr>
+    <td colspan=1></td>
+    <td colspan=1><font size=2>1536/37: Med reformasjonen skal folk selv lese
+    og forstå Bibelen: ”Morsmålet”, dansk i Norge, erstatter latin som
+    kirkespråk. Flere danske prester kommer.</font></td>
+   </tr>
+   <tr>
+    <td colspan=1></td>
+    <td colspan=1><font size=2>1643: Norsk boktrykkeri: Skriftspråket når ut
+    til flere.</font></td>
+   </tr>
+   <tr>
+    <td colspan=1></td>
+    <td colspan=1><font size=2>1736/39: Konfirmasjonen og allmueskolen: <br>
+    Alle nordmenn skal lese dansk.</font></td>
+   </tr>
+  </table>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP8 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0011.htm');" onmouseover="Over(this).html"
+  id=PPTL8 onmouseout="Out(this)">Situasjonen etter 1814</a></font></div>
+  <div id=PPTC8 class=CTxt style='display:none'>
+  <table style='color:black' id=PPTB8 class=CBorder>
+   <tr>
+    <td width=5 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width="100%"></td>
+   </tr>
+   <tr>
+    <td colspan=1></td>
+    <td colspan=3><font size=2>Norge hadde gått inn i en politisk union med
+    Sverige,</font></td>
+   </tr>
+   <tr>
+    <td colspan=1></td>
+    <td colspan=3><font size=2>men landet var i en slags ”kulturell union” med
+    Danmark som følge av unionen 1380-1814:</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=2><font size=2>Skriftspråket var dansk:<br>
+    Norges første romanforfatter, Maurits Hansen, gav ut en norsk og en dansk
+    grammatikk, men bare tittelen var forskjelllig!</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=2><font size=2>Men de aller fleste nordmenn snakket en norsk
+    dialekt.</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=2><font size=2>Eliten bruke mest ”dannet dagligtale” - eller
+    dansk ved særlig høytidelige anledninger (fra prekestolen f.eks.).</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=2><font size=2>Embetsmannskulturen var dansk:</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Embetsmannsfamiliene var ofte av dansk opphav.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>Norsk universitet hadde først kommet i 1811.</font></td>
+   </tr>
+  </table>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP9 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0005.htm');" onmouseover="Over(this).html"
+  id=PPTL9 onmouseout="Out(this)">Hovedlinjene i norsk språkhistorie fra
+  1830-åra til i dag</a></font></div>
+  <div id=PPTC9 class=CTxt style='display:none'>
+  <table style='color:black' id=PPTB9 class=CBorder>
+   <tr>
+    <td width=5 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width="100%"></td>
+   </tr>
+   <tr>
+    <td colspan=1></td>
+    <td colspan=4><font size=2>Den ”revolusjonære” linja:</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=3><font size=2>P.A.Munch<br>
+    &#9;1840-åra - :</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=3><font size=2>Ivar Aasen</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=3><font size=2>Landsmål</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=3><font size=2>Rettskrivingsreformer</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=3><font size=2>Nynorsk</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=3></td>
+   </tr>
+   <tr>
+    <td colspan=1></td>
+    <td colspan=4><font size=2>Fornorskingslinja:<br>
+    &#9;&#9;1830-åra:</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=3><font size=2>Henrik Wergeland<br>
+    <br>
+    Knud Knudsen</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=3><font size=2>Riksmål<br>
+    &#9;&#9;1900-tallet:</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=3><font size=2>Rettskrivingsreformer</font></td>
+   </tr>
+   <tr>
+    <td colspan=4></td>
+    <td colspan=1><font size=2>Samnorsk</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=3><font size=2>Bokmål</font></td>
+   </tr>
+  </table>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP10 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0007.htm');" onmouseover="Over(this).html"
+  id=PPTL10 onmouseout="Out(this)">Henrik Wergeland</a></font></div>
+  <div id=PPTC10 class=CTxt style='display:none'>
+  <table style='color:black' id=PPTB10 class=CBorder>
+   <tr>
+    <td width=5 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width="100%"></td>
+   </tr>
+   <tr>
+    <td colspan=1></td>
+    <td colspan=2><font size=2>Skriftet Om norsk Sprogreformation innledet
+    språkdebatten i 1830-åra:<br>
+    Wergeland ville ta opp norske ord,
+    uttrykk og delvis også grammatiske former i dansk.</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>Nasjonalromantikeren la vekt på det nasjonale
+    prinsippet.</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>Kunstneren la vekt på det stilistiske
+    prinsippet.</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>Folkeopplysningsmannen la vekt på det demokratiske
+    prinsippet.</font></td>
+   </tr>
+  </table>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP11 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0006.htm');" onmouseover="Over(this).html"
+  id=PPTL11 onmouseout="Out(this)">Peter Andreas Munch</a></font></div>
+  <div id=PPTC11 class=CTxt style='display:none'>
+  <table style='color:black' id=PPTB11 class=CBorder>
+   <tr>
+    <td width=5 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width="100%"></td>
+   </tr>
+   <tr>
+    <td colspan=1></td>
+    <td colspan=3><font size=2>Reaksjon mot Wergeland på et vitenskapelig
+    grunnlag:<br>
+    Han ville skape et helt nytt norsk skriftspråk</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=2><font size=2>med utgangspunkt i en ”fullkommen” dialekt</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=2><font size=2>nær norrønt</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>vitenskapsmann/historiker</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>nasjonalromantiker</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>tilhørte kretsen rundt Welhaven, som ville holde
+    på den kulturelle forbindelsen med Danmark</font></td>
+   </tr>
+  </table>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP12 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0008.htm');" onmouseover="Over(this).html"
+  id=PPTL12 onmouseout="Out(this)">Ivar Aasen</a></font></div>
+  <div id=PPTC12 class=CTxt style='display:none'>
+  <table style='color:black' id=PPTB12 class=CBorder>
+   <tr>
+    <td width=5 nowrap></td>
+    <td width="100%"></td>
+   </tr>
+   <tr>
+    <td colspan=1></td>
+    <td colspan=1><font size=2>Fra 1840-åra utførte han det praktiske arbeidet
+    som Munch hadde lagt det teoretiske grunnlaget for:<br>
+    Han gransket dialektene
+    og ville skape et mål som passet for hele landet (landsmål) med et felles system
+    og norrønt i noen grad som utgangspunkt, purist i ordvalget, særlig mot
+    tyske elementer (”an-be-het-elser”)</font></td>
+   </tr>
+   <tr>
+    <td colspan=1></td>
+    <td colspan=1><font size=2>Fra ca. 1850 utgav han ordbok, grammatikk og
+    ”Prøver af Landsmaalet”.</font></td>
+   </tr>
+  </table>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP13 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0009.htm');" onmouseover="Over(this).html"
+  id=PPTL13 onmouseout="Out(this)">Knud Knudsen</a></font></div>
+  <div id=PPTC13 class=CTxt style='display:none'>
+  <table style='color:black' id=PPTB13 class=CBorder>
+   <tr>
+    <td width=5 nowrap></td>
+    <td width="100%"></td>
+   </tr>
+   <tr>
+    <td colspan=1></td>
+    <td colspan=1><font size=2>Han fulgte opp tanken om fornorsking skritt for
+    skritt med praktiske forslag:<br>
+    Han ville bygge på dannet dagligtale:
+    en noenlunde felles talemålsnorm for hele landet i familier med høyere
+    sosial status, et kompromiss mellom dansk skrift og norsk tale. Særlig var
+    han opptatt av harde konsonanter som noe som skilte norsk fra dansk. Legg i
+    denne sammenheng merke til hvor han kom fra!</font></td>
+   </tr>
+  </table>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP14 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0010.htm');" onmouseover="Over(this).html"
+  id=PPTL14 onmouseout="Out(this)">Knudsen vs. Aasen</a></font></div>
+  <div id=PPTC14 class=CTxt style='display:none'>
+  <table style='color:black' id=PPTB14 class=CBorder>
+   <tr>
+    <td width=5 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width="100%"></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>Knudsen (1812 - 1895)</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>Holt ved Tvedestrand</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>egentlig husmannssønn, men tok høyere
+    utdannelse, under-viste gutter fra høyere samfunnslag og hadde</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>et pedagogisk siktemål:<br>
+    Dansk skriftspråk gjorde rettskrivingen
+    vanskelig.</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>påvirket av Bjørnson og Ibsen i 1850- og
+    1860-åra</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>deltok på et skandinavisk språkmøte i Stockholm
+    i 1869</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>hadde mer radikale visjoner for framtida med
+    folkemålsformer</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>Aasen (1813 - 1896)</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>Ørsta på Sunnmøre</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>bondesønn, og <br>
+    var selvlært fordi han ikke ville fjerne seg fra sin stand og hadde</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>et sosialt siktemål: ville gjøre det lettere for
+    bøndene å hevde seg i samfunnet ved å utvikle et skriftspråk basert på
+    deres talemål</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>et nasjonalt siktemål</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>målet skulle brukes til folke-kultur og
+    diktning, brukte selv dansk-norsk til daglig</font></td>
+   </tr>
+  </table>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP15 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0012.htm');" onmouseover="Over(this).html"
+  id=PPTL15 onmouseout="Out(this)">Norsk språkutvikling 1840-1900</a></font></div>
+  <div id=PPTC15 class=CTxt style='display:none'>
+  <table style='color:black' id=PPTB15 class=CBorder>
+   <tr>
+    <td width=5 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width="100%"></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>Asbjørnsen og Moe brukte dansk med særnorske ord
+    i sine eventyr.</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>Bjørnson og Ibsen skrev dansk med særnorske ord
+    i sin nasjonalromantiske periode, men gikk mer i ”dansk” retning pga. det
+    skandinaviske bokmarkedet.</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>Det skandinaviske språk-møtet i 1869 kom til å
+    påvirke Ibsens rettskriving.</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>Nordahl Rolfsens lesebok fra 1892 tok opp mange
+    av Knud Knudsens forslag.</font></td>
+   </tr>
+   <tr>
+    <td colspan=1></td>
+    <td colspan=2><font size=2>Landsmålet ble tatt i bruk av flere forfattere i
+    ulike varianter:</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>Aasen-normalen (Prøver af Landsmalet fra 1853)</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>Aasmund Olavsson Vinjes variant preget av
+    Telemark (Dølen)</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>Olaus Fjørtoft: Alle skriver tilnærmet sin egen
+    dialekt, også i by- og arbeidermiljø!</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>Arne Garborg: midlands-normalen (mellom øst og
+    vest) med utgangspunkt i Vest-Telemark (mange vokaler)</font></td>
+   </tr>
+  </table>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP16 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0013.htm');" onmouseover="Over(this).html"
+  id=PPTL16 onmouseout="Out(this)">Språkpolitiske vedtak 1878-1892</a></font></div>
+  <div id=PPTC16 class=CTxt style='display:none'>
+  <table style='color:black' id=PPTB16 class=CBorder>
+   <tr>
+    <td width=5 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width="100%"></td>
+   </tr>
+   <tr>
+    <td colspan=1></td>
+    <td colspan=2><font size=2>Vedtak i Stortinget, som særlig fra 1882 blir
+    dominert av opposisjonen, Venstre, som er for både landsmål og fornorsking:</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>1878: Barna skal bruke dialekten sin i skolen,
+    og læreren skal tilpasse talemålet sitt for å gjøre seg forstått.</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>1885: Aasens landsmål blir formelt likestilt med
+    ”det almindelige Bogsproget” (jamstillingsvedtaket).</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>1887: ”Dannet dagligtale” skal være normen for
+    høytlesing.</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>1892: Skolestyret i kommunene får velge
+    skriftlig opplæringsmål: 200 landsmålskretser av 6000 før 1900.</font></td>
+   </tr>
+  </table>
+  </div>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,767 @@
+<html>
+<head>
+<title>Eiendomspronomen 3: utfylling</title>
+<meta http-equiv="Expires" Content="0">
+<meta http-equiv="Pragma" Content="no-cache">
+<style type="text/css">
+a {font-family: Arial; font-size: 10pt; font-weight: bold; color: #000066; text-decoration: none;}
+</style>
+<script language="JavaScript">
+var a
+var b
+var c
+var d
+var e
+var f
+var g
+var h
+var i
+var j
+var k
+var l
+var m
+var n
+var o
+var p
+var q
+var r
+var s
+var t
+var u
+var v
+var w
+var x
+var y
+var z
+var aa
+var bb
+var cc
+var dd
+var poeng=0;
+function svara(form) {
+if (form.a.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  } else {
+if (form.a.value!="seinen"){
+  alert("Pga. Rolf er pronomenet hankjønn, og endelsen er i samsvar med hankjønn akkusativ. Prøv igjen!");
+  form.a.value="";
+  form.a.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+  alert("Riktig! Pga. Rolf skal det være sein-, og endelsen blir -en fordi hankjønnsordet Vater her er direkte objekt/akkusativ.");
+  form.a.value="seinen";
+  form.a.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+    }
+  }
+}
+function svarb(form) {
+if (form.b.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  } else {
+if (form.b.value!="ihren") {
+  alert("Pga. Renate er pronomenet hunkjønn, og endelsen er i samsvar med hankjønn akkusativ. Prøv igjen!");
+  form.b.value="";
+  form.b.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+  alert("Riktig! Pga. Renate skal det være ihr-, og endelsen blir -en fordi hankjønnsordet Freund her er direkte objekt/akkusativ.");
+  form.b.value="ihren";
+  form.b.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+    }
+  }
+}
+function svarc(form) {
+if (form.c.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  } else {
+if (form.c.value!="ihre") {
+  alert("Pga. Kinder er pronomenet flertall, og endelsen er i samsvar med flertall akkusativ. Prøv igjen!");
+  form.c.value="";
+  form.c.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+  alert("Riktig! Pga. Kinder skal det være ihr-, og endelsen blir -e fordi flertallsordet Großeltern her er direkte objekt/akkusativ.");
+  form.c.value="ihre";
+  form.c.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+    }
+  }
+}
+function svard(form) {
+if (form.d.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  } else {
+if (form.d.value!="sein") {
+  alert("Pga. Hans er pronomenet hankjønn, og endelsen er i samsvar med hankjønn nominativ. Prøv igjen!");
+  form.d.value="";
+  form.d.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+  alert("Riktig! Pga. Hans skal det være sein-, og endelsen blir - fordi hankjønnsordet Bruder her er subjekt/nominativ.");
+  form.d.value="sein";
+  form.d.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+    }
+  }
+}
+function svare(form) {
+if (form.e.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  } else {
+if (form.e.value!="seiner") {
+  alert("Pga. Peter er pronomenet hankjønn, og endelsen er i samsvar med hunkjønn dativ. Prøv igjen!");
+  form.e.value="";
+  form.e.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+  alert("Riktig! Pga. Peter skal det være sein-, og endelsen blir -er fordi hunkjønnsordet Freundin her står i dativ pga. mit.");
+  form.e.value="seiner";
+  form.e.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+    }
+  }
+}
+function svarf(form) {
+if (form.f.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  } else {
+if (form.f.value!="ihrer") {
+  alert("Pga. Petra er pronomenet hunkjønn, og endelsen er i samsvar med hunkjønn dativ. Prøv igjen!");
+  form.f.value="";
+  form.f.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+  alert("Riktig! Pga. Petra skal det være ihr-, og endelsen blir -er fordi hunkjønnsordet Jacke her står i dativ pga. mit.");
+  form.f.value="ihrer";
+  form.f.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+    }
+  }
+}
+function svarg(form) {
+if (form.g.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  } else {
+if (form.g.value!="Ihre") {
+  alert("Pga. Sie (Herr Kohler) er pronomenet flertall/høflig tiltale, og endelsen er i samsvar med hunkjønn akkusativ. Prøv igjen!");
+  form.g.value="";
+  form.g.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+  alert("Riktig! Pga. Sie (Herr Kohler) skal det være Ihr-, og endelsen blir -e fordi hunkjønnsordet Jacke her er direkte objekt/akkusativ.");
+  form.g.value="den";
+  form.g.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+    }
+  }
+}
+function svarh(form) {
+if (form.h.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  } else {
+if (form.h.value!="ihren") {
+  alert("Pga. Renate und Christian er pronomenet flertall, og endelsen er i samsvar med hankjønn akkusativ. Prøv igjen!");
+  form.h.value="";
+  form.h.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+  alert("Riktig! Pga. Renate und Christian skal det være ihr-, og endelsen blir -en fordi hankjønnsordet Ball her er direkte objekt/akkusativ.");
+  form.h.value="ihren";
+  form.h.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+    }
+  }
+}
+function svari(form) {
+if (form.i.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  } else {
+if (form.i.value!="ihr") {
+  alert("Pga. Sabine er pronomenet hunkjønn, og endelsen er i samsvar med intetkjønn akkusativ. Prøv igjen!");
+  form.i.value="";
+  form.i.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+  alert("Riktig! Pga. Sabine skal det være ihr-, og endelsen blir - fordi intetkjønnsordet her er direkte objekt/akkusativ.");
+  form.i.value="ihr";
+  form.i.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+    }
+  }
+}
+function svarj(form) {
+if (form.j.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  } else {
+if (form.j.value!="Ihr") {
+  alert("Pga. Frau Schmidt er pronomenet flertall/høflig tiltale, og endelsen er i samsvar med hankjønn nominativ. Prøv igjen!");
+  form.j.value="";
+  form.j.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+  alert("Riktig! Pga. Frau Schmidt skal det være Ihr-, og endelsen blir - fordi hankjønnsordet Mann her er subjekt/nominativ.");
+  form.j.value="Ihr";
+  form.j.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+    }
+  }
+}
+function svark(form) {
+if (form.k.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  } else {
+if (form.k.value!="ihrer") {
+  alert("Pga. Julia er pronomenet hunkjønn, og endelsen er i samsvar med hunkjønn dativ. Prøv igjen!");
+  form.k.value="";
+  form.k.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+  alert("Riktig! Pga. Julia skal det være ihr-, og endelsen blir -er fordi hunkjønnsordet Tante her står i dativ pga. mit.");
+  form.k.value="ihrer";
+  form.k.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+    }
+  }
+}
+function svarl(form) {
+if (form.l.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  } else {
+if (form.l.value!="seinem") {
+  alert("Pga. Klaus er pronomenet hankjønn, og endelsen er i samsvar med hankjønn dativ. Prøv igjen!");
+  form.l.value="";
+  form.l.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+  alert("Riktig! Pga. Klaus skal det være sein-, og endelsen blir -em fordi hankjønnsordet Wagen her står i dativ pga. aus.");
+  form.l.value="seinem";
+  form.l.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+    }
+  }
+}
+function svarm(form) {
+if (form.m.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  } else {
+if (form.m.value!="ihren") {
+  alert("Pga. Kinder er pronomenet flertall, og endelsen er i samsvar med flertall dativ. Prøv igjen!");
+  form.m.value="";
+  form.m.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+  alert("Riktig! Pga. Kinder skal det være ihr-, og endelsen blir -en fordi flertallsordet Eltern her står i dativ pga. mit.");
+  form.m.value="ihren";
+  form.m.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+    }
+  }
+}
+function svarn(form) {
+if (form.n.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  } else {
+if (form.n.value!="ihr") {
+  alert("Pga. Christa er pronomenet hunkjønn, og endelsen er i samsvar med intetkjønn akkusativ. Prøv igjen!");
+  form.n.value="";
+  form.n.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+  alert("Riktig! Pga. Christa skal det være ihr-, og endelsen blir - fordi intetkjønnsordet Herz her er direkte objekt/akkusativ.");
+  form.n.value="ihr";
+  form.n.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+    }
+  }
+}
+function svaro(form) {
+if (form.o.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  } else {
+if (form.o.value!="seine") {
+  alert("Pga. Mann er pronomenet hankjønn, og endelsen er i samsvar med flertall akkusativ. Prøv igjen!");
+  form.o.value="";
+  form.o.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+  alert("Riktig! Pga. Mann skal det være sein-, og endelsen blir -e fordi flertallsordet Eltern her er direkte objekt/akkusativ.");
+  form.o.value="seine";
+  form.o.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+    }
+  }
+}
+function svarp(form) {
+if (form.p.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  } else {
+if (form.p.value!="Ihren") {
+  alert("Pga. Sie er pronomenet flertall/høflig tiltale, og endelsen er i samsvar med hankjønn akkusativ. Prøv igjen!");
+  form.p.value="";
+  form.p.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+  alert("Riktig! Pga. Sie skal pronomenet være Ihr-, og endelsen blir -en fordi hankjønnsordet Wagen her er direkte objekt/akkusativ.");
+  form.p.value="Ihren";
+  form.p.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+    }
+  }
+}
+function svarq(form) {
+if (form.q.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  } else {
+if (form.q.value!="seinen") {
+  alert("Pga. Kind er pronoment intetkjønn, og endelsen er i samsvar med flertall dativ. Prøv igjen!");
+  form.q.value="";
+  form.q.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+  alert("Riktig! Pga. Kind skal det være sein-, og endelsen blir -en fordi flertallsordet Schwestern her står i dativ pga. mit.");
+  form.q.value="seinen";
+  form.q.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+    }
+  }
+}
+function svarr(form) {
+if (form.r.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  } else {
+if (form.r.value!="seine") {
+  alert("Pga. Junge er pronomenet hankjønn, og endelsen er i samsvar med hunkjønn akkusativ. Prøv igjen!");
+  form.r.value="";
+  form.r.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+  alert("Riktig! Pga. Junge skal det være sein-, og endelsen blir -e fordi hunkjønnsordet Mutter her er direkte objekt/akkusativ.");
+  form.r.value="seine";
+  form.r.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+    }
+  }
+}
+function svars(form) {
+if (form.s.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  } else {
+if (form.s.value!="ihr") {
+  alert("Pga. Pia er pronomenet hunkjønn, og endelsen er i samsvar med hankjønn nominativ. Prøv igjen!");
+  form.s.value="";
+  form.s.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+  alert("Riktig! Pga. Pia skal det være ihr-, og endelsen blir - fordi hankjønnsordet Gast her er subjekt/nominativ.");
+  form.s.value="ihr";
+  form.s.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+    }
+  }
+}
+function svart(form) {
+if (form.t.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  } else {
+if (form.t.value!="seinem") {
+  alert("Pga. Rainer er pronomenet hankjønn, og endelsen er i samsvar med hankjønn dativ. Prøv igjen!");
+  form.t.value="";
+  form.t.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+  alert("Riktig! Pga. Rainer skal det være sein-, og endelsen blir -em fordi hankjønnsordet Onkel her står i dativ pga. zu.");
+  form.t.value="seinem";
+  form.t.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+    }
+  }
+}
+function svaru(form) {
+if (form.u.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  } else {
+if (form.u.value!="ihren") {
+  alert("Pga. Frau er pronomenet hunkjønn, og endelsen er i samsvar med hankjønn akkusativ. Prøv igjen!");
+  form.u.value="";
+  form.u.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+  alert("Riktig! Pga. Frau skal det være ihr-, og endelsen blir -en fordi hankjønnsordet her er direkte objekt/akkusativ.");
+  form.u.value="ihren";
+  form.u.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+    }
+  }
+}
+function svarv(form) {
+if (form.v.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  } else {
+if (form.v.value!="ihrer") {
+  alert("Pga. Beate er pronomenet hunkjønn, og endelsen er i samsvar med hunkjønn dativ. Prøv igjen!");
+  form.v.value="";
+  form.v.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+  alert("Riktig! Pga. Beate skaldet være ihr-, og endelsen blir -er fordi hunkjønnsordet Tante her står i dativ pga. bei.");
+  form.v.value="ihrer";
+  form.v.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+    }
+  }
+}
+function svarw(form) {
+if (form.w.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  } else {
+if (form.w.value!="sein") {
+  alert("Pga. Heinz er pronomenet hankjønn, og endelsen er i samsvar med intetkjønn akkusativ. Prøv igjen!");
+  form.w.value="";
+  form.w.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+  alert("Riktig! Pga. Heinz skal det være sein-, og endelsen blir - fordi intetkjønnsordet Segelboot her direkte objekt/akkusativ.");
+  form.w.value="sein";
+  form.w.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+    }
+  }
+}
+function svarx(form) {
+if (form.x.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  } else {
+if (form.x.value!="ihrem") {
+  alert("Pga. Eltern er pronomenet flertall, og endelsen er i samsvar med hankjønn dativ. Prøv igjen!");
+  form.x.value="";
+  form.x.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+  alert("Riktig! Pga. Eltern skal det være ihr-, og endelsen blir -em fordi hankjønnsordet Sohn her står i dativ pga. bei.");
+  form.x.value="ihrem";
+  form.x.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+    }
+  }
+}
+function svary(form) {
+if (form.y.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  } else {
+if (form.y.value!="seinen") {
+  alert("Pga. Boris (Becker) er pronomenet hankjønn, og endelsen er i samsvar med hankjønn akkusativ. Prøv igjen!");
+  form.y.value="";
+  form.y.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+  alert("Riktig! Pga. Boris (Becker) skal det være sein-, og endelsen blir -en fordi hankjønnsordet Landsmann her står i akkusativ pga. gegen.");
+  form.y.value="seinen";
+  form.y.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+    }
+  }
+}
+function svarz(form) {
+if (form.z.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  } else {
+if (form.z.value!="ihrem") {
+  alert("Pga. sie er pronomenet hunkjønn, og endelsen er i samsvar med hankjønn dativ. Prøv igjen!");
+  form.z.value="";
+  form.z.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+  alert("Riktig! Pga. sie skal det være ihr-, og endelsen blir -em fordi hankjønnsordet Hund står i dativ pga. mit.");
+  form.z.value="ihrem";
+  form.z.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+    }
+  }
+}
+function svaraa(form) {
+if (form.aa.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  } else {
+if (form.aa.value!="seinem") {
+  alert("Pga. 'er' er pronomenet hankjønn, og endelsen er i samsvar med hankjønn dativ. Prøv igjen!");
+  form.aa.value="";
+  form.aa.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+  alert("Riktig! Pga. 'er' skal det være sein-, og endelsen blir -em fordi intetkjønnsordet Bett her står i dativ pga. in/på stedet.");
+  form.aa.value="seinem";
+  form.aa.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+    }
+  }
+}
+function svarbb(form) {
+if (form.bb.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  } else {
+if (form.bb.value!="ihren") {
+  alert("Pga. Anja er pronomenet hunkjønn, og endelsen er i samsvar med hankjønn akkusativ. Prøv igjen!");
+  form.bb.value="";
+  form.bb.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+  alert("Riktig! Pga. Anja skal det være ihr-, og endelsen blir -en fordi hankjønnsordet Vater her står i akkusativ pga. für.");
+  form.bb.value="ihren";
+  form.bb.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+    }
+  }
+}
+function svarcc(form) {
+if (form.cc.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  } else {
+if (form.cc.value!="seinen") {
+  alert("Pga. Maier (som omtales i 3. person) er pronomet hankjønn, og endelsen er i samsvar med hankjønn akkusativ. Prøv igjen!");
+  form.cc.value="";
+  form.cc.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+  alert("Riktig! Pga. Maier (som omtales i 3. person) skal det være sein-, og endelsen blir -en fordi hankjønnsordet Hund her står i akkusativ pga. ohne.");
+  form.cc.value="seinen";
+  form.cc.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+    }
+  }
+}
+function svardd(form) {
+if (form.dd.style.backgroundColor=="#99ff99") {
+  alert("Nei, den går ikke!");
+  } else {
+if (form.dd.value!="seinem") {
+  alert("Pga. Wolfgang er pronomenet hankjønn, og endelsen er i samsvar med hankjønn dativ. Prøv igjen!");
+  form.dd.value="";
+  form.dd.style.backgroundColor="#ff9999";
+  poeng = poeng-1;
+  form.poeng.value=poeng;
+  } else {
+  alert("Riktig! Pga. Wolfgang skal det være sein-, og endelsen blir -em fordi hankjønnsordet Chef her står i dativ pga. mit.");
+  form.dd.value="seinem";
+  form.dd.style.backgroundColor="#99ff99";
+  poeng = poeng+2;
+  form.poeng.value=poeng;
+    }
+  }
+}
+function juks(form) {
+alert("Du prøver vel ikke å jukse med poeng?");
+poeng=poeng+0;
+form.poeng.value=poeng;
+}
+</script>
+</head>
+<body bgcolor="#99ccff">
+<h3 align="center">Eiendomspronomen 3: utfylling</h3>
+<p align="justify">
+Sett inn rett form av <b>eiendomspronomenet</b>. Bruk <b>sm&aring; bokstaver</b>
+- selvf&oslash;lgelig med unntak av de tilfellene der det dreier seg om h&oslash;flig tiltale!
+Er svaret galt, kan du fortsette til du har klart det. Det er alltid former <b>sein</b> eller
+<b>ihr (Ihr)</b>. Husk korrekte endelser i tillegg! Du f&aring;r ett minuspoeng
+for hvert mislykte fors&oslash;k i feltet nederst, mens det er to plusspoeng for riktig svar.
+<form>
+<table bgcolor="#666666" width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td>
+<table bgcolor="#ccff66" width="100%">
+<tr>
+<td>
+<nobr>Rolf besucht <input type="text" name="a" value="" size=5 onChange="svara(this.form)"> Vater.
+</td>
+<td>
+<nobr>Renate trifft <input type="text" name="b" value="" size=5 onChange="svarb(this.form)"> Freund.
+</td>
+</tr>
+<tr>
+<td>
+<nobr>Die Kinder besuchen <input type="text" name="c" value="" size=5 onChange="svarc(this.form)"> Gro&szlig;eltern.
+</td>
+<td>
+<nobr>Hans ist nicht hier, aber da kommt <input type="text" name="d" value="" size=5 onChange="svard(this.form)"> Bruder.
+</td>
+</tr>
+<tr>
+<td>
+<nobr>Peter ist mit <input type="text" name="e" value="" size=5 onChange="svare(this.form)"> Freundin nach Oslo gefahren.
+</td>
+<td>
+<nobr>Petra ist mit <input type="text" name="f" value="" size=5 onChange="svarf(this.form)"> Kusine nach Spanien gefahren.
+</td>
+</tr>
+<tr>
+<td>
+<nobr>Herr Kohler, haben Sie <input type="text" name="g" value="" size=5 onChange="svarg(this.form)"> Jacke gefunden?
+</td>
+<td>
+<nobr>Renate und Christian haben <input type="text" name="h" value="" size=5 onChange="svarh(this.form)"> Ball verloren.
+</td>
+</tr>
+<tr>
+<td>
+<nobr>Sabine hat <input type="text" name="i" value="" size=5 onChange="svari(this.form)"> Auto verkauft.
+</td>
+<td>
+<nobr>Frau Schmidt, kommt <input type="text" name="j" value="" size=5 onChange="svarj(this.form)"> Mann auch mit?
+</td>
+</tr>
+<tr>
+<td>
+<nobr>Julia hat mit <input type="text" name="k" value="" size=5 onChange="svark(this.form)"> Tante gesprochen.
+</td>
+<td>
+<nobr>Klaus ist aus <input type="text" name="l" value="" size=5 onChange="svarl(this.form)"> Wagen gestiegen.
+</td>
+</tr>
+<tr>
+<td>
+<nobr>Die Kinder sind mit <input type="text" name="m" value="" size=5 onChange="svarm(this.form)"> Eltern verabredet.
+</td>
+<td>
+<nobr>Christa hat <input type="text" name="n" value="" size=5 onChange="svarn(this.form)"> Herz in Heidelberg verloren!
+</td>
+</tr>
+<tr>
+<td>
+<nobr>Der Mann hat <input type="text" name="o" value="" size=5 onChange="svaro(this.form)"> Eltern angerufen.
+</td>
+<td>
+<nobr>Holen Sie <input type="text" name="p" value="" size=5 onChange="svarp(this.form)"> Wagen in der Werkstatt.
+</td>
+</tr>
+<tr>
+<td>
+<nobr>Das Kind spielt mit <input type="text" name="q" value="" size=5 onChange="svarq(this.form)"> Schwestern.
+</td>
+<td>
+<nobr>Der kleine Junge kann <input type="text" name="r" value="" size=5 onChange="svarr(this.form)"> Mutter nicht finden.
+</td>
+</tr>
+<tr>
+<td>
+<nobr>Pia ist nicht gekommen, aber <input type="text" name="s" value="" size=5 onChange="svars(this.form)"> Gast ist da.
+</td>
+<td>
+<nobr>Rainer ist zu <input type="text" name="t" value="" size=5 onChange="svart(this.form)"> Onkel gegangen.
+</td>
+</tr>
+<tr>
+<td>
+<nobr>Die junge Frau kann <input type="text" name="u" value="" size=5 onChange="svaru(this.form)"> Mantel nicht finden.
+</td>
+<td>
+<nobr>Beate wohnt bei <input type="text" name="v" value="" size=5 onChange="svarv(this.form)"> Tante in Wien.
+</td>
+</tr>
+<tr>
+<td>
+<nobr>Heinz hat <input type="text" name="w" value="" size=5 onChange="svarw(this.form)"> Segelboot verkauft.
+</td>
+<td>
+<nobr>Die Eltern haben bei <input type="text" name="x" value="" size=5 onChange="svarx(this.form)"> Sohn &uuml;bernachtet.
+</td>
+</tr>
+<tr>
+<td>
+<nobr>Boris Becker verlor gegen <input type="text" name="y" value="" size=5 onChange="svary(this.form)"> Landsmann.
+</td>
+<td>
+<nobr>Sie geht oft mit <input type="text" name="z" value="" size=5 onChange="svarz(this.form)"> Hund spazieren.
+</td>
+</tr>
+<tr>
+<td>
+<nobr>Er liegt schon in <input type="text" name="aa" value="" size=5 onChange="svaraa(this.form)"> Bett.
+</td>
+<td>
+<nobr>Anja tut alles f&uuml;r <input type="text" name="bb" value="" size=5 onChange="svarbb(this.form)"> Vater.
+</td>
+</tr>
+<tr>
+<td>
+<nobr>Herr Maier geht nie ohne <input type="text" name="cc" value="" size=5 onChange="svarcc(this.form)"> Hund spazieren.
+</td>
+<td>
+<nobr>Wolfgang hat &Auml;rger mit <input type="text" name="dd" value="" size=5 onChange="svardd(this.form)"> Chef.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="100%">
+<tr>
+<td><b><font face="Arial" size="2">Antall poeng:</font></b>&nbsp;<input type="text" name="poeng" value="0" size=3 onChange="juks(this.form)"></td>
+<td><a href="pron.html#tre" target="blank"><font color="#000000"><b>Regler og b&oslash;yningsm&oslash;nster</b></font></a></td>
+</tr>
+<tr>
+<td><a href="pron.html"><font color="#000000"><b>Hovedside for pronomen</b></font></a></td>
+<td><a href="tygram.html"><font color="#000000"><b>Hovedside for tysk grammatikk</b></font></a></td>
+</tr>
+</table>
+</form>
+</body>
+</html>

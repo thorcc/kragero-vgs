@@ -1,0 +1,426 @@
+<html>
+
+<head>
+
+<title>Politik & Wirtschaft</title>
+
+<script language="JavaScript">
+function fasit(form) {
+var a
+var b
+var c
+var d
+var e
+var f
+var g
+var h
+var i
+var j
+var poeng = 0;
+if ((form.a.value != "0") &&
+    (form.b.value != "0") &&
+    (form.c.value != "0") && 
+    (form.d.value != "0") && 
+    (form.e.value != "0") && 
+    (form.f.value != "0") && 
+    (form.g.value != "0") && 
+    (form.h.value != "0") && 
+    (form.i.value != "0") && 
+    (form.j.value != "0"))
+  {
+    if (form.a.value == "2")
+    {
+       poeng = poeng + 1;
+  } else {
+       poeng = poeng + 0;
+  }
+    if (form.b.value == "3")
+    {
+       poeng = poeng + 1;
+  } else {
+       poeng = poeng + 0;
+  }
+    if (form.c.value == "6")
+  {
+       poeng = poeng + 1;
+  } else {
+       poeng = poeng + 0;
+  }
+    if (form.d.value == "4")
+  {
+       poeng = poeng + 1;
+  } else {
+       poeng = poeng + 0;
+  }
+    if (form.e.value == "2")
+  {
+       poeng = poeng + 1;
+  } else {
+       poeng = poeng + 0;
+  }
+    if (form.f.value == "5")
+  {
+       poeng = poeng + 1;
+  } else {
+       poeng = poeng + 0;
+  } 
+    if (form.g.value == "2")
+  {
+       poeng = poeng + 1;
+  } else {
+       poeng = poeng + 0;
+  } 
+    if (form.h.value == "1")
+  {
+       poeng = poeng + 1;
+  } else {
+       poeng = poeng + 0;
+  }
+    if (form.i.value == "1")
+  { 
+       poeng = poeng + 1;
+  } else {
+       poeng = poeng + 0;
+  }
+    if (form.j.value == "4")
+  {
+       poeng = poeng + 1;
+  } else {
+       poeng = poeng + 0;
+    }
+       form.resultat.value=poeng
+       if (poeng == 10)
+    {
+       alert ("Herzlichen Glückwunsch!");
+    }
+  }
+}
+</script>
+
+
+</head>
+
+<body bgcolor="99ccff">
+<table width="100%" border="0" cellspacing="1" cellpadding="5" bgcolor="#000000">
+<tr>
+<TD align="center" bgcolor="#ccffcc">
+<nobr>&nbsp;<a href="tysk.html"><font color="#000000">Tilbake</font></a>&nbsp;
+</TD>
+<TD align="center" bgcolor="#ccffcc">
+<nobr><a href="tygram.html"><font color="#000000">Grammatikk</font></a>
+</TD>
+<td align="center" bgcolor="#ccffcc">
+<nobr><a href="Animasjon.exe"><font color="#000000">Animasjon</font></a>
+</td>
+<td align="center" bgcolor="#ccffcc">
+<nobr><a href="glose.html"><font color=#000000">Glose&oslash;velser</font></a>
+</td>
+<td align="center" bgcolor="#000000">
+<nobr>&nbsp;<a href="quiz.html"><font color="#ccffcc">Quiz</font></a>&nbsp;
+</td>
+<td align="center" bgcolor="#ccffcc">
+<nobr><a href="tyskutvt.html"><font color="#000000">Sch&uuml;leraustausch</font></a>
+</td>
+<td align="center" bgcolor="#ccffcc">
+<nobr>&nbsp;<a href="medier.html"><font color="#000000">Medier</font></a>&nbsp;
+</td>
+</tr>
+</table>
+<p>
+
+<form method="post" action="enctype.html">
+
+<table width="650" border="0" cellspacing="0" cellpadding="0" bgcolor="#99CCFF">
+
+<tr>
+
+<td bgcolor="#99ccff" VALIGN="TOP" width="200"> 
+
+<table border="12" bgcolor="#999999" cellspacing="0" cellpadding="6" width="100%">
+
+<tr>
+
+<td bgcolor="#990000"><b>
+
+<font face="Arial" color="#ccff66" size="5">
+
+Politik &<br>Wirtschaft
+
+</font>
+
+<p align="justify">
+
+<font face="Arial" color="#ffffff" size="2">
+
+Beantworten Sie zuerst alle Fragen! Sie erfahren die Zahl der richtigen Antworten - nicht was richtig oder falsch ist.
+
+</font></p><font face="Arial" color="#ffffff" size="2">
+
+Ergebnis&nbsp;:&nbsp;&nbsp;<input type="text" name="resultat" size="1" value="">
+
+</font></b>
+
+</td>
+
+</tr>
+
+</TABLE>
+
+<table border="1" cellspacing="0" cellpadding="10" bgcolor="#999999" width="100%">
+
+<tr>
+
+<td align="center">
+
+<input type="button" value="Überprüfen" onClick="fasit(this.form)">
+
+<br><input type="reset" value="Zurücksetzen">
+
+</td>
+
+</tr>
+
+</table>
+
+</td>
+
+<td bgcolor="#99ccff" VALIGN="TOP" width="450" HEIGHT="100%" align="left">
+
+<table border="1" cellspacing="0" cellpadding="2" bgcolor="#ffffff" width="100%" HEIGHT="100%" align="left">
+
+<tr>
+
+<td align="left" bgcolor="#ffffff" height="100%">
+
+<table border="0" cellspacing="0" cellpadding="2" bgcolor="#ffffff" HEIGHT="100%" align="left">
+
+<tr>
+
+<td>
+<select name="a">
+  <option value="0">Diese Partei kann man&nbsp;</option>
+  <option value="1">Die CDU kann man</option>
+  <option value="2">Die SPD kann man</option>
+  <option value="3">Die FDP kann man</option>
+  <option value="4">Die Grünen kann man</option>
+  <option value="5">Die CSU kann man</option>
+  <option value="6">Die PDS kann man</option>
+</select>
+</td>
+<td>
+  <nobr>mit der norw. Arbeiterpartei vergleichen.
+</td>
+</tr>
+<tr>
+<td>
+<select name="b">
+  <option value="0">Dieser Politiker</option>
+  <option value="1">Der Landespräsident</option>
+  <option value="2">Der Landeskanzler</option>
+  <option value="3">Der Ministerpräsident</option>
+  <option value="4">Der Gouverneur</option>
+  <option value="5">Der Bürgesmeister</option>
+  <option value="6">Der Landesvorsitzende</option>
+</select>
+</td>
+<td>
+  <nobr>leitet die Regierung in einem Bundesland.
+</td>
+</tr>
+<tr>
+<td>
+<select name="c">
+  <option value="0">Dieser Politiker ist jetzt&nbsp;&nbsp;</option>
+  <option value="1">Helmut Kohl ist</option>
+  <option value="2">Joschka Fischer ist</option>
+  <option value="3">Wolfgang Tierse ist</option>
+  <option value="4">Gerhard Schröder ist</option>
+  <option value="5">Johannes Rau ist</option>
+  <option value="6">Horst Köhler ist</option>
+</select></td>
+<td>
+   <nobr>Bundespräsident der BRD.
+</td>
+</tr>
+<tr>
+<td>
+<select name="d">
+  <option value="0">Dieser Politiker ist jetzt&nbsp;&nbsp;</option>
+  <option value="1">Helmut Kohl ist</option>
+  <option value="2">Joschka Fischer ist</option>
+  <option value="3">Wolfgang Tierse ist</option>
+  <option value="4">Gerhard Schröder ist</option>
+  <option value="5">Johannes Rau ist</option>
+  <option value="6">Horst Köhler ist</option>
+</select></td>
+<td>
+  <nobr>Bundeskanzler der BRD.
+</td>
+</tr>
+<tr>
+<td>
+<select name="e">
+  <option value="0">Dieser Politiker ist jetzt&nbsp;&nbsp;</option>
+  <option value="1">Helmut Kohl ist</option>
+  <option value="2">Joschka Fischer ist</option>
+  <option value="3">Wolfgang Tierse ist</option>
+  <option value="4">Gerhard Schröder ist</option>
+  <option value="5">Johannes Rau ist</option>
+  <option value="6">Horst Köhler ist</option>
+</select>
+</td>
+<td>
+  <nobr>Bundesaußenminister der BRD.
+</td>
+</tr>
+<tr>
+<td>
+<select name="f">
+  <option value="0">Diese Industriestadt ist&nbsp;&nbsp;</option>
+  <option value="1">Duisburg ist</option>
+  <option value="2">Leverkusen ist</option>
+  <option value="3">Gelsenkirchen ist</option>
+  <option value="4">Kassel ist</option>
+  <option value="5">Ludwigshafen ist</option>
+  <option value="6">Saarbrücken ist</option>
+</select>
+</td>
+<td>
+  <nobr>die "Heimat" der BASF.
+</td>
+</tr>
+<tr>
+<td>
+<select name="g">
+  <option value="0">Diese Stadt ist als die&nbsp;&nbsp;&nbsp;</option>
+  <option value="1">Hamburg ist als die</option>
+  <option value="2">Hannover ist als die</option>
+  <option value="3">Dortmund ist als die</option>
+  <option value="4">Essen ist als die</option>
+  <option value="5">Mannheim ist als die</option>
+  <option value="6">Stuttgart ist als die</option>
+</select></td>
+<td>
+  <nobr>gro&szlig;e Messestadt (EXPO 2000) bekannt.
+</td>
+</tr>
+<tr>
+<td>
+<select name="h">
+  <option value="0">Dieser Wagen kommt&nbsp;&nbsp;&nbsp;</option>
+  <option value="1">BMW kommt</option>
+  <option value="2">Mercedes kommt</option>
+  <option value="3">Volkswagen kommt</option>
+  <option value="4">Porsche kommt</option>
+  <option value="5">Ford kommt</option>
+  <option value="6">Opel kommt</option>
+</select></td>
+<td>
+  <nobr>aus M&uuml;nchen.
+</td>
+</tr>
+<tr>
+<td>
+<select name="i">
+  <option value="0">In dieser Stadt hat man&nbsp;&nbsp;</option>
+  <option value="1">In Solingen hat man</option>
+  <option value="2">In Wuppertal hat man</option>
+  <option value="3">In Krefeld hat man</option>
+  <option value="4">In Münster hat man</option>
+  <option value="5">In Neumünster hat man</option>
+  <option value="6">In Lübeck hat man</option>
+</select></td>
+<td>
+  <nobr>viele Messer, Gabeln und Löffel hergestellt.
+</td>
+</tr>
+<tr>
+<td>
+<select name="j">
+  <option value="0">In dieser Stadt hat die&nbsp;&nbsp;&nbsp;&nbsp;</option>
+  <option value="1">In Berlin hat die</option>
+  <option value="2">In Hamburg hat die</option>
+  <option value="3">In Hannover hat die</option>
+  <option value="4">In Franktfurt hat die</option>
+  <option value="5">In Düsseldorf hat die</option>
+  <option value="6">In München hat die</option>
+</select>
+</td>
+<td>
+  <nobr>Deutsche Bundesbank ihren Sitz.
+</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+</td>
+</tr>
+</table>
+<p>
+<table BORDER="1" CELLSPACING="0" CELLPADDING="5" BGCOLOR="#ffffff">
+<tr>
+<td width="140" bgcolor="#ff6666" align="center">
+<nobr><a href="land1.html"><FONT FACE="Arial" SIZE="2" COLOR="#000000"><b>Landeskunde 1</b></FONT></a>
+</td width="140">
+<td width="140" bgcolor="#ff9933" align="center">
+<nobr><a href="land2.html"><FONT FACE="Arial" SIZE="2" COLOR="#000000"><b>Landeskunde 2</b></FONT></a>
+</td width="140">
+<td width="140" bgcolor="#ffcc33" align="center">
+<nobr><a href="land3.html"><FONT FACE="Arial" SIZE="2" COLOR="#000000"><b>Landeskunde 3</b></FONT></a>
+</td width="140">
+<td width="140" bgcolor="#ffff66" align="center">
+<nobr><a href="land4.html"><FONT FACE="Arial" SIZE="2" COLOR="#000000"><b>Landeskunde 4</b></FONT></a>
+</td width="140">
+</tr>
+<tr>
+<td width="140" bgcolor="#ff9999" align="center">
+<nobr><a href="hist1.html"><FONT FACE="Arial" SIZE="2" COLOR="#000000"><b>Geschichte 1</b></FONT></a>
+</td width="140">
+<td width="140" bgcolor="#cc9999" align="center">
+<nobr><a href="hist2.html"><FONT FACE="Arial" SIZE="2" COLOR="#000000"><b>Geschichte 2</b></FONT></a>
+</td width="140">
+<td width="140" bgcolor="#cccc99" align="center">
+<nobr><a href="hist3.html"><FONT FACE="Arial" SIZE="2" COLOR="#000000"><b>Geschichte 3</b></FONT></a>
+</td width="140">
+<td width="140" bgcolor="#ccff66" align="center">
+<nobr><a href="politik.html"><FONT FACE="Arial" SIZE="2" COLOR="#000000"><b>Politik & Wirtschaft</b></FONT></a>
+</td width="140">
+</tr>
+<tr>
+<td width="140" bgcolor="#ff66ff" align="center">
+<nobr><a href="literatur1.html"><FONT FACE="Arial" SIZE="2" COLOR="#000000"><b>Literatur 1</b></FONT></a>
+</td width="140">
+<td width="140" bgcolor="#cc66ff" align="center">
+<nobr><a href="literatur2.html"><FONT FACE="Arial" SIZE="2" COLOR="#000000"><b>Literatur 2</b></FONT></a>
+</td width="140">
+<td width="140" bgcolor="#cccccc" align="center">
+<nobr><a href="film.html"><FONT FACE="Arial" SIZE="2" COLOR="#000000"><b>Medien</b></FONT></a>
+</td width="140">
+<td width="140" bgcolor="#99ff99" align="center">
+<nobr><a href="musik.html"><FONT FACE="Arial" SIZE="2" COLOR="#000000"><b>Musik</b></FONT></a>
+</td width="140">
+</tr>
+<tr>
+<td width="140" bgcolor="#9999cc" align="center">
+<nobr><a href="kultur.html"><FONT FACE="Arial" SIZE="2" COLOR="#000000"><b>Kunst & Kultur</b></FONT></a>
+</td width="140">
+<td width="140" bgcolor="#6699ff" align="center">
+<nobr><a href="winter.html"><FONT FACE="Arial" SIZE="2" COLOR="#000000"><b>Wintersport</b></FONT></a>
+</td width="140">
+<td width="140" bgcolor="#99cccc" align="center">
+<nobr><a href="fussball.html"><FONT FACE="Arial" SIZE="2" COLOR="#000000"><b>Fu&szlig;ball</b></FONT></a>
+</td width="140">
+<td width="140" bgcolor="#99ffff" align="center">
+<nobr><a href="sport.html"><FONT FACE="Arial" SIZE="2" COLOR="#000000"><b>Andere Sportarten</b></FONT></a>
+</td width="140">
+</tr>
+</table>
+</form></body>
+
+</html>
